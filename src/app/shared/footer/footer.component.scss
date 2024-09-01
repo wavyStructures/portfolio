@@ -1,0 +1,35 @@
+footer {
+    position: relative;
+    height: 128px;
+    width: 100%;
+    background-color: #000;
+    
+
+
+    
+    >svg {
+        height: 128px;
+        width: 100%;
+    }
+
+
+
+    >div {
+        position: absolute;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        
+
+        >p {
+            color: var(--clr-bg);
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+        }
+    }
+}

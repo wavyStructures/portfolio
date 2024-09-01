@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --clr-bg: #fffcf3;
+    --clr-text: #000;
+//     --clr-text-good-morning: #2a3647;
+//     --clr-text-menu-hover: #e3eeff;
+//     --clr-button-todo: #d2e3ff;
+//     --clr-text-medium-blue: #005dff;
+//     --clr-input-focus: #0d99ff;
+//     --clr-icon: #a8a8a8;
+//     --clr-style-lightgrey: #d1d1d1;
+//     --clr-style-lightblue: #29abe2;
+
+// color: var(--clr-main);
+
+  }
+
+
+body{
+    margin: 0;
+    overflow: hidden;
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    font-family: 'Syne', Calibri, 'Trebuchet MS', sans-serif;
+    button {
+        cursor: pointer;
+        border: unset;
+    }
+    input {
+        border: unset;
+    }
+    
+}
+
+*{
+    box-sizing: border-box;
+}
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #6BC1E1 #ffffff00;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #6BC1E1;
+    border-radius: 10px;
+    border: 3px solid #ffffff00;
+  }
