@@ -1,11 +1,14 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ResponsiveService } from '../../responsive-services/responsive.service';
+import { RouterLink, RouterOutlet } from '@angular/router';
+// import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterOutlet],
+  // imports: [RouterLink, RouterOutlet, TranslateModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })

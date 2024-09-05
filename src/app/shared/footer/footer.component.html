@@ -1,8 +1,23 @@
 <footer>
-    <div>
+    <div class="footer-wrapper">
+        <div class="socialMediaLinks">
+            <a href="https://github.com/wavyStructures" target="_blank"> <img
+                    src="../../../assets/img/icons/Property 1 github.png" alt=""></a>
+            <a href="#contact" target="_blank"><img src="../../../assets/img/icons/Property 1 mail.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/anja-schwab-9441722b6/" target="_blank"><img
+                    src="../../../assets/img/icons/Property 1 linkedIn.png" alt=""></a>
+        </div>
+        <div class="copyright">
+            <div class="logo-div"><img src="../../../assets/img/logo.png" alt="">
+            </div>
+            <a href="mailto:anja_schwab@gmx.de">anja_schwab&#64;gmx.de</a>
+            <!-- <p>&copy; 2024 Anja Schwab</p> -->
 
+        </div>
 
+        <div [routerLink]="['/imprint']" class="privacy_policy">Legal Notice
+            <!-- {{ 'BTN_IMPRINT' | translate }} -->
+        </div>
 
-        <p>&copy; 2024 Anja Schwab</p>
     </div>
 </footer>

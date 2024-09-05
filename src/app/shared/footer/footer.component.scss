@@ -1,35 +1,58 @@
+*{
+    border: 0.5px solid red;
+}
+
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    height: 128px;
     width: 100%;
     background-color: #000;
+    color: var(--clr-bg);
     
-
-
     
-    >svg {
-        height: 128px;
-        width: 100%;
-    }
-
-
-
-    >div {
-        position: absolute;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
+    .socialMediaLinks {
         display: flex;
-        align-items: center;
         justify-content: center;
-        top: 0;
-        
+        align-items: center;
+        gap: 10px;
 
-        >p {
-            color: var(--clr-bg);
-            font-size: 13px;
-            font-style: normal;
-            font-weight: 400;
+        img {
+            height: 40px;
+            width: 40px;
         }
     }
+
+    .logo-div{
+        padding: 28px 0;
+    }
+
+    .copyright {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 30px;
+        }
+
+        a {
+            font-family: Overpass;
+            font-size: 19px; 
+            font-weight: 300;
+            text-decoration: none;
+            color: var(--clr-bg);
+            text-align: center;
+        }
+    }
+
+    .privacy_policy {
+        padding: 9px 0 28px 0;
+        text-align: center;
+    }
 }
+
+
+

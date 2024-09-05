@@ -19,10 +19,11 @@ export class ContactformComponent {
     message: '',
   };
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'http://localhost/send-email.php',
+    // endPoint: 'https://deineDomain.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -46,6 +47,7 @@ export class ContactformComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      console.log(this.contactData);
       ngForm.resetForm();
       // this.emptyForm();
     }
