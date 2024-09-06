@@ -12,14 +12,15 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class ContactformComponent {
   http = inject(HttpClient);
 
+  checkboxState: boolean = false;
+  mailTest = false;
+
   contactData = {
     firstName: '',
     lastName: '',
     email: '',
     message: '',
   };
-
-  mailTest = false;
 
   post = {
     endPoint: 'http://localhost/send-email.php',
