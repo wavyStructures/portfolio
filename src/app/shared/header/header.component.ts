@@ -1,12 +1,27 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+// import { Subscription } from 'rxjs';
+import { ResponsiveService } from '../../responsive-services/responsive.service';
+// import { RouterLink, RouterOutlet } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  isActive: boolean = false;
 
+  constructor(private translate: TranslateService) {}
+
+  changeLanguage(language: string) {
+    this.translate.use(language);
+  }
+
+  toggleNav() {
+    this.isActive = !this.isActive;
+  }
 }

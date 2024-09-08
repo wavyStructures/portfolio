@@ -1,8 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-    border-radius: 5px;
-    padding: 20px;
+    padding: 0 20px;
     background-color: var(--clr-text);
     color: var(--clr-bg);
   }
@@ -12,13 +11,18 @@ h1{
   font-family: Overpass;
   font-size: 32px;
   font-weight: 700;
-  text-align: center;
-
+  text-align: justify;
+  text-align-last: center;
 }
 
 .contactForm{
   display: flex;
   flex-direction: column;
+
+  .agreeCheckboxDiv {
+    display: flex;
+    align-items: baseline;
+  }
 }
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], [type=email], textarea {
@@ -41,12 +45,19 @@ input[type=text], [type=email], textarea {
     }
   }
 
+input[type=checkbox] {
+    appearance: none;
+    background-color: #000;
+    border: 1px solid #fff;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
 
 .contact-form-fields{
   background-color: var(--clr-text);
   color: var(--clr-bg);
 }
-
   
   /* Style the submit button with a specific background color etc */
 .submit {
