@@ -1,0 +1,54 @@
+section {
+
+    .atf-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .atf-title{
+        font-family: Syne;
+        font-size: 45px;
+        font-weight: 800;
+        line-height: 45px;
+        letter-spacing: -0.025em;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .atf-sub-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+
+        .atf-name{
+            color: var(--clr-text-green);
+            font-family: Overpass;
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 23px;
+            letter-spacing: -0.025em;
+            text-align: center;
+
+        }
+
+        .atf-underline{
+            width: 180px;
+            height: 0;
+            border-bottom: 3px solid black;           
+    }}
+
+    .atf-bottom {
+        position: relative;
+        >a {
+            position: absolute;
+            rotate: 240deg;
+        }
+    }
+
+
+}
