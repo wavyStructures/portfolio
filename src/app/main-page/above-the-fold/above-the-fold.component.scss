@@ -43,10 +43,35 @@ section {
     }}
 
     .atf-bottom {
-        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 24px;
         >a {
-            position: absolute;
-            rotate: 240deg;
+            transform: rotate(270deg);
+            text-decoration: none;
+            color: var(--clr-text);
+            font-family: Overpass;
+            font-size: 20px;
+            font-weight: 300;
+            text-align: left;
+        }
+
+        .atf-scroll-down{
+            .atf-arrow-box{
+                height: 160px;
+                align-content: end;
+                >img{
+                    height: 92px;
+                }
+            }
+
+            >span{
+                font-family: Overpass;
+                font-size: 20px;
+                font-weight: 300;
+                letter-spacing: -0.025em;
+                text-align: left;
+            }
         }
     }
 
