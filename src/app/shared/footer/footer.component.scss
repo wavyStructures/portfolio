@@ -22,7 +22,7 @@ footer {
 
     .logo-div{
         padding: 28px 0;
-    }
+            }
 
     .copyright {
         display: flex;
@@ -31,7 +31,8 @@ footer {
         align-items: center;
 
         img {
-            height: 30px;
+            filter: invert(1);
+            height: 100px;
         }
 
         a {

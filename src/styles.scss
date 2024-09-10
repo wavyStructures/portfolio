@@ -26,6 +26,7 @@ body{
     background-color: var(--clr-bg);
     color: var(--clr-text);
     font-family: 'Syne', Calibri, 'Trebuchet MS', sans-serif;
+    scroll-behavior: smooth;
     button {
         cursor: pointer;
         border: unset;
