@@ -1,0 +1,29 @@
+section{
+    
+    display: flex;
+    justify-content: center;
+    .about-wrapper{
+        width: 21.25rem;
+    }
+
+
+    h1 {
+        font-family: Syne;
+        font-size: 36px;
+        font-weight: 800;
+        letter-spacing: 0.01em;
+        text-align: center;
+    }
+
+    p{
+        font-family: Overpass;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    img {
+        width: 100%;
+        padding-right: 8px;
+    }
+}

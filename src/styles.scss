@@ -4,21 +4,9 @@
     --clr-text: #000;
     --clr-text-green: #00BC8F;
     --clr-btn: #BBB;
-//     --clr-text-good-morning: #2a3647;
 //     --clr-text-menu-hover: #e3eeff;
-//     --clr-button-todo: #d2e3ff;
-//     --clr-text-medium-blue: #005dff;
-//     --clr-input-focus: #0d99ff;
-//     --clr-icon: #a8a8a8;
-//     --clr-style-lightgrey: #d1d1d1;
-//     --clr-style-lightblue: #29abe2;
-
 // color: var(--clr-main);
-
-  }
-// *{
-//   border: 0.5px solid red;
-// }
+}
 
 body{
     margin: 0;
@@ -35,6 +23,13 @@ body{
         border: unset;
     }
     
+}
+
+#header {
+  position: fixed;
+  background-color: var(--clr-bg);
+  z-index: 999;
+  width: 100dvw;
 }
 
 *{
