@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { ResponsiveService } from '../../responsive-services/responsive.service';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-above-the-fold',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterOutlet, TranslateModule],
   templateUrl: './above-the-fold.component.html',
-  styleUrl: './above-the-fold.component.scss'
+  styleUrl: './above-the-fold.component.scss',
 })
-export class AboveTheFoldComponent {
-
-}
+export class AboveTheFoldComponent {}

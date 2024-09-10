@@ -6,11 +6,13 @@
     "DOWN": "down",
   
     "ABOUTME": "About me",
-    "ABOUT_DESCRYPTION": "Hi! I'm a passionate web developer focused on creating dynamic and user-friendly websites. My name is Anja, my strengths lie in frontend development with HTML, CSS, JavaScript, and Angular. I prioritize clean, well-structured code and always strive for optimal solutions to complex problems. If you think I would be a good fit for your project, feel free to contact me.",
+    "ABOUT_DESCRIPTION": "Hi! I'm a passionate web developer focused on creating dynamic and user-friendly websites. My name is Anja, my strengths lie in frontend development with HTML, CSS, JavaScript, and Angular. I prioritize clean, well-structured code and always strive for optimal solutions to complex problems. If you think I would be a good fit for your project, feel free to contact me.",
+    "BASED": "Based in Halle (Saale)",
+    "REMOTE": "Open to work Remote",
     "MY_SKILLS": "My skills",
   
     "HEADER_PORTFOLIO": "Portfolio",
-    "PORTFOLIO_DESCRYPTION": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "PORTFOLIO_DESCRIPTION": "Explore a selection of my work here - Interact with projects to see my skills in action.",
     "GREET": "Say Hi!",
     "CONTACT_UPPER_TEXT": "Want to discuss a new project?",
     "CONTACT_LOWER_TEXT": "Say hello! let's discuss your ideas and make it happen",
