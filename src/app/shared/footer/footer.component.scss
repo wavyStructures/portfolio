@@ -4,10 +4,10 @@ footer {
     align-items: center;
     position: relative;
     width: 100%;
-    background-color: #000;
+    background-color: var(--clr-text);
     color: var(--clr-bg);
-    
-    
+    margin-top: -1px;
+         
     .socialMediaLinks {
         display: flex;
         justify-content: center;

@@ -1,88 +1,142 @@
 .container {
   display: flex;
   flex-direction: column;
-    padding: 0 20px;
-    background-color: var(--clr-text);
-    color: var(--clr-bg);
-  }
-
-h1{
-  color: var(--clr-text-green);
-  font-family: Overpass;
-  font-size: 32px;
-  font-weight: 700;
-  text-align: justify;
-  text-align-last: center;
-}
-
-.contactForm{
-  display: flex;
-  flex-direction: column;
-
-  .agreeCheckboxDiv {
-    display: flex;
-    align-items: baseline;
-  }
-}
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], [type=email], textarea {
-    width: 100%; 
-    border-bottom: 2px solid var(--clr-bg); /* Gray border */
-    background-color: var(--clr-text);
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; 
-    margin-bottom: 16px; 
-    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-    padding: 15px 25px 15px 25px;
-    gap: 10px;
-
-    &::placeholder {
-      color: var(--clr-bg);
-      font-family: Overpass;
-      font-size: 16px;
-      font-weight: 400;
-      text-align: left;
-    }
-  }
-
-input[type=checkbox] {
-    appearance: none;
-    background-color: #000;
-    border: 1px solid #fff;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-
-.contact-form-fields{
+  padding:  53px 20px 0 20px;
   background-color: var(--clr-text);
   color: var(--clr-bg);
-}
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%); 
   
-  /* Style the submit button with a specific background color etc */
-.submit {
-  width: fit-content;
-  padding: 20px 40px 20px 40px;
-  gap: 10px;
-  align-self: center;
-  background-color: var(--clr-text);
-  border: 4px solid var(--clr-btn);
-  opacity: 50%;
-  color: var(--clr-btn);
-  cursor: pointer;
-  font-family: Montserrat;
-  font-size: 23px;
-  font-weight: 400;
-  text-align: left;
-}
+  .greet{
+    font-family: Syne;
+    font-size: 45px;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    text-align: left;
+    margin: 0;
+  }
 
+  h2{
+    margin: 39px 0 19px 0;
+    color: var(--clr-text-green);
+    font-family: Overpass;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: justify;
+    text-align-last: center;
+  }
 
-  
-  /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
-    background-color: #45a049;
+  h3{
+    font-family: Overpass;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: justify;
+    text-align-last: center;
+  }
+
+  .contactForm{
+    display: flex;
+    flex-direction: column;
+
+    .agreeCheckboxDiv {
+      display: flex;
+      align-items: baseline;
+
+      a{
+        color: var(--clr-text-green);
+      }
+    }
+
+    textarea{
+      border: 0;
+      border-bottom: 2px solid var(--clr-bg);
+    }
   }
   
-  /* Add a background color and some padding around the form */
+  input[type=text], [type=email], textarea {
+      width: 100%; 
+      border-bottom: 2px solid var(--clr-bg); /* Gray border */
+      background-color: var(--clr-text);
+      box-sizing: border-box; 
+      margin-top: 6px; 
+      margin-bottom: 16px; 
+      resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+      padding: 15px 25px 15px 25px;
+      gap: 10px;
+      font-family: Overpass;
+      font-size: 20px;
+      font-weight: 400;
+      text-align: left;
 
+      &::placeholder {
+        color: var(--clr-bg);
+        font-family: Overpass;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+      }
+    
+    }
+
+
+
+  input[type=checkbox] {
+      appearance: none;
+      background-color: var(--clr-text);
+      border: 2px solid var(--clr-bg);
+      width: 1.2rem;
+      height: 1.1rem;
+      cursor: pointer;
+      border-radius: 2px;
+      align-self: flex-start;
+      margin-top: 1.125rem;
+      margin-right: 0.5rem;
+  }
+
+  .contact-form-fields{
+    background-color: var(--clr-text);
+    color: var(--clr-bg);
+    
+    &:focus {
+      outline: none;
+    }
+  }
+    
+    /* Style the submit button with a specific background color etc */
+  .submit {
+    width: fit-content;
+    padding: 20px 40px 20px 40px;
+    gap: 10px;
+    align-self: center;
+    background-color: var(--clr-text);
+    border: 4px solid var(--clr-btn);
+    opacity: 50%;
+    color: var(--clr-btn);
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: 23px;
+    font-weight: 400;
+    text-align: left;
+    margin: 2.125rem 0 2.323rem 0;
+  }
+
+
+    
+    /* When moving the mouse over the submit button, add a darker green color */
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+      -webkit-text-fill-color: #fffcf3;
+    }
+    
+    /* Reset background for autofill on focus */
+    input:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+      -webkit-text-fill-color: #fffcf3;
+    }
+
+    /* Add a background color and some padding around the form */
+}
   
