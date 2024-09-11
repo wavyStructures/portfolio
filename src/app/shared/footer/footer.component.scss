@@ -48,6 +48,9 @@ footer {
     .privacy_policy {
         padding: 9px 0 28px 0;
         text-align: center;
+        >a{
+            color: var(--clr-text-green);
+        }
     }
 }
 
