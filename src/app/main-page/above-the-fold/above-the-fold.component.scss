@@ -62,6 +62,24 @@ section {
         }
 
         .atf-scroll-down{
+            .arrow-down {
+                width: 0;
+                height: 0;
+               animation: arrow-slide-loop 2s infinite; /* Infinite loop animation */
+              }
+              
+              @keyframes arrow-slide-loop {
+                0% {
+                  transform: translateY(0); /* Initial position */
+                }
+                50% {
+                  transform: translateY(10px); /* Moves down */
+                }
+                100% {
+                  transform: translateY(10px); /* Stays down, so we don't see the movement back */
+                }
+              }
+
             .atf-arrow-box{
                 height: 160px;
                 align-content: end;
