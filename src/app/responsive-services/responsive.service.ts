@@ -1,32 +1,48 @@
 import { Injectable } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { BehaviorSubject } from 'rxjs';
+import { Observable, combineLatest } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ResponsiveService {
-  // BehaviorSubjects to track the responsiveness
-  private mobileSubject = new BehaviorSubject<boolean>(false);
-  private tabletSubject = new BehaviorSubject<boolean>(false);
-  private desktopSubject = new BehaviorSubject<boolean>(false);
+  isMobile$: Observable<boolean>;
+  isTablet$: Observable<boolean>;
+  isDesktop$: Observable<boolean>;
 
-  // Expose observables to subscribe to responsiveness changes
-  isMobile$ = this.mobileSubject.asObservable();
-  isTablet$ = this.tabletSubject.asObservable();
-  isDesktop$ = this.desktopSubject.asObservable();
+  // Combined stream
+  deviceStatus$: Observable<{
+    isMobile: boolean;
+    isTablet: boolean;
+    isDesktop: boolean;
+  }>;
 
   constructor(private breakpointObserver: BreakpointObserver) {
-    this.breakpointObserver
-      .observe([
-        Breakpoints.Handset, // Mobile devices
-        Breakpoints.Tablet, // Tablet devices
-        Breakpoints.Web, // Desktop devices
-      ])
-      .subscribe((result) => {
-        this.mobileSubject.next(result.breakpoints[Breakpoints.Handset]);
-        this.tabletSubject.next(result.breakpoints[Breakpoints.Tablet]);
-        this.desktopSubject.next(result.breakpoints[Breakpoints.Web]);
-      });
+    // Define individual observables
+    this.isMobile$ = this.breakpointObserver
+      .observe([Breakpoints.Handset])
+      .pipe(map((result) => result.matches));
+
+    this.isTablet$ = this.breakpointObserver
+      .observe([Breakpoints.Tablet])
+      .pipe(map((result) => result.matches));
+
+    this.isDesktop$ = this.breakpointObserver
+      .observe([Breakpoints.Web])
+      .pipe(map((result) => result.matches));
+
+    // Combine the streams using combineLatest
+    this.deviceStatus$ = combineLatest([
+      this.isMobile$,
+      this.isTablet$,
+      this.isDesktop$,
+    ]).pipe(
+      map(([isMobile, isTablet, isDesktop]) => ({
+        isMobile,
+        isTablet,
+        isDesktop,
+      }))
+    );
   }
 }

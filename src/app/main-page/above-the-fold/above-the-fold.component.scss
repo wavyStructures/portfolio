@@ -1,23 +1,13 @@
 section {
-    padding-top: 80%;
+    // padding-top: 12rem;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    // height: 100vh;
     justify-content: space-evenly;
 
-    // .atf-wrapper{
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    // }
-
     .atf-title{
-        font-family: Syne;
-        font-size: 45px;
-        font-weight: 800;
-        line-height: 45px;
-        letter-spacing: -0.025em;
-        text-align: center;
+        // letter-spacing: -0.025em;
+        // text-align: center;
         margin: 0;
         padding: 0;
     }
@@ -63,28 +53,34 @@ section {
 
         .atf-scroll-down{
             .arrow-down {
-                width: 0;
-                height: 0;
-               animation: arrow-slide-loop 2s infinite; /* Infinite loop animation */
+                // width: 100;
+                // height: 100;
+               position: relative;
+               animation: arrow-slide-loop 15s infinite; /* Infinite loop animation */
+               transition: all 3s ease-in-out;
               }
               
               @keyframes arrow-slide-loop {
-                0% {
-                  transform: translateY(0); /* Initial position */
-                }
-                50% {
-                  transform: translateY(10px); /* Moves down */
-                }
-                100% {
-                  transform: translateY(10px); /* Stays down, so we don't see the movement back */
-                }
+                0% {top: 0px; opacity: 1;}  /* Start at the top and fully visible */
+                50% {top: 200px; opacity: 1;} /* End of downward motion, still visible */
+                51% {opacity: 0;} /* Just after reaching the bottom, make it invisible */
+                100% {top: 0px; opacity: 0;} /* Move it back up invisibly */
+                // 0% {
+                //   transform: translateY(0); /* Initial position */
+                // }
+                // 50% {
+                //   transform: translateY(10px); /* Moves down */
+                // }
+                // 100% {
+                //   transform: translateY(10px); /* Stays down, so we don't see the movement back */
+                // }
               }
 
             .atf-arrow-box{
-                height: 160px;
-                align-content: end;
+                // height: 160px;
+                // align-content: end;
                 >img{
-                    height: 92px;
+                    height: auto;
                 }
             }
 
