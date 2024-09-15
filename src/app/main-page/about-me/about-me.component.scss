@@ -8,7 +8,7 @@
         text-align: left;
     }
 
-    img.photo {
+    .photo>img {
         width: 100%;
         padding-right: 8px;
     }
@@ -17,10 +17,13 @@
         display: flex;
         align-items: center;
         height: 2rem;
-
+        >p{    
+            padding-top: 10px;
+        }
         img {
-            height: 20px;
+            height: 26px;
             width: 35px;
+            margin-right: 5px;
         }
     }
 
@@ -29,34 +32,48 @@
         justify-content: center;
         padding: 75px 0 5px 0;
     
-    button{
-        padding: 20px 40px;
-        gap: 10px;
-        border: 4px solid var(--clr-text);    
-        background-color: var(--clr-bg);
-        font-family: Overpass;
-        font-size: 23px;
-        font-weight: 400;
-        text-align: left;
-        transition: transform 0.3s ease, font-weight 0.3s ease;
+        button{
+            padding: 20px 40px;
+            gap: 10px;
+            border: 4px solid var(--clr-text);    
+            background-color: var(--clr-bg);
+            font-family: Overpass;
+            font-size: 23px;
+            font-weight: 400;
+            text-align: left;
+            transition: transform 0.3s ease, font-weight 0.3s ease;
 
-        &:hover{
-            transform: scale(1.05);
-            font-weight: 700;
-            padding: 20px 60px;
-        }
+            &:hover{
+                transform: scale(1.05);
+                font-weight: 700;
+                padding: 20px 60px;
+            }
 
-        &:active {
-            background-color: var(--clr-text);
-            color: #fff;
-            transform: scale(1);
-            font-weight: 700;
-        }
-    }
-
-    .arrow-div{
-        img{
-            height: 30px;
+            &:active {
+                background-color: var(--clr-text);
+                color: #fff;
+                transform: scale(1);
+                font-weight: 700;
+            }
         }
     }
-}}
+
+    .arrow-div  {
+        position: relative;
+        height: 250px;
+        width: 250px;
+        >img{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            // height: 30px;
+            transform: rotate(45deg);
+            transition: transform 0.25s linear;
+            
+            &.scrolled {
+                transform: translateX(-100px) translateY(100px) rotate(45deg);
+              }
+          
+        }
+    }
+}

@@ -16,7 +16,8 @@
         </div>
         <div class="photo"><img src="./../../../assets/img/AnjaPhotoSquare.jpg" alt=""></div>
         <div class="arrow-div">
-            <img class="photo" src="./../../../assets/icons/blackArrow_down.svg" alt="">
+            <img src="./../../../assets/icons/blackArrow_down.svg" alt="arrow showing down"
+                [ngClass]="{'scrolled': isScrolled}">
         </div>
     </div>
 </section>
