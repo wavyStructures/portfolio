@@ -6,7 +6,8 @@
     "DOWN": "down",
   
     "ABOUTME": "Über mich",
-    "ABOUT_DESCRIPTION": "Hallo! Ich bin Webentwicklerin und erstelle gerne dynamische und benutzerfreundliche Webseiten. Mein Name ist Anja, meine Stärken liegen in der Frontend-Entwicklung mit HTML, CSS, JavaScript und Angular. Ich lege Wert auf sauberen, gut strukturierten Code und strebe stets nach optimalen Lösungen. Wenn Sie denken, dass ich gut zu Ihrem Projekt passen würde, können Sie mich gerne kontaktieren.",
+    "ABOUT_DESCRIPTION": "Hallo! Ich bin Webentwicklerin und erstelle gerne dynamische und benutzerfreundliche Webseiten. Mein Name ist Anja, meine Stärken liegen in der Frontend-Entwicklung mit HTML, CSS, JavaScript und Angular. Ich lege Wert auf sauberen, gut strukturierten Code und strebe stets nach optimalen Lösungen.",
+    "ABOUT_DESCRIPTION2": "Wenn Sie denken, dass ich gut zu Ihrem Projekt passen würde, können Sie mich gerne kontaktieren.",
     "BASED": "Region Halle (Saale)",
     "REMOTE": "Remote möglich",
     "MY_SKILLS": "Meine Skills",

@@ -33,12 +33,16 @@ body{
 }
 
 section{
-  // display: flex;
-  // justify-content: center;
-  padding-top: 8rem;
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+ 
+  // padding-top: 8rem;
+  // height: 100vh;
   // scroll-snap-align: start; 
+
+  // overflow: hidden; // Ensure content doesn't overflow the section
 }
+
 
 *{
     box-sizing: border-box;

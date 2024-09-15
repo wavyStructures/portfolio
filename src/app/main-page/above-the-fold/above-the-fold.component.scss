@@ -1,15 +1,18 @@
 section {
-    // padding-top: 12rem;
-    display: flex;
-    flex-direction: column;
     height: 100vh;
-    justify-content: space-evenly;
+    // padding-top: 12rem;
+        .atf-wrapper{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        gap: 48px;
+    }
 
     .atf-title{
         margin: 0;
         padding: 0;
     }
-
 
     .atf-sub-title{
         display: flex;
@@ -26,7 +29,6 @@ section {
             line-height: 23px;
             letter-spacing: -0.025em;
             text-align: center;
-
         }
 
         .atf-underline{
@@ -50,23 +52,40 @@ section {
         }
 
         .atf-scroll-down{
-            .arrow-down {
-               position: relative;
-               animation: arrow-slide-loop 15s infinite; 
-               transition: all 3s ease-in-out;
-              }
+            display: flex;
+            flex-direction: column;
+           
+            // .arrow-down {
+            //    position: relative;
+            //    animation: arrow-slide-loop 15s infinite; 
+            //    transition: all 3s ease-in-out;
+            //   }
               
-              @keyframes arrow-slide-loop {
-                0% {top: 0px; opacity: 1;}  /* Start at the top and fully visible */
-                50% {top: 200px; opacity: 1;} /* End of downward motion, still visible */
-                51% {opacity: 0;} /* Just after reaching the bottom, make it invisible */
-                100% {top: 0px; opacity: 0;} /* Move it back up invisibly */
-                }
+            //   @keyframes arrow-slide-loop {
+            //     0% {top: 0px; opacity: 1;}  /* Start at the top and fully visible */
+            //     50% {top: 200px; opacity: 1;} /* End of downward motion, still visible */
+            //     51% {opacity: 0;} /* Just after reaching the bottom, make it invisible */
+            //     100% {top: 0px; opacity: 0;} /* Move it back up invisibly */
+            //     }
 
             .atf-arrow-box{
-                >img{
-                    height: auto;
-                }
+                width: 100px; 
+                height: 200px;
+                background-size: cover;
+                animation: rotateImages 8s infinite; /* 10s for example, adjust for speed */
+                transition: all 3s ease-in;
+                // >img{
+                //     height: auto;
+                // }
+
+                @keyframes rotateImages {
+                    0%   { background-image: url('./../../../assets/img/animations/arrow1.png'); }
+                    20%  { background-image: url('./../../../assets/img/animations/arrow2.png'); }
+                    40%  { background-image: url('./../../../assets/img/animations/arrow3.png'); }
+                    60%  { background-image: url('./../../../assets/img/animations/arrow4.png'); }
+                    80%  { background-image: url('./../../../assets/img/animations/arrow5.png'); }
+                    100% { background-image: url('./../../../assets/img/animations/arrow6.png'); } /* Loop back to the first image */
+                  }
             }
 
             >span{
