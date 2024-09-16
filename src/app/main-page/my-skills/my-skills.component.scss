@@ -1,3 +1,8 @@
+.section.skills{
+    display: flex;
+    flex-direction: column;
+}
+
 .skills-wrapper {
     display: flex;
     flex-direction: column;
@@ -43,4 +48,23 @@
             text-align: center;
         }
     }
+   
   }
+
+.arrow-div  {
+    position: relative;
+    height: 200px;
+    width: 250px;
+    >img{
+        position: absolute;
+        top: 20px;
+        left: 80px;
+        // height: 30px;
+        transform: rotate(315deg);
+        transition: transform 0.25s linear;
+        
+        &.scrolled {
+            transform: translateX(120px) translateY(100px) rotate(315deg);
+          }
+    }
+}

@@ -1,12 +1,14 @@
 section {
     height: 100vh;
     // padding-top: 12rem;
-        .atf-wrapper{
+    
+    .atf-wrapper{
         display: flex;
         justify-content: flex-end;
-        align-items: center;
+        align-items: stretch;
         flex-direction: column;
         gap: 48px;
+        padding: 0px 32px;
     }
 
     .atf-title{
