@@ -57,23 +57,50 @@
             }
         }
     }
-
+    .skillsArrow {
+        padding-left: 12%;
+        padding-right: 20%;
+        padding-bottom: 48px;
+        display: flex;
+        justify-content: flex-end;
+    
+        .skillArrowAnimation {
+            overflow: hidden;
+            width: 160px;
+            height: 160px;
+            position: relative;
+    
+            img {
+                height: 100%;
+                position: absolute;
+                animation: runAnimation 7s linear infinite;
+            }
+        }
+    }
     .arrow-div  {
         position: relative;
         height: 250px;
         width: 250px;
         >img{
             position: absolute;
-            top: 20px;
-            right: 20px;
-            // height: 30px;
-            transform: rotate(45deg);
-            transition: transform 0.25s linear;
+            height: 100%;
             
-            &.scrolled {
-                transform: translateX(-120px) translateY(100px) rotate(45deg);
+}            // transition: transform 0.25s linear;
+            
+            .scrolled {
+                animation: moveDown 7s linear infinite; 
+                // transform: translateX(-120px) translateY(100px) rotate(45deg);
               }
-          
-        }
+              @keyframes moveDown {
+                from {
+                  transform: translate(100%, -100%);
+                  /* Startposition: rechte obere Ecke */
+                }
+              
+                to {
+                  transform: translate(-100%, 100%);
+                  /* Endposition: linke untere Ecke */
+                }
+              }
     }
 }

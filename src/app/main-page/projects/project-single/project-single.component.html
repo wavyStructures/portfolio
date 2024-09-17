@@ -1,11 +1,33 @@
 <div [ngStyle]="{ 'border-color': isSelected ? '#000' : 'none' }">
+    <article>
+        <!-- @for(project of projects; track project.title; let i = $index){
+        @if (i % 2 === 0){
+        <even-projects></even-projects>
+        } @else {
+        <odd-projects></odd-projects>
+        } -->
 
-    
 
 
 
+        <div class="single-project-div">
+            <div class="number-of-div 1">01/02</div>
+            <div class="project-img-div">
+                <img src="./../../../assets/img/projects/join.jpg" alt="">
+            </div>
+            <!-- {{ project['title'] }} -->
+        </div>
+        <div class="single-project-div">
+            <div class="number-of-div 2">02/02</div>
+            <div class="project-img-div">
+                <img src="./../../../assets/img/projects/EPL.jpg" alt="">
+            </div>
+        </div>
 
 
+
+        <!-- } -->
+    </article>
 
 
 </div>
