@@ -11,4 +11,9 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss',
 })
-export class ReferencesComponent {}
+export class ReferencesComponent {
+
+
+
+  
+}

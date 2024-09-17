@@ -25,8 +25,17 @@
     "PLACEHOLDER_MSG_WARN": "Your message is empty",
     "CHECKBOX_TEXT_1": "I've read the",
     "CHECKBOX_TEXT_2": "and agree to the processing of my data as outlined.",
-    "about0": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-    "about1": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to collect coins and bottles in order to defeat the endboss.",
+    "ABOUT0": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "ABOUT1": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to collect coins and bottles in order to defeat the endboss.",
+
+    "PEOPLE_STATUS_1": "Geschäftspartnerin",
+    "PEOPLE_STATUS_2": "Join Projekt",
+    
+    "REFERENCE_1": "Anja is very organized at work and never loses her calm. She is always polite and fully dedicated to her team. Her positive attitude and friendly nature make her great to work with. I would be happy to work with her again.",
+    "REFERENCE_2": "A communicative and friendly colleague, she is an absolute asset to every team . She keeps focus and stays cool-headed in stressful situations. On top of that, she is also very good at breaking down complex issues in an understandable and clear way. It is a pleasure to work with her!",
+    
+
+
     "PRIVACY_POLICY": "privacy policy",
     "SEND_MSG": "Send message",
     "BTN_IMPRINT": "Legal notice",

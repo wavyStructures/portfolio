@@ -25,8 +25,16 @@
     "PLACEHOLDER_MSG_WARN": "Ihre Nachricht ist leer",
     "CHECKBOX_TEXT_1": "Ich habe die",
     "CHECKBOX_TEXT_2": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
-    "about0": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
-    "about1": "Ein einfaches Jump'n'Run-Spiel, basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Flaschen zu sammeln, um gegen den Endboss zu kämpfen.",
+    "ABOUT0": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+    "ABOUT1": "Ein einfaches Jump'n'Run-Spiel, basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Flaschen zu sammeln, um gegen den Endboss zu kämpfen.",
+    
+    "PEOPLE_STATUS_1": "Geschäftspartnerin",
+    "PEOPLE_STATUS_2": "Join Projekt",
+    "REFERENCE_1": "Anja ist bei der Arbeit organisiert und verliert nie ihre Ruhe. Sie bleibt stets höflich und ist ihrem Team voll und ganz gewidmet. Ihre positive Einstellung und freundliche Art machen die Zusammenarbeit mit ihr großartig. Ich würde mich freuen, wieder mit ihr zu arbeiten.",
+    "REFERENCE_2": "Mit ihrer kommunikativen und freundlichen Art eine absolute Bereicherung für jedes Team. Sie behält den Fokus und bleibt in stressigen Situationen ruhig. Darüber hinaus versteht sie es ausgezeichnet, komplexe Themen verständlich und klar aufzubereiten. Es ist immer eine Freude, mit ihr zu arbeiten!",
+    
+    
+    
     "PRIVACY_POLICY": "Datenschutzrichtlinie",
     "SEND_MSG": "Nachricht senden",
     "BTN_IMPRINT": "Impressum",
