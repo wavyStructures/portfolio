@@ -1,58 +1,12 @@
 <section class="section">
     <div class="references-wrapper">
-        <div>
+        <div class="ref-top">
             <h2>{{'REFERENCES' | translate}}</h2>
             <p>{{'REFERENCES_TEXT' | translate}}</p>
         </div>
-        <div class="notes_list_button_wrapper">
-            <div>
-                <button (click)="changeFavFilter('all')" [disabled]="status == 'trash'" class="btn light_btn"
-                    [ngClass]="{'btn_active': favFilter == 'all'}">
-                    @if (favFilter == 'all') {
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg"></svg>
-                    }
-                    @else {
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg"></svg>
-                    }
-                    <p>All</p>
-                </button>
-                <button (click)="changeFavFilter('fav')" [disabled]="status == 'trash'" class="btn light_btn"
-                    [ngClass]="{'btn_active': favFilter == 'fav'}">
-
-                    @if (favFilter == 'fav') {
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"></svg>
-                    }
-                    @else {
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg"></svg>
-                    }
-                    <p>Favorites</p>
-                </button>
-            </div>
-            <div>
-                <button (click)="changeTrashStatus()" class="white_btn_round "
-                    [ngClass]="{'back_arrow_active': status == 'trash', 'back_arrow_inactive': status != 'trash'}">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg"></svg>
-
-                </button>
-
-                <button (click)="changeTrashStatus()" class="btn trash_btn"
-                    [ngClass]="{'trash_btn_active': status == 'trash'}">
-                    @if (status != 'trash') {
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"></svg>
-                    }
-                    @else {
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"></svg>
-                    }
-                    <p>Trash</p>
-                </button>
-            </div>
-        </div>
-        <div>
-            <app-reference-single *ngFor="let referenceSingle of references"></app-reference-single>
+        <div class="ref-bottom">
+            <app-reference-single *ngFor="let referenceSingle of references"
+                [references]="referenceSingle"></app-reference-single>
         </div>
     </div>
 
