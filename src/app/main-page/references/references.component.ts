@@ -21,7 +21,7 @@ import { ReferenceSingleComponent } from './reference-single/reference-single.co
   styleUrl: './references.component.scss',
 })
 export class ReferencesComponent {
-  references = [
+  references: Reference[] = [
     {
       name: 'Stefanie V.',
       project: 'PEOPLE_1',
