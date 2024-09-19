@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
 }
-
 .skills-wrapper {
     display: flex;
     flex-direction: column;
@@ -10,48 +9,145 @@
     margin: 20px;
     padding: 8px;
     border: 4px solid var(--clr-text);
-    >h2{
+    >h2 {
         margin-top: -30px;
         background-color: var(--clr-bg);
         width: 80%;
         align-self: center;
     }
-  }
-  
-  .skills-grid {
+}
+
+.skill-item-and-missing > img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 20px;
     justify-items: center;
+}
 
+/* Target the skill items specifically, excluding the last-row-icon */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Center the last row of normal skill items */
+.skill-item:nth-last-child(-n+3) {
+    grid-column: span 3; /* Center when there are 1, 2, or 3 items in the last row */
+    justify-self: center;
+}
+
+/* Last row specific styles (icon and text) */
+.last-row-icon {
+    grid-column: 1; /* Place the icon in the first column of the last row */
+}
+
+.last-row-text {
+    grid-column: 2 / -1; /* Make the text take up the rest of the columns */
+    justify-self: start; /* Align text to the left within its grid area */
+}
+// .skills-wrapper {
+//     display: flex;
+//     flex-direction: column;
+//     text-align: center;
+//     margin: 20px;
+//     padding: 8px;
+//     border: 4px solid var(--clr-text);
+//     >h2{
+//         margin-top: -30px;
+//         background-color: var(--clr-bg);
+//         width: 80%;
+//         align-self: center;
+//     }
+//   }
+  
+//   .skill-item-and-missing{
+//         >img {
+//             width: 80px;
+//             height: 80px;
+//             object-fit: cover;
+//         }
+  
+//   .skills-grid {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+//     gap: 20px;
+//     justify-items: center;
     
-    .skill-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        // &:nth-last-child(-n + 3) {
-        //     justify-self: center; 
-        //   }
-        
+    
 
-        >img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-        }
-        >span{
-            font-family: Overpass;
-            font-size: 16px;
-            font-weight: 700;
-            text-align: center;
-        }
-    }
+//     .skill-item {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         gap: 10px;
+//         // &:nth-last-child(-n + 3) {
+//         //     justify-self: center; 
+//         //   }
+       
+//         >span{
+//             font-family: Overpass;
+//             font-size: 16px;
+//             font-weight: 700;
+//             text-align: center;
+//         }
+//     }
+//     }
+//     // .skills-missing{
+//     //     display: flex;
+        
+//     // }
+
    
-  }
+//     .skills-grid::before {
+//         content: "";
+//         grid-column: 1 / -1;
+//     }
+    
+//     /* Center the icons in the last "normal" row when it has fewer than full columns */
+//     .skills-grid img:nth-last-child(3):nth-of-type(1),
+//     .skills-grid img:nth-last-child(2):nth-of-type(1),
+//     .skills-grid img:nth-last-child(1):nth-of-type(1) {
+//         grid-column: span 3;
+//         justify-self: center;
+//     }
+    
+//     .last-row-icon {
+//         /* Place the icon in the first column of the last row */
+//         grid-column: 1; /* Span only 1 column */
+//     }
+    
+//     .last-row-text {
+//         /* Make the text take up the rest of the columns */
+//         grid-column: 2 / -1; /* Span from column 2 to the end */
+//         justify-self: start; /* Align text to the left within its grid area */
+//     }
+//   }
 
 .arrow-div  {
+
+    .skillsArrow {
+        padding-left: 12%;
+        padding-right: 20%;
+        display: flex;
+        justify-content: flex-end;
+        transform: scaleX(-1);
+    
+        .skillArrowAnimation {
+        
+    }
+
+
+    overflow: hidden;
     position: relative;
     height: 200px;
     width: 250px;
@@ -62,6 +158,10 @@
         // height: 30px;
         rotate: 315deg;
         transition: transform 0.25s linear;
+        height: 100%;
+        position: absolute;
+        animation: runAnimation 7s linear infinite;
+        }
         
         &.scrolled {
             transform: translateX(120px) translateY(100px) rotate(315deg);

@@ -1,9 +1,23 @@
-<div [ngStyle]="{ 'border-color': isSelected ? '#000' : 'none' }">
-    <article>
+<!-- <div [ngStyle]="{ 'border-color': isSelected ? '#000' : 'none' }"> -->
 
 
+<article>
+    <div class="single-project-div">
+        <div class="number-of-div 1">01/02</div>
+        <div class="project-img-div">
+            <img src="{{projects.img}}" alt="">
+        </div>
 
-        <!-- @for(project of projects; track project.title; let i = $index){
+        <h2>{{projects.title | translate}}</h2>
+
+        <p>{{projects.stack }}</p>
+        <p>{{projects.github}}</p>
+        <p>{{projects.demo }}</p>
+
+    </div>
+
+
+    <!-- @for(project of projects; track project.title; let i = $index){
         @if (i % 2 === 0){
         <even-projects></even-projects>
         } @else {
@@ -11,26 +25,24 @@
         } -->
 
 
-
-
-        <div class="single-project-div">
-            <div class="number-of-div 1">01/02</div>
-            <div class="project-img-div">
-                <img src="./../../../assets/img/projects/join.jpg" alt="">
-            </div>
-            <!-- {{ project['title'] }} -->
+    <!-- <div class="single-project-div">
+        <div class="number-of-div 1">01/02</div>
+        <div class="project-img-div">
+            <img src="./../../../assets/img/projects/join.jpg" alt="">
         </div>
-        <div class="single-project-div">
-            <div class="number-of-div 2">02/02</div>
-            <div class="project-img-div">
-                <img src="./../../../assets/img/projects/EPL.jpg" alt="">
-            </div>
+        {{ project['title'] }}
+    </div> -->
+    <!-- <div class="single-project-div">
+        <div class="number-of-div 2">02/02</div>
+        <div class="project-img-div">
+            <img src="./../../../assets/img/projects/EPL.jpg" alt="">
         </div>
+    </div> -->
+
+    <!-- } -->
 
 
-
-        <!-- } -->
-    </article>
+</article>
 
 
-</div>
+<!-- </div> -->
