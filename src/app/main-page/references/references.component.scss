@@ -1,0 +1,29 @@
+
+
+
+
+.arrow-div  {
+    position: relative;
+    overflow: hidden;
+    height: 14rem;
+    margin-left: 3.8rem;
+
+    >img{
+        position: absolute;
+        height: 100%;
+        transition: transform 0.25s linear;        
+    }            
+    
+    .scrolled {
+        animation: moveDown 7s ease-in-out infinite; 
+    }
+
+    @keyframes moveDown {
+        from {
+           transform: translate(100%, -100%);
+            }
+        to {
+           transform: translate(-100%, 100%);
+           }
+    }
+}

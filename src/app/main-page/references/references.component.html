@@ -8,7 +8,10 @@
             <app-reference-single *ngFor="let referenceSingle of references"
                 [references]="referenceSingle"></app-reference-single>
         </div>
+
+        <div class="arrow-div">
+            <img src="./../../../assets/img/animations/arrow_angle.png" alt="arrow showing down"
+                [ngClass]="{'scrolled': isScrolled}">
+        </div>
     </div>
-
-
 </section>

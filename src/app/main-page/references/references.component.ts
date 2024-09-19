@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ResponsiveService } from '../../responsive-services/responsive.service';
 import { Subscription } from 'rxjs';
@@ -21,6 +21,14 @@ import { ReferenceSingleComponent } from './reference-single/reference-single.co
   styleUrl: './references.component.scss',
 })
 export class ReferencesComponent {
+  isScrolled = false;
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    // You can modify this logic as per your needs
+    const offset = window.pageYOffset || document.documentElement.scrollTop;
+    this.isScrolled = offset > 500; // Change 100 to the value when you want the arrow to move
+  }
+
   references: Reference[] = [
     {
       name: 'Stefanie V.',

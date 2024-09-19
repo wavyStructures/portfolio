@@ -134,37 +134,77 @@
 //   }
 
 .arrow-div  {
-
-    .skillsArrow {
-        padding-left: 12%;
-        padding-right: 20%;
-        display: flex;
-        justify-content: flex-end;
-        transform: scaleX(-1);
-    
-        .skillArrowAnimation {
-        
-    }
-
-
-    overflow: hidden;
     position: relative;
-    height: 200px;
-    width: 250px;
+    overflow: hidden;
+    height: 14rem;
+    margin-right: 3.8rem;
+    transform: scaleX(-1);
+    
     >img{
         position: absolute;
-        top: 20px;
-        left: 80px;
-        // height: 30px;
-        rotate: 315deg;
-        transition: transform 0.25s linear;
         height: 100%;
-        position: absolute;
-        animation: runAnimation 7s linear infinite;
-        }
-        
-        &.scrolled {
-            transform: translateX(120px) translateY(100px) rotate(315deg);
-          }
+        transition: transform 0.25s linear;        
+    }            
+    
+    .scrolled {
+        animation: moveDown 7s ease-in-out infinite; 
+    }
+
+    @keyframes moveDown {
+        from {
+           transform: translate(100%, -100%);
+            }
+        to {
+           transform: translate(-100%, 100%);
+           }
     }
 }
+// }
+
+//////////////////////////  MOBILE ///////////////////////////////////////
+ @media (max-width: 600px) {
+
+    /* Make the grid layout more vertical */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Reduce icon size */
+        gap: 15px; /* Smaller gap between items */
+    }
+
+    /* Adjust individual skill items (icons) */
+    .skill-item img {
+        width: 60px; /* Smaller icons */
+        height: 60px;
+    }
+
+    /* Font size adjustments for skill labels */
+    .skill-item > span {
+        font-size: 14px; /* Reduce font size */
+        text-align: center; /* Keep text centered */
+    }
+
+    /* Adjust the special last row icon and text */
+    .last-row-icon {
+        grid-column: 1; /* Keep the icon in the first column */
+        width: 50px; /* Smaller icon on mobile */
+        height: 50px;
+    }
+
+    .last-row-text {
+        grid-column: 2 / -1; /* Text still spans the remaining columns */
+        font-size: 14px; /* Smaller text for mobile */
+        justify-self: start;
+    }
+
+    /* Adjust the section's padding and margins */
+    .skills-wrapper {
+        padding: 10px; /* Smaller padding */
+        margin: 10px; /* Smaller margin */
+    }
+
+    /* Optional: Adjust header */
+    .skills-wrapper h2 {
+        font-size: 20px; /* Reduce header size */
+        margin-top: 10px; /* Adjust header margin */
+        width: 90%; /* Make the header width slightly wider for mobile */
+    }
+ }

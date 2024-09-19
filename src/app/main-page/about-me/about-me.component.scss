@@ -57,50 +57,30 @@
             }
         }
     }
-    .skillsArrow {
-        padding-left: 12%;
-        padding-right: 20%;
-        padding-bottom: 48px;
-        display: flex;
-        justify-content: flex-end;
-    
-        .skillArrowAnimation {
-            overflow: hidden;
-            width: 160px;
-            height: 160px;
-            position: relative;
-    
-            img {
-                height: 100%;
-                position: absolute;
-                animation: runAnimation 7s linear infinite;
-            }
-        }
-    }
+  
     .arrow-div  {
         position: relative;
-        height: 250px;
-        width: 250px;
+        overflow: hidden;
+        height: 14rem;
+        margin-left: 3.8rem;
+
         >img{
             position: absolute;
             height: 100%;
-            
-}            // transition: transform 0.25s linear;
-            
-            .scrolled {
-                animation: moveDown 7s linear infinite; 
-                // transform: translateX(-120px) translateY(100px) rotate(45deg);
-              }
-              @keyframes moveDown {
-                from {
-                  transform: translate(100%, -100%);
-                  /* Startposition: rechte obere Ecke */
+            transition: transform 0.25s linear;        
+        }            
+        
+        .scrolled {
+            animation: moveDown 7s ease-in-out infinite; 
+        }
+
+        @keyframes moveDown {
+            from {
+               transform: translate(100%, -100%);
                 }
-              
-                to {
-                  transform: translate(-100%, 100%);
-                  /* Endposition: linke untere Ecke */
-                }
-              }
+            to {
+               transform: translate(-100%, 100%);
+               }
+        }
     }
 }
