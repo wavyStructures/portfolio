@@ -1,5 +1,5 @@
 .about-wrapper{
-        width: 21.25rem;
+        // width: 21.25rem;
     
     p{
         font-family: Overpass;
@@ -41,7 +41,8 @@
             font-size: 23px;
             font-weight: 400;
             text-align: left;
-            transition: transform 0.3s ease, font-weight 0.3s ease;
+            transition: transform 1s cubic-bezier(0.22, 0.61, 0.36, 1), font-weight 1s ease-out;
+            
 
             &:hover{
                 transform: scale(1.05);
