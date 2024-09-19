@@ -1,7 +1,21 @@
+.references-wrapper{
+    padding: 16px 24px;
 
+    .ref-top{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
+        >h2{
+            margin-bottom: unset;
+        }
 
-
+        >p{
+            text-align: center;
+        }
+    }
+   
 .arrow-div  {
     position: relative;
     overflow: hidden;
@@ -26,4 +40,5 @@
            transform: translate(-100%, 100%);
            }
     }
+}
 }

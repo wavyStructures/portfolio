@@ -1,0 +1,36 @@
+.ref-titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 24px;
+    border: 4px solid var(--clr-text);
+    margin-bottom: 12px;
+>img{
+    height: 27px;
+    width: 40px;
+}
+
+h2{
+    font-family: Syne;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+span{
+    font-family: Overpass;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+p{
+    font-family: Overpass;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+}
+
+}
+
