@@ -4,7 +4,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { TranslateModule } from '@ngx-translate/core';
-import * as AOS from 'aos';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-root',
@@ -22,12 +23,7 @@ import * as AOS from 'aos';
 export class AppComponent implements OnInit {
   title = 'Anja Schwab';
 
-  ngOnInit(): void {
-    // Initialize AOS globally
-    AOS.init({
-      duration: 1200,
-      easing: 'ease-in-out',
-      once: true,
-    });
+  ngOnInit() {
+    AOS.init();
   }
 }

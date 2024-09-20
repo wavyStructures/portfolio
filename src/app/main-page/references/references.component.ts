@@ -1,7 +1,5 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ResponsiveService } from '../../responsive-services/responsive.service';
-import { Subscription } from 'rxjs';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { Reference } from '../../interfaces/reference.interface';

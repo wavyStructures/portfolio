@@ -2,3 +2,32 @@ img {
     width: 300px;
     height: 200px;
 }
+
+.project-img-div img {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-in-out;
+  }
+
+  .aos-animate {
+    filter: grayscale(0%); /* Remove grayscale when AOS triggers */
+  }
+
+
+
+  
+  .text-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+//   .text-content.visible {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+
+  .stack {
+    font-size: 24px;
+    color: #00bc8f;
+    font-weight: 400;
+  }

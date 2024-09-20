@@ -2,47 +2,51 @@
 
 
 <article>
-    <div class="single-project-div">
-        <div class="number-of-div 1">01/02</div>
-        <div class="project-img-div">
-            <img src="{{projects.img}}" alt="">
+    <div [ngClass]="getLayoutClass()" class="single-project-div">
+
+        <div [ngClass]="getLayoutClass()">
+            <!-- For Even Layout -->
+            @if (getLayoutClass() === 'even-layout') {
+            <div class="even-project-div">
+                <div class="number-of-div">01/02</div>
+                <div class="project-img-div">
+                    <img [src]="project.img" alt="project image" data-aos="fade" data-aos-duration="500"
+                        data-aos-delay="500">
+                </div>
+
+                <div class="text-content" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                    <h2>{{project.title | translate}}</h2>
+                    <p class="stack">{{project.stack}}</p>
+                    <p class="description">{{project.description}}</p>
+                    <a [href]="project.github" target="_blank"><button>Github</button></a>
+                    <p>{{project.demo}}</p>
+                </div>
+            </div>
+            }
+
+            <!-- For Odd Layout -->
+            @if (getLayoutClass() === 'odd-layout') {
+            <div class="odd-project-div">
+                <div class="text-content" #textContent data-aos="fade-left">
+                    <h2>{{project.title | translate}}</h2>
+                    <p>{{project.stack}}</p>
+                    <p>{{project.github}}</p>
+                    <p>{{project.demo}}</p>
+                </div>
+
+                <div class="project-img-div">
+                    <img [src]="project.img" alt="project image">
+                </div>
+                <div class="number-of-div">01/02</div>
+            </div>
+            }
         </div>
-
-        <h2>{{projects.title | translate}}</h2>
-
-        <p>{{projects.stack }}</p>
-        <p>{{projects.github}}</p>
-        <p>{{projects.demo }}</p>
 
     </div>
 
 
-    <!-- @for(project of projects; track project.title; let i = $index){
-        @if (i % 2 === 0){
-        <even-projects></even-projects>
-        } @else {
-        <odd-projects></odd-projects>
-        } -->
 
 
-    <!-- <div class="single-project-div">
-        <div class="number-of-div 1">01/02</div>
-        <div class="project-img-div">
-            <img src="./../../../assets/img/projects/join.jpg" alt="">
-        </div>
-        {{ project['title'] }}
-    </div> -->
-    <!-- <div class="single-project-div">
-        <div class="number-of-div 2">02/02</div>
-        <div class="project-img-div">
-            <img src="./../../../assets/img/projects/EPL.jpg" alt="">
-        </div>
-    </div> -->
-
-    <!-- } -->
 
 
 </article>
-
-
-<!-- </div> -->

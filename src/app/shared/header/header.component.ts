@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ViewportScroller } from '@angular/common';
 
-// import { Subscription } from 'rxjs';
-import { ResponsiveService } from '../../responsive-services/responsive.service';
-// import { RouterLink, RouterOutlet } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
