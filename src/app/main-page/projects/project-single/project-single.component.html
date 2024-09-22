@@ -2,51 +2,51 @@
 
 
 <article>
-    <div [ngClass]="getLayoutClass()" class="single-project-div">
+    <div [ngClass]="getLayoutClass()" class="single-project-wrapper">
 
-        <div [ngClass]="getLayoutClass()">
-            <!-- For Even Layout -->
-            @if (getLayoutClass() === 'even-layout') {
-            <div class="even-project-div">
-                <div class="number-of-div">01/02</div>
-                <div class="project-img-div">
-                    <img [src]="project.img" alt="project image" data-aos="fade" data-aos-duration="500"
-                        data-aos-delay="500">
-                </div>
+        <!-- For Even Layout -->
+        @if (getLayoutClass() === 'even-layout') {
+        <div class="project-div even">
 
-                <div class="text-content" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-sine">
-                    <h2>{{project.title | translate}}</h2>
-                    <p class="stack">{{project.stack}}</p>
-                    <p class="description">{{project.description}}</p>
-                    <a [href]="project.github" target="_blank"><button>Github</button></a>
-                    <p>{{project.demo}}</p>
-                </div>
+            <div class="number-of-div">01/02</div>
+
+            <div class="project-img-div">
+                <img [src]="project.img" alt="project image">
+                <a target="_blank" href="{{ project.demo }}" class="show-border"><img
+                        src="../../../../assets/img/icons/blackArrow_circle.svg"></a>
             </div>
-            }
 
-            <!-- For Odd Layout -->
-            @if (getLayoutClass() === 'odd-layout') {
-            <div class="odd-project-div">
-                <div class="text-content" #textContent data-aos="fade-left">
-                    <h2>{{project.title | translate}}</h2>
-                    <p>{{project.stack}}</p>
-                    <p>{{project.github}}</p>
-                    <p>{{project.demo}}</p>
-                </div>
+            <div class="text-content" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-sine">
 
-                <div class="project-img-div">
-                    <img [src]="project.img" alt="project image">
-                </div>
-                <div class="number-of-div">01/02</div>
+                <h2>{{project.title | translate}}</h2>
+                <p class="stack">{{project.stack}}</p>
+                <p class="description">{{project.description}}</p>
+                <a [href]="project.github" target="_blank"><button>Github</button></a>
+                <p>{{project.demo}}</p>
+
             </div>
-            }
         </div>
+        }
 
+        <!-- For Odd Layout -->
+        @if (getLayoutClass() === 'odd-layout') {
+        <div class="odd-project-div">
+            <div class="text-content" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+
+                <h2>{{project.title | translate}}</h2>
+                <p class="stack">{{project.stack}}</p>
+                <p class="description">{{project.description}}</p>
+                <a [href]="project.github" target="_blank"><button>Github</button></a>
+                <p>{{project.demo}}</p>
+
+            </div>
+
+            <div class="project-img-div">
+                <img [src]="project.img" alt="project image">
+            </div>
+            <div class="number-of-div">01/02</div>
+        </div>
+        }
     </div>
-
-
-
-
-
 
 </article>

@@ -1,8 +1,6 @@
 import {
   Component,
   Input,
-  ElementRef,
-  ViewChild,
   AfterViewInit,
   AfterViewChecked,
 } from '@angular/core';
@@ -19,9 +17,6 @@ import { Project } from '../../../interfaces/project.interface';
   styleUrl: './project-single.component.scss',
 })
 export class ProjectSingleComponent implements AfterViewInit, AfterViewChecked {
-  @ViewChild('projectImage') projectImage!: ElementRef;
-  @ViewChild('textContent') textContent!: ElementRef;
-
   ngAfterViewInit(): void {
     AOS.init();
   }
