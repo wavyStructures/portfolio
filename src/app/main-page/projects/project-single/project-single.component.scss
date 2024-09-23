@@ -15,11 +15,14 @@ article{
         margin: 0 auto; // Center layout
       }
   
+    .odd-project-div, .even-project-div {
+      padding: 40px 0;
+    }  
+      
     .number-of-div {
       font-family: Syne;
       font-size: 23px;
       font-weight: 700;
-      line-height: 27.6px;
       text-align: right;
     }
 
@@ -39,8 +42,9 @@ article{
         transition: filter 0.5s ease-in-out;
       
 
-      &:hover {
+      &:hover,  :active  {
         filter: grayscale(0%);
+        cursor: pointer;
       }}
     }
 
@@ -49,6 +53,7 @@ article{
         visibility: hidden;
         position: absolute;
         top: 25px;
+        pointer-events: none;
 
         border: 4px solid #000;
         width: 100%;
@@ -67,7 +72,7 @@ article{
         }
     }
 
-    &.even-project-div {
+    .even-project-div {
       .show-border {
         left: 25px;
       }
@@ -96,7 +101,12 @@ article{
       // }
     }
 
-    &.odd-project-div {
+    .odd-project-div {
+
+      .number-of-div{
+        text-align: left;
+      }
+
       .show-border {
         right: 25px;
       }
@@ -116,8 +126,9 @@ article{
           transition-delay: 200ms;
           transform: scale(1.5) rotate(130deg);
         }
-
       }
+
+    
 
       &:hover .about {
         animation: animateRightOdd 125ms forwards;

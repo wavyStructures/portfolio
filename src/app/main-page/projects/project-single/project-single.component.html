@@ -6,10 +6,9 @@
 
         <!-- For Even Layout -->
         @if (getLayoutClass() === 'even-layout') {
-        <div class="project-div even">
+        <div class="even-project-div">
 
             <div class="number-of-div">01/02</div>
-
             <div class="project-img-div">
                 <img [src]="project.img" alt="project image">
                 <a target="_blank" href="{{ project.demo }}" class="show-border"><img
@@ -20,9 +19,8 @@
 
                 <h2>{{project.title | translate}}</h2>
                 <p class="stack">{{project.stack}}</p>
-                <p class="description">{{project.description}}</p>
+                <p class="description">{{ projectDescription | translate }}</p>
                 <a [href]="project.github" target="_blank"><button>Github</button></a>
-
 
             </div>
         </div>
@@ -31,19 +29,22 @@
         <!-- For Odd Layout -->
         @if (getLayoutClass() === 'odd-layout') {
         <div class="odd-project-div">
+
+            <div class="number-of-div">01/02</div>
+            <div class="project-img-div">
+                <img [src]="project.img" alt="project image">
+                <a target="_blank" href="{{ project.demo }}" class="show-border"><img
+                        src="../../../../assets/img/icons/blackArrow_circle.svg"></a>
+            </div>
+
             <div class="text-content" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
 
                 <h2>{{project.title | translate}}</h2>
                 <p class="stack">{{project.stack}}</p>
-                <p class="description">{{project.description}}</p>
+                <p class="description">{{ projectDescription | translate }}</p>
                 <a [href]="project.github" target="_blank"><button>Github</button></a>
 
             </div>
-
-            <div class="project-img-div">
-                <img [src]="project.img" alt="project image">
-            </div>
-            <div class="number-of-div">01/02</div>
         </div>
         }
     </div>

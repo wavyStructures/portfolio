@@ -2,7 +2,8 @@
     <div class="projects-wrapper">
         <h2>{{'HEADER_PORTFOLIO' | translate}}</h2>
         <p class="h2-text">{{ 'PORTFOLIO_DESCRIPTION' | translate }}</p>
-        <app-project-single *ngFor="let projectItem of projects; index as i" [project]="projectItem" [index]="i">
+        <app-project-single *ngFor="let projectItem of projects; index as i" [project]="projectItem" [index]="i"
+            [projectDescription]="'ABOUT_' + i">
         </app-project-single>
     </div>
 

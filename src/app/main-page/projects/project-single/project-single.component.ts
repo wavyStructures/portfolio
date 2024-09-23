@@ -29,6 +29,7 @@ export class ProjectSingleComponent implements AfterViewInit, AfterViewChecked {
 
   @Input() project!: Project;
   @Input() index!: number;
+  @Input() projectDescription: string = '';
 
   getLayoutClass() {
     return this.index % 2 === 0 ? 'even-layout' : 'odd-layout';
