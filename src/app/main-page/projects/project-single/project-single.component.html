@@ -8,7 +8,9 @@
         @if (getLayoutClass() === 'even-layout') {
         <div class="even-project-div">
 
-            <div class="number-of-div">01/02</div>
+            <div class="number-of-div" [ngStyle]="{'align-self': 'flex-end'}">
+                {{ ('0' + (index + 1)).slice(-2) }}/{{ ('0' + totalProjects).slice(-2) }}
+            </div>
             <div class="project-img-div">
                 <img [src]="project.img" alt="project image">
                 <a target="_blank" href="{{ project.demo }}" class="show-border"><img
@@ -30,7 +32,9 @@
         @if (getLayoutClass() === 'odd-layout') {
         <div class="odd-project-div">
 
-            <div class="number-of-div">01/02</div>
+            <div class="number-of-div" [ngStyle]="{'align-self': 'flex-start'}">
+                {{ ('0' + (index + 1)).slice(-2) }}/{{ ('0' + totalProjects).slice(-2) }}
+            </div>
             <div class="project-img-div">
                 <img [src]="project.img" alt="project image">
                 <a target="_blank" href="{{ project.demo }}" class="show-border"><img

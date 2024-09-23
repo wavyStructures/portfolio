@@ -3,7 +3,7 @@
         <h2>{{'HEADER_PORTFOLIO' | translate}}</h2>
         <p class="h2-text">{{ 'PORTFOLIO_DESCRIPTION' | translate }}</p>
         <app-project-single *ngFor="let projectItem of projects; index as i" [project]="projectItem" [index]="i"
-            [projectDescription]="'ABOUT_' + i">
+            [totalProjects]="projects.length" [projectDescription]="'ABOUT_' + i">
         </app-project-single>
     </div>
 

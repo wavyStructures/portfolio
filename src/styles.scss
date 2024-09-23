@@ -8,20 +8,26 @@
 // color: var(--clr-main);
 }
 
-body{
+app-root{
+    height: 100%;
+    max-width: 1440rem;
+    width: 100%;
+
+
     margin: 0;
     background-color: #dedede;
     color: var(--clr-text);
     font-family: 'Syne', Calibri, 'Trebuchet MS', sans-serif;
     scroll-behavior: smooth;
+    
     button {
         cursor: pointer;
         border: unset;
     }
+    
     input {
         border: unset;
     }
-    
 }
 
 #header {
@@ -37,9 +43,9 @@ section{
   padding: 16px;
 }
 
-
 *{
     box-sizing: border-box;
+    border: 1px solid red;
 }
 
 * {

@@ -29,6 +29,7 @@ export class ProjectSingleComponent implements AfterViewInit, AfterViewChecked {
 
   @Input() project!: Project;
   @Input() index!: number;
+  @Input() totalProjects!: number;
   @Input() projectDescription: string = '';
 
   getLayoutClass() {
