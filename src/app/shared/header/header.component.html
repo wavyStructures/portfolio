@@ -1,22 +1,31 @@
 <div class="header-container">
     <img src="../../../assets/img/Logo_black_final.svg" alt="">
     <div class="nav-div">
+
+        @if(currentLanguage === 'en'){
+        <img src="../../../assets/img/icons/english.png" alt="Deutsch" (click)="changeLanguage('de')">}
+        @if(currentLanguage === 'de'){
+        <img src="../../../assets/img/icons/german.png" alt="English" (click)="changeLanguage('en')">}
+
         <button class="burger-menu" id="toggle" (click)="toggleNav()">
             <div class="line line1"></div>
             <div class="line line2"></div>
             <div class="line line3"></div>
         </button>
-        <nav [ngClass]="{ 'active': isActive }" id="nav">
-            <ul>
-                <li><a (click)="scrollToSection('atf')">Home</a></li>
-                <li><a (click)="scrollToSection('projects')">Projects</a></li>
-                <li><a (click)="scrollToSection('about')">About Me</a></li>
-                <li><a (click)="scrollToSection('contact')">Contact</a></li>
 
-            </ul>
-        </nav>
+
     </div>
 
+
+    <nav [ngClass]="{ 'active': isActive }" id="nav">
+        <ul>
+            <li><a (click)="scrollToSection('atf')">Home</a></li>
+            <li><a (click)="scrollToSection('projects')">Projects</a></li>
+            <li><a (click)="scrollToSection('about')">About Me</a></li>
+            <li><a (click)="scrollToSection('contact')">Contact</a></li>
+
+        </ul>
+    </nav>
     <!-- <button (click)="changeLanguage('en')">English</button>
         <button (click)="changeLanguage('de')">Deutsch</button> -->
 

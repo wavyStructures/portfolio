@@ -3,7 +3,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 25px 0 0;
-    
+    max-width: 1440px;
+
     img {
         height: 100px;
         margin-top: 16px;
@@ -22,10 +23,18 @@ nav.active {
 
 nav ul {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 0;
+   
+    height: 80%;
+    max-height: 600px;
+    max-width: 800px;
+    margin: 0 auto;
+
     transition: width 0.6s linear;
 }
 
@@ -49,6 +58,19 @@ nav ul a {
     color: var(--clr-text);
     text-decoration: none;
     margin: 0 10px;
+}
+
+.nav-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    >img{
+        width: auto;
+        height: 2.8rem;
+        padding-bottom: 3px;
+    }
 }
 
 .burger-menu {

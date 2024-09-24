@@ -13,13 +13,17 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent {
   isActive: boolean = false;
+  currentLanguage: string = 'en';
 
   constructor(
     private translate: TranslateService,
     private viewportScroller: ViewportScroller
-  ) {}
+  ) {
+    this.translate.setDefaultLang('en');
+  }
 
   changeLanguage(language: string) {
+    this.currentLanguage = language;
     this.translate.use(language);
   }
 
