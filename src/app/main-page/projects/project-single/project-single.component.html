@@ -11,7 +11,8 @@
             <div class="number-of-div" [ngStyle]="{'align-self': 'flex-end'}">
                 {{ ('0' + (index + 1)).slice(-2) }}/{{ ('0' + totalProjects).slice(-2) }}
             </div>
-            <div class="project-img-div">
+
+            <div class="project-img-div" [ngStyle]="{'align-self': 'flex-start'}">
                 <img [src]="project.img" alt="project image">
                 <a target="_blank" href="{{ project.demo }}" class="show-border"><img
                         src="../../../../assets/img/icons/blackArrow_circle.svg"></a>
@@ -35,7 +36,8 @@
             <div class="number-of-div" [ngStyle]="{'align-self': 'flex-start'}">
                 {{ ('0' + (index + 1)).slice(-2) }}/{{ ('0' + totalProjects).slice(-2) }}
             </div>
-            <div class="project-img-div">
+
+            <div class="project-img-div" [ngStyle]="{'align-self': 'flex-end'}">
                 <img [src]="project.img" alt="project image">
                 <a target="_blank" href="{{ project.demo }}" class="show-border"><img
                         src="../../../../assets/img/icons/blackArrow_circle.svg"></a>
