@@ -28,7 +28,7 @@ export class ProjectsComponent {
       title: 'Join',
       stack: 'Angular | TypeScript | HTML | CSS | Firebase',
       description: 'join-text',
-      github: 'https://github.com',
+      github: 'https://github.com/wavyStructures/anjaschwab-join',
       demo: 'https://join.developer-anja-schwab.de',
     },
     {
@@ -36,7 +36,7 @@ export class ProjectsComponent {
       title: 'El Pollo Loco',
       stack: 'JavaScript | HTML | CSS',
       description: 'epl-text',
-      github: 'https://github.com',
+      github: 'https://github.com/wavyStructures/El-Pollo-Loco',
       demo: 'https://EPL.developer-anja-schwab.de',
     },
     {

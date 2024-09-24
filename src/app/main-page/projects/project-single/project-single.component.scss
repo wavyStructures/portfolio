@@ -43,24 +43,24 @@ article{
     .project-img-div {
       display: flex;
       position: relative;
-      // background-color: green;
       width: 85%;
       flex: 1;
       max-width: 100%;
       padding: 1rem;
+      cursor: pointer;
+      filter: grayscale(100%);
+      transition: filter 0.5s ease-in-out;
+
+      &:hover {
+        filter: grayscale(0%);
+        cursor: pointer;
+      }
 
       >img {
         width: 100%; // Make image responsive
         height: auto; // Maintain aspect ratio
         // max-width: 300px; // Set a max width if needed
-        filter: grayscale(100%);
-        transition: filter 0.5s ease-in-out;
-      
-
-      &:hover,  :active  {
-        filter: grayscale(0%);
-        cursor: pointer;
-      }}
+      }
     
 
     .show-border {
@@ -85,11 +85,11 @@ article{
       box-sizing: border-box;
       transition: opacity 75ms ease-in-out, visibility 75ms ease-in-out;
 
-      >img {
-        position: absolute;
-        width: 2rem;
-        top: 40%;
-      }
+        >img {
+          position: absolute;
+          width: 2rem;
+          top: 40%;
+        }
       }
     }
 
