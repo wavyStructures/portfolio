@@ -8,9 +8,40 @@
         text-align: left;
     }
 
-    .photo>img {
-        width: 50%;
+    .photo {
         padding-right: 8px;
+        margin: 0 auto;
+        margin-bottom: 8px;
+        position: relative;
+        
+        >img {
+            width: 100%;
+            max-width: 300px;
+            }
+    }
+    
+    .show-border {
+        width: 100%;
+        max-width: 300px;
+        height: 100%;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        border: 4px solid var(--clr-text);
+        opacity: 0;
+        padding-right: 8px;
+        // pointer-events: none;
+        transition: opacity 3s ease-in-out;
+        
+
+        // &:hover {
+        //     opacity: 1;
+        // }
+    }
+
+    /* Hover over the button to trigger the border around the image */
+    .button-div:hover ~ .photo .show-border {
+        opacity: 1;
     }
    
     .about-info{

@@ -4,7 +4,7 @@
 <article>
     <div [ngClass]="getLayoutClass()" class="single-project-wrapper">
 
-        <!-- For Even Layout -->
+        <!-- For Indexed Even Layout -->
         @if (getLayoutClass() === 'even-layout') {
         <div class="even-project-div">
 
@@ -29,7 +29,7 @@
         </div>
         }
 
-        <!-- For Odd Layout -->
+        <!-- For Indexed Odd Layout -->
         @if (getLayoutClass() === 'odd-layout') {
         <div class="odd-project-div">
 
