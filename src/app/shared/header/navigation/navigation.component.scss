@@ -1,0 +1,49 @@
+nav {
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+nav.active {
+    display: block;
+    width: 350px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+   
+    height: 80%;
+    max-height: 600px;
+    max-width: 800px;
+    margin: 0 auto;
+
+    transition: width 0.6s linear;
+}
+
+nav.active ul {
+    width: 100%;
+}
+
+nav ul li {
+    transform: rotateY(0deg);
+    opacity: 0;
+    transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+nav.active ul li {
+    opacity: 1;
+    transform: rotateY(360deg);
+}
+
+nav ul a {
+    position: relative;
+    color: var(--clr-text);
+    text-decoration: none;
+    margin: 0 10px;
+}
+

@@ -60,13 +60,14 @@ nav ul a {
     margin: 0 10px;
 }
 
-.nav-div{
+.header-right{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
 
     >img{
+        width: auto;
         width: auto;
         height: 2.8rem;
         padding-bottom: 3px;
