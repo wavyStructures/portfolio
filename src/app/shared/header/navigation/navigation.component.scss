@@ -1,14 +1,9 @@
-nav {
-    display: none;
-    transition: all 0.3s ease-in-out;
-}
-
-nav.active {
+.navigation-wrapper {
     display: block;
-    width: 350px;
+    width: 100vw;
 }
 
-nav ul {
+.navigation-wrapper ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,22 +20,13 @@ nav ul {
     transition: width 0.6s linear;
 }
 
-nav.active ul {
+.navigation-wrapper ul {
     width: 100%;
 }
 
-nav ul li {
-    transform: rotateY(0deg);
-    opacity: 0;
-    transition: transform 0.6s linear, opacity 0.6s linear;
-}
 
-nav.active ul li {
-    opacity: 1;
-    transform: rotateY(360deg);
-}
 
-nav ul a {
+.navigation-wrapper ul a {
     position: relative;
     color: var(--clr-text);
     text-decoration: none;

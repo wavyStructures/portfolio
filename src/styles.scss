@@ -8,6 +8,11 @@
 // color: var(--clr-main);
 }
 
+html {
+  scroll-padding-top: 100px;
+  scroll-behavior: smooth;
+}
+
 app-root{
     height: 100%;
     max-width: 1440rem;
@@ -18,7 +23,7 @@ app-root{
     background-color: #dedede;
     color: var(--clr-text);
     font-family: 'Syne', Calibri, 'Trebuchet MS', sans-serif;
-    scroll-behavior: smooth;
+    
     
     button {
         cursor: pointer;
@@ -42,6 +47,7 @@ section{
   display: flex;
   justify-content: center;
   padding: 16px;
+  scroll-snap-align: start;
 }
 
 *{

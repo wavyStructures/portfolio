@@ -15,11 +15,8 @@
 
 
     </div>
-    <nav [ngClass]="{ 'active': isActive }" id="nav-page">
-        <app-navigation></app-navigation>
-    </nav>
-
-    <!-- <button (click)="changeLanguage('en')">English</button>
-        <button (click)="changeLanguage('de')">Deutsch</button> -->
-
 </div>
+<nav [ngClass]="{ 'active': isActive }" id="nav-page">
+    <app-navigation [isActive] = "isActive" (closeNav)="toggleNav()"></app-navigation>
+</nav>
+
