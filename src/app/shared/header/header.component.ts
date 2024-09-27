@@ -29,5 +29,6 @@ export class HeaderComponent {
 
   toggleNav() {
     this.isActive = !this.isActive;
+    document.body.classList.toggle('no-scoll', this.isActive);
   }
 }
