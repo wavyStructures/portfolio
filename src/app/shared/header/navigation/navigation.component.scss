@@ -42,87 +42,44 @@
         width: 70%;
         height: 15%;
         font-family: Syne;
-        font-size: 45px;
+        font-size: 2.3rem;
         font-weight: 700;
         line-height: 45px;
         letter-spacing: -0.025em;
+        color: #000; 
+        background-image: url('./../../../../assets/img/animations/link_border1.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%; 
+        // cursor: pointer;
+
+        &:hover {
+          animation: border-effect 125ms forwards;
+          background-repeat: no-repeat;
+          // background-size: contain;
+          // cursor: pointer;
+        }
     }
 
 }
 
-/* Basic styling for the nav link */
-.nav-link {
-    position: relative;  /* Required to position the pseudo-elements relative to the link */
-    display: inline-block; 
-    text-decoration: none;
-    padding: 10px 20px;
-    color: #000; /* Text color */
-    cursor: pointer;  /* Mouse pointer on hover */
+
+
+  @keyframes border-effect {
+    0% {
+      background-image: url('./../../../../assets/img/animations/link_border1.png');
+    }
+  
+    50% {
+      background-image: url('./../../../../assets/img/animations/link_border2.png');
+    }
+  
+    100% {
+      background-image: url('./../../../../assets/img/animations/link_border3.png');
+    }
+    
   }
-  
-/* Basic styling for the nav link */
-.nav-link {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px 20px;
-    color: #000; /* Text color */
-    cursor: pointer;
-    transition: color 0.3s ease; /* Optional: Change text color on hover */
-  }
-  
-  /* Pseudo-elements for black lines */
-  .nav-link::before,
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    height: 2px;
-    background-color: black;
-    transition: width 0.3s ease; /* Animate width changes */
-    width: 0;  /* Start with invisible lines */
-    opacity: 0; /* Hidden initially */
-  }
-  
-  /* Define where the lines should appear */
-  .nav-link::before {
-    left: 0;
-  }
-  
-  .nav-link::after {
-    right: 0;
-  }
-  
-  /* Hover state: Step-by-step animation */
-  
-  /* Step 1: Left-bottom corner (first 20px) */
-  .nav-link:hover::before {
-    width: 20px;
-    opacity: 1;
-    transition-delay: 0.1s;  /* Add delay for smoother transition */
-  }
-  
-  /* Step 2: Full bottom line after step 1 (on hover) */
-  .nav-link:hover::before {
-    width: 100%; /* Full bottom border */
-    transition-delay: 0.3s;  /* Delayed to appear after state1 */
-  }
-  
-  /* Step 3: Right-half of the bottom line (completing the transition) */
-  .nav-link:hover::after {
-    width: 50%;
-    opacity: 1;
-    transition-delay: 0.5s;  /* Appears last */
-  }
-  
-  /* When mouse leaves, reset to invisible lines */
-  .nav-link:not(:hover)::before,
-  .nav-link:not(:hover)::after {
-    width: 0;  /* Reset to 0 width */
-    opacity: 0; /* Hide lines again */
-    transition-delay: 0s; /* Reset immediately */
-  }
-  
+
+ 
 
 
 
