@@ -1,14 +1,8 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  Output,
-  HostBinding,
-  HostListener,
-} from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { ContactformComponent } from '../../../main-page/contactform/contactform.component';
+// import { ContactformComponent } from '../../../main-page/contactform/contactform.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FooterComponent } from '../../footer/footer.component';
 
 @Component({
@@ -16,7 +10,8 @@ import { FooterComponent } from '../../footer/footer.component';
   standalone: true,
   imports: [
     CommonModule,
-    ContactformComponent,
+    // ContactformComponent,
+    TranslateModule,
     FooterComponent,
     RouterModule,
     RouterLink,
@@ -27,10 +22,8 @@ import { FooterComponent } from '../../footer/footer.component';
 export class NavigationComponent {
   @Input() isActive!: boolean; // Input from parent
   @Output() closeNav = new EventEmitter<void>(); // Event to notify parent
-  constructor(
-    // private viewportScroller: ViewportScroller,
-    private router: Router
-  ) {}
+
+  constructor(private router: Router, private translate: TranslateService) {}
 
   navigateToSection(target: string): void {
     const element = document.getElementById(target);
@@ -38,28 +31,5 @@ export class NavigationComponent {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     this.closeNav.emit(); // Emit close event
-  }
-
-  @HostBinding('class.state1') isState1 = false;
-  @HostBinding('class.state2') isState2 = false;
-  @HostBinding('class.state3') isState3 = false;
-
-  @HostListener('mouseover', ['$event.target'])
-  onMouseOver(target: HTMLElement) {
-    if (target.classList.contains('nav-link')) {
-      this.resetStates();
-      this.isState1 = true; // Start with state1 (left corner)
-    }
-  }
-
-  @HostListener('mouseleave')
-  onMouseLeave() {
-    this.resetStates();
-  }
-
-  private resetStates() {
-    this.isState1 = false;
-    this.isState2 = false;
-    this.isState3 = false;
   }
 }
