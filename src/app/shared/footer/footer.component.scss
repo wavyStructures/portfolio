@@ -17,6 +17,10 @@ footer {
         img {
             height: 40px;
             width: 40px;
+            &:hover {
+                filter: drop-shadow(0px 0px 1px #fff);
+            }
+        }
         }
     }
 
@@ -51,7 +55,7 @@ footer {
             color: var(--clr-text-green);
         }
     }
-}
+
 
 ////////////////////////navigation footer////////////////////////
 .nav-footer{
@@ -64,23 +68,39 @@ footer {
     
     .footer-wrapper {
       position: relative;        
-       width: 100vw;
-
+      width: 100vw;
       height: auto; 
       display: flex;
       flex-direction: column-reverse;
+      gap: 2rem;
+      padding-bottom: 1rem;
+
+    .copyright{
+        display: flex;
+        flex-direction: unset; 
+        justify-content: unset; 
+        align-items: flex-start;
+        padding: 0 24px;
+    }  
     
-      
-    
-      .mailTo {
-        /* Ensure correct positioning */
+    .mailTo {
         display: block;
         text-decoration: none;
-        
         margin-top: 1rem;
-        left: 24px; /* Adjust as necessary */
+        left: 24px; 
       }
+
+    .socialMediaLinks {
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 1rem;
+
+        img:hover {
+            filter: drop-shadow(0px 0px 1px #fff);
+        }
     }
+}
 
 
 

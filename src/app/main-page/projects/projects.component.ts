@@ -39,5 +39,5 @@ export class ProjectsComponent {
       github: 'https://github.com/wavyStructures/El-Pollo-Loco',
       demo: 'https://EPL.developer-anja-schwab.de',
     },
-  ];
+    ];
 }
