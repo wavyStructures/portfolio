@@ -39,7 +39,6 @@ footer {
             font-family: Overpass;
             font-size: 19px; 
             font-weight: 300;
-            text-decoration: none;
             color: var(--clr-bg);
             text-align: center;
         }
@@ -54,5 +53,42 @@ footer {
     }
 }
 
+////////////////////////navigation footer////////////////////////
+.nav-footer{
+    
+    footer{
+        margin-top: auto; /* Push footer to the bottom */
+        justify-content: flex-start;
+        padding: 8px 21px;
+    }
+    
+    .footer-wrapper {
+      position: relative;        
+       width: 100vw;
+
+      height: auto; 
+      display: flex;
+      flex-direction: column-reverse;
+    
+      
+    
+      .mailTo {
+        /* Ensure correct positioning */
+        display: block;
+        text-decoration: none;
+        
+        margin-top: 1rem;
+        left: 24px; /* Adjust as necessary */
+      }
+    }
 
 
+
+
+
+
+
+
+
+
+}

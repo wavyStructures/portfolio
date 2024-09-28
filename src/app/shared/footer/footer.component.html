@@ -1,4 +1,4 @@
-<footer>
+<footer [ngClass]="{ 'nav-footer': isInsideNavigation }">
     <div class="footer-wrapper">
         <div class="socialMediaLinks">
             <a href="https://github.com/wavyStructures" target="_blank"> <img
@@ -11,12 +11,12 @@
             <div class="logo-div"><img [ngClass]="{ 'd-none': isInsideNavigation }"
                     src="../../../assets/img/Logo_black_final.svg" alt="">
             </div>
-            <a href="mailto:anja_schwab@gmx.de">anja_schwab&#64;gmx.de</a>
+            <a class="mailTo" href="mailto:anja_schwab@gmx.de">anja_schwab&#64;gmx.de</a>
             <!-- <p>&copy; 2024 Anja Schwab</p> -->
 
         </div>
 
-        <div [routerLink]="['/imprint']" class="privacy_policy">
+        <div [ngClass]="{ 'd-none': isInsideNavigation }" [routerLink]="['/imprint']" class="privacy_policy">
             {{ 'BTN_IMPRINT' | translate }}
         </div>
 

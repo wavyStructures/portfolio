@@ -39,13 +39,5 @@ export class ProjectsComponent {
       github: 'https://github.com/wavyStructures/El-Pollo-Loco',
       demo: 'https://EPL.developer-anja-schwab.de',
     },
-    {
-      img: './../../../assets/img/projects/EPL.jpg',
-      title: 'Pokedex',
-      stack: 'JavaScript | HTML | CSS | Api',
-      description: 'pokedex-text',
-      github: 'https://github.com',
-      demo: 'https://pokedex.developer-anja-schwab.de/',
-    },
   ];
 }
