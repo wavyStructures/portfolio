@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { NavigationService } from '../../services/navigation.service';
 
 @Component({
   selector: 'app-my-skills',
@@ -18,5 +19,11 @@ export class MySkillsComponent {
     // You can modify this logic as per your needs
     const offset = window.pageYOffset || document.documentElement.scrollTop;
     this.isScrolled = offset > 100; // Change 100 to the value when you want the arrow to move
+  }
+
+  constructor(private navigationService: NavigationService) {}
+
+  navigateToSection(target: string) {
+    this.navigationService.navigateToSection(target);
   }
 }

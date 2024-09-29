@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     background-color: var(--clr-bg);
-    z-index: 1001; /* Increase to ensure header is on top */
+    z-index: 1001; 
     width: 100%;
 }
 
@@ -10,8 +10,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // height: calc(100vh - 116px);
-  height: 80%;
+  height: calc(100vh - 116px);
+  // height: 80%;
   width: 100vw;
   align-items: center;
   z-index: 999;
