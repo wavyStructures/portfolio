@@ -14,6 +14,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 })
 export class HeaderComponent {
   isActive: boolean = false;
+  isClosing: boolean = false;
   isAtTop: boolean = true;
   currentLanguage: string = 'en';
 
@@ -31,8 +32,18 @@ export class HeaderComponent {
   }
 
   toggleNav() {
-    this.isActive = !this.isActive;
-    document.body.classList.toggle('no-scoll', this.isActive);
+    if (this.isActive) {
+      this.isClosing = true;
+      setTimeout(() => {
+        this.isActive = false;
+        this.isClosing = false;
+        document.body.classList.remove('no-scroll');
+      }, 1000);
+    } else {
+      this.isActive = true;
+      this.isClosing = false;
+      document.body.classList.add('no-scroll');
+    }
   }
 
   @HostListener('window:scroll', [])

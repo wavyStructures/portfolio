@@ -7,10 +7,11 @@
         @if(currentLanguage === 'de'){
         <img src="../../../assets/img/icons/german.png" alt="English" (click)="changeLanguage('en')">}
 
-        <button class="burger-menu" id="toggle" (click)="toggleNav()">
-            <div class="line line1"></div>
+        <button class="burger-menu" id="toggle" [ngClass]="{ 'burger-active': isActive,  'closing': isClosing }"
+            (click)="toggleNav()">
+            <!-- <div class="line line1"></div>
             <div class="line line2"></div>
-            <div class="line line3"></div>
+            <div class="line line3"></div> -->
         </button>
 
 
