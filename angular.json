@@ -33,7 +33,10 @@
               "src/styles.scss", 
               "node_modules/aos/dist/aos.css"
             ],
-            "scripts": ["node_modules/aos/dist/aos.js"]          },
+            "scripts": ["node_modules/aos/dist/aos.js"],
+            "allowedCommonJsDependencies": [
+              "aos"
+            ]          },
           "configurations": {
             "production": {
               "budgets": [
@@ -44,8 +47,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4kb",
+                  "maximumError": "5kb"
                 }
               ],
               "outputHashing": "all"

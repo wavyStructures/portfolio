@@ -23,7 +23,8 @@ import 'aos/dist/aos.css';
 export class AppComponent implements OnInit {
   title = 'Anja Schwab';
 
-  ngOnInit() {
+  async ngOnInit() {
+    const AOS = await import('aos');
     AOS.init();
   }
 }
