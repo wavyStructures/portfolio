@@ -37,7 +37,7 @@ export class ProjectsComponent {
       stack: 'JavaScript | HTML | CSS',
       description: 'epl-text',
       github: 'https://github.com/wavyStructures/El-Pollo-Loco',
-      demo: 'https://EPL.developer-anja-schwab.de',
+      demo: 'https://epl.developer-anja-schwab.de',
     },
-    ];
+  ];
 }

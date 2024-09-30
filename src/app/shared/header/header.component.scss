@@ -40,7 +40,7 @@ nav.active {
     background-image: url('./../../../assets/img/animations/burger1.png');
     background-size: cover;
     background-repeat: no-repeat;
-    transition: background-image 0.5s linear;
+    // transition: background-image 0.5s linear;
     border: 0;
     cursor: pointer;
     padding: 0;
@@ -54,11 +54,11 @@ nav.active {
 }
 
 .burger-menu.burger-active {
-animation: cycleBurgerMenu 1s linear forwards;
+animation: cycleBurgerMenu 3s linear forwards;
 }
 
 .burger-menu.closing {
-    animation: reverseBurgerMenu 1s linear forwards;
+    animation: reverseBurgerMenu 3s linear forwards;
 }
 
 @keyframes cycleBurgerMenu {

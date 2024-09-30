@@ -12,11 +12,14 @@
                 {{ ('0' + (index + 1)).slice(-2) }}/{{ ('0' + totalProjects).slice(-2) }}
             </div>
 
-            <div class="project-img-div" [ngStyle]="{'align-self': 'flex-start'}">
-                <img [src]="project.img" alt="project image">
-                <a target="_blank" href="{{ project.demo }}" class="show-border"><img
-                        src="../../../../assets/img/icons/blackArrow_circle.svg"></a>
-            </div>
+            <a [href]="project.demo" target="_blank">
+                <div class="project-img-div" [ngStyle]="{'align-self': 'flex-start'}">
+                    <img [src]="project.img" alt="project image">
+                    <div class="show-border">
+                        <img src="../../../../assets/img/icons/blackArrow_circle.svg">
+                    </div>
+                </div>
+            </a>
 
             <div class="text-content" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine">
 
@@ -37,11 +40,14 @@
                 {{ ('0' + (index + 1)).slice(-2) }}/{{ ('0' + totalProjects).slice(-2) }}
             </div>
 
-            <div class="project-img-div" [ngStyle]="{'align-self': 'flex-end'}">
-                <img [src]="project.img" alt="project image">
-                <a target="_blank" href="{{ project.demo }}" class="show-border"><img
-                        src="../../../../assets/img/icons/blackArrow_circle.svg"></a>
-            </div>
+            <a [href]="project.demo" target="_blank" class="show-border">
+                <div class="project-img-div" [ngStyle]="{'align-self': 'flex-end'}">
+                    <img [src]="project.img" alt="project image">
+                    <div class="show-border">
+                        <img src="../../../../assets/img/icons/blackArrow_circle.svg">
+                    </div>
+                </div>
+            </a>
 
             <div class="text-content" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
 
