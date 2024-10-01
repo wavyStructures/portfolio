@@ -1,9 +1,30 @@
-section {
+::ng-deep section {
 
     flex-direction: column;
     align-items: center;
 
     >h2 {
+        font-size: 2rem;
+        font-weight: 900;
+
+        &:hover {
+            color: unset;
+        }
+    }
+
+    >h3 {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        font-weight: 300;
+
+        >span {
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+    }
+
+    >h4 {
         display: flex;
         flex-direction: column;
     }
