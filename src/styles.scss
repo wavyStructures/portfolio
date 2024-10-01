@@ -18,6 +18,16 @@ body {
   padding: 0;
 }
 
+app-privacy-policy {
+  width: 100%;
+  flex: 1;
+}
+
+app-imprint {
+  width: 100%;
+  flex: 1;
+}
+
 app-root{
     height: 100%;
     max-width: 1440rem;
