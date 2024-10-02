@@ -1,25 +1,6 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-  }
-
-  div{
+.app-div {
     height: 100vh;
     display: flex;
     flex-direction: column;
     width: 100%;
-  }
-
-  #header {
-    height: 116px;
-    width: 100%;
-    max-width: 1440px;
-    position: fixed;
-    top: 0;
-    z-index: 2;
-  }
-
-  #footer {
-    width: 100%;
-  }
+}

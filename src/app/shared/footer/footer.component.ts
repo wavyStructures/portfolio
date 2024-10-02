@@ -12,4 +12,5 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class FooterComponent {
   @Input() isInsideNavigation: boolean = false;
+  @Input() isInsideImprint: boolean = false;
 }
