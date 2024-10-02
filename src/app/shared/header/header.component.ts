@@ -1,9 +1,9 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { NavigationStateService } from './../../navigation-state.service';
+import { NavigationStateService } from './../../services/navigation-state.service';
 import { NavigationComponent } from './navigation/navigation.component';
 
 @Component({
@@ -13,8 +13,9 @@ import { NavigationComponent } from './navigation/navigation.component';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   isActive: boolean = false;
+  isNavOpen: boolean = false;
   isClosing: boolean = false;
   isAtTop: boolean = true;
   currentLanguage: string = 'en';
@@ -33,18 +34,24 @@ export class HeaderComponent {
     this.translate.use(language);
   }
 
+  ngOnInit(): void {
+    // Subscribe to the navigation state
+    this.navigationStateService.navState$.subscribe((isOpen) => {
+      this.isNavOpen = isOpen;
+    });
+  }
+
   toggleNav() {
+    this.navigationStateService.toggleNavState();
     if (this.isActive) {
       this.isClosing = true;
       setTimeout(() => {
         this.isActive = false;
-        this.navigationStateService.updateNavState(false);
         this.isClosing = false;
         document.body.classList.remove('no-scroll');
       }, 1000);
     } else {
       this.isActive = true;
-      this.navigationStateService.updateNavState(true);
       this.isClosing = false;
       document.body.classList.add('no-scroll');
     }

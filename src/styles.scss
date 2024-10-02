@@ -13,6 +13,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Syne', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 app-privacy-policy {
@@ -26,31 +27,26 @@ app-imprint {
 }
 
 app-root {
-    // height: 100%;
-    max-width: 1440rem;
+    height: 100%;
     width: 100%;
-
-    margin: 0;
-    background-color: #dedede;
-    color: var(--clr-text);
-    font-family: 'Syne', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 1440rem;
         
-    button {
-        cursor: pointer;
-        border: unset;
-    }
-    
-    input {
-        border: unset;
-    }
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+app-contactform {
+  display: flex;
 }
 
 #header {
   position: fixed;
   top: 0;
   background-color: var(--clr-bg);
-  z-index: 1000;
-  width: 95%;
+  width: 100%;
+  z-index: 2;
 }
 
 section {
@@ -62,7 +58,7 @@ section {
 
 * {
     box-sizing: border-box;
-    // border: 1px solid red;
+    border: 1px solid red;
 }
 
 * {

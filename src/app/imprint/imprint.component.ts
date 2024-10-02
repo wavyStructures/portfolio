@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, Input } from '@angular/core';
-import { NavigationStateService } from '../navigation-state.service'; // Import the service
+import { NavigationStateService } from './../services/navigation-state.service'; // Import the service
 import { Subscription } from 'rxjs';
 
 import { CommonModule } from '@angular/common';
