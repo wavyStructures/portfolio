@@ -1,8 +1,9 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { Router } from '@angular/router';
+import { NavigationStateService } from './../../navigation-state.service';
 import { NavigationComponent } from './navigation/navigation.component';
 
 @Component({
@@ -20,8 +21,9 @@ export class HeaderComponent {
 
   constructor(
     private translate: TranslateService,
+    private router: Router,
     private viewportScroller: ViewportScroller,
-    private router: Router
+    private navigationStateService: NavigationStateService
   ) {
     this.translate.setDefaultLang('en');
   }
@@ -36,11 +38,13 @@ export class HeaderComponent {
       this.isClosing = true;
       setTimeout(() => {
         this.isActive = false;
+        this.navigationStateService.updateNavState(false);
         this.isClosing = false;
         document.body.classList.remove('no-scroll');
       }, 1000);
     } else {
       this.isActive = true;
+      this.navigationStateService.updateNavState(true);
       this.isClosing = false;
       document.body.classList.add('no-scroll');
     }

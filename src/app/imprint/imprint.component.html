@@ -1,3 +1,4 @@
-<section [innerHTML]="'IMPRINT_TEXT' | translate ">
+<section [ngClass]="{ 'd-none': isNavActive }">
+    <div [innerHTML]="'IMPRINT_TEXT' | translate"></div>
     <app-footer [isInsideImprint]="true"></app-footer>
 </section>
