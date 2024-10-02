@@ -6,17 +6,15 @@
   color: var(--clr-bg);
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%); 
   
-  .greet{
+  .greet {
     font-family: Syne;
     font-size: 45px;
     font-weight: 800;
     letter-spacing: 0.01em;
     text-align: left;
-    margin: 0;
   }
 
-  h3{
-    margin: 39px 0 19px 0;
+  h3 {
     color: var(--clr-text-green);
     font-family: Overpass;
     font-size: 32px;
@@ -25,7 +23,7 @@
     text-align-last: center;
   }
 
-  h4{
+  h4 {
     font-family: Overpass;
     font-size: 20px;
     font-weight: 400;
@@ -33,7 +31,7 @@
     text-align-last: center;
   }
 
-  .contactForm{
+  .contactForm {
     display: flex;
     flex-direction: column;
 
@@ -41,12 +39,12 @@
       display: flex;
       align-items: baseline;
 
-      a{
+      a {
         color: var(--clr-text-green);
       }
     }
 
-    textarea{
+    textarea {
       border: 0;
       border-bottom: 2px solid var(--clr-bg);
     }
@@ -54,6 +52,7 @@
   
   input[type=text], [type=email], textarea {
       width: 100%; 
+      border: none;
       border-bottom: 2px solid var(--clr-bg); /* Gray border */
       background-color: var(--clr-text);
       box-sizing: border-box; 
@@ -92,7 +91,7 @@
       margin-right: 0.5rem;
   }
 
-  .contact-form-fields{
+  .contact-form-fields {
     background-color: var(--clr-text);
     color: var(--clr-bg);
     
@@ -120,7 +119,7 @@
     ;
 
 
-    &:hover{
+    &:hover {
       transform: scale(1.2);
     color: #fff;
     border-color: #fff;
