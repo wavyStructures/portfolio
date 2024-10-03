@@ -20,9 +20,12 @@ footer {
             img {
                 height: 40px;
                 width: 40px;
+                filter: brightness(1);
+                transition: filter 0.3s ease;
             
                 &:hover {
                 animation: slide-up 3s cubic-bezier(.25,.46,.45,.94) both;
+                filter: brightness(1.5); 
                 }
 
                 @keyframes slide-up {
@@ -67,12 +70,30 @@ footer {
         text-align: center;
         cursor: pointer;
                
-        >a {color: var(--clr-bg); }
-            
-        >a:hover{
-                color: var(--clr-text-green);
+        >a {color: var(--clr-bg);         
+            position: relative;
+        }
+        
+        >a::after {
+            content: "";
+            position: absolute;
+            left: 0%;
+            bottom: 0;
+            width: 10%;
+            height: 2px; 
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+            transition: width 0.5s ease; 
+            transform: translateX(110%); 
+        }
+
+        >a:hover::after {
+            width: 50%; 
+            background-color: #00BC8F; 
         }
     }
+    
+    
 
 ////////////////////////navigation footer////////////////////////
 .nav-footer{
