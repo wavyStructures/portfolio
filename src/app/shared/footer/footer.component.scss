@@ -44,7 +44,7 @@ footer {
     .logo-div{
         padding: 28px 0;
         cursor: pointer;
-        }
+    }
 
     .copyright {
         display: flex;
@@ -53,8 +53,13 @@ footer {
         align-items: center;
 
         img {
-            filter: invert(1);
+            filter: invert(1) brightness(0.9);
             height: 100px;
+            transition: filter 0.3s ease;
+
+            &:hover{
+                filter: invert(1) brightness(1.5); 
+            }
         }
 
         a {

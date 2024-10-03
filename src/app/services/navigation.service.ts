@@ -14,9 +14,7 @@ export class NavigationService {
     }
   }
 
-
-
-  navigateToTop(): void {
-    this.router.navigate([''], { fragment: 'atf' });
-  }
+  // navigateToTop(): void {
+  //   this.router.navigate([''], { fragment: 'atf' });
+  // }
 }
