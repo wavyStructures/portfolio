@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { NavigationService } from '../../services/navigation.service';
 import { NavigationStateService } from './../../services/navigation-state.service';
 import { NavigationComponent } from './navigation/navigation.component';
 
@@ -24,6 +25,7 @@ export class HeaderComponent implements OnInit {
     private translate: TranslateService,
     private router: Router,
     private viewportScroller: ViewportScroller,
+    private navigationService: NavigationService,
     private navigationStateService: NavigationStateService
   ) {
     this.translate.setDefaultLang('en');
@@ -64,7 +66,7 @@ export class HeaderComponent implements OnInit {
 
   navigateToTop() {
     if (!this.isAtTop) {
-      this.router.navigate([''], { fragment: 'atf' });
+      this.navigationService.navigateToSection('atf');
     }
     if (this.isActive) {
       this.toggleNav();
