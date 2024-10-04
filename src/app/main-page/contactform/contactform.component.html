@@ -9,9 +9,24 @@
     </div>
 
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contactForm">
+        <div>
+            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
+                placeholder="{{ 'PLACEHOLDER_NAME'| translate }}" class="contact-form-fields
+        " minlength="2" required>
 
-        <input [(ngModel)]="contactData.firstName" type="text" id="name" name="name" placeholder="Your name" class="contact-form-fields
-        " required>
+
+            @if (!name.valid && name.touched ) {
+            <span class="feedback-text"> {{ 'PLACEHOLDER_NAME_WARN' | translate }}</span>
+            <img class="feedback-icon shake-horizontal icon-red" src="./../../../assets/img/icons/warn.png"
+                alt="warning icon">
+            }
+            @if(name.valid){
+            <img class="feedback-icon" src="./../../../assets/img/icons/correct.png" alt="ok icon">
+            }
+        </div>
+
+
+
 
 
         <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email" class="contact-form-fields
@@ -31,6 +46,7 @@
                     {{ 'PRIVACY_POLICY' | translate }}
                 </a> {{'CHECKBOX_TEXT_2' | translate}}</p>
         </div>
+
 
         <button class="submit" type="submit" value="Submit">Say hello ;)</button>
         <!-- {{ 'SEND_MSG' | translate }} -->

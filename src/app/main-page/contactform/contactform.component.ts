@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -18,8 +17,7 @@ export class ContactformComponent {
   mailTest = false;
 
   contactData = {
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
     message: '',
   };
