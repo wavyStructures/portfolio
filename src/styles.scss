@@ -44,7 +44,7 @@ app-contactform {
   position: fixed;
   top: 0;
   background-color: var(--clr-bg);
-  width: 100%;
+  width: 100vw;
   z-index: 2;
 }
 
@@ -82,10 +82,11 @@ section {
 
 h1 {
   font-family: 'Syne';
-  font-size: clamp(2.5rem, 8vw, 8rem);
+  font-size: clamp(2.3rem, 8vw, 8rem);
   font-weight: 800;
   letter-spacing: -0.025em;
   text-align: center;
+  margin: 64px 0 0 0;
 }
 
 h2 {  

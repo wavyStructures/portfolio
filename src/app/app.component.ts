@@ -4,7 +4,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { TranslateModule } from '@ngx-translate/core';
-import AOS from 'aos';
+// import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 @Component({

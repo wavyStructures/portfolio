@@ -151,7 +151,7 @@ article{
     
 
       &:hover .about {
-        animation: animateRightOdd 125ms forwards;
+        // animation: animateRightOdd 125ms forwards;
         padding-left: 0;
         padding-right: 100px;
       }
@@ -159,8 +159,8 @@ article{
       
     .text-content {
       opacity: 1;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
+      // transform: translateY(20px);
+      // transition: opacity 0.5s ease, transform 0.5s ease;
       // flex: 1;
       // max-width: 100%;
       // padding: 1rem;
