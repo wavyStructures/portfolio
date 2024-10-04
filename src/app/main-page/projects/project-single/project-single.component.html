@@ -21,26 +21,12 @@
                 </div>
             </a>
 
-            <div data-aos="fade-down" data-aos-duration="500" data-aos-easing="ease-in-sine">
-
-                <div data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000" data-aos-offset="200"
-                    data-aos-once="true">
-                    <p>This element fades down with a 300ms delay, 1000ms duration, and only animates once.</p>
-                </div>
-
-                <!-- <div data-aos="zoom-in" data-aos-delay="500">
-                    <p>This text zooms in with a 500ms delay.</p>
-                </div> -->
-
-
-                <div class="text-content">
-
-                    <h2>{{project.title | translate}}</h2>
-                    <p class="stack">{{project.stack}}</p>
-                    <p class="description">{{ projectDescription | translate }}</p>
-                    <a [href]="project.github" target="_blank"><button>Github</button></a>
-
-                </div>
+            <div class="text-content" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="220"
+                data-aos-delay="200" data-aos-easing="ease-in-sine">
+                <h2>{{project.title | translate}}</h2>
+                <p class="stack">{{project.stack}}</p>
+                <p class="description">{{ projectDescription | translate }}</p>
+                <a [href]="project.github" target="_blank"><button>Github</button></a>
             </div>
         </div>
         }
