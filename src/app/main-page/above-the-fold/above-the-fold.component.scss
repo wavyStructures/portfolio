@@ -1,6 +1,6 @@
 section {
     height: 100vh;
-    // padding-top: 12rem;
+    background-color: var(--clr-bg);
     
     .atf-wrapper{
         display: flex;
@@ -12,6 +12,7 @@ section {
         .atf-title-wrapper{
             background-color: var(--clr-bg);
             z-index: 1;
+            padding: 100px 0;
         }
     }
 
@@ -44,13 +45,18 @@ section {
     }}
 
     .atf-bottom {
+        // display: flex;
+        // justify-content: space-between;
+        // padding: 0 24px;
+
         display: flex;
         justify-content: space-between;
-        // padding: 0 24px;
+        flex-grow: 1;
         
         .mail-div {
             transform: rotate(270deg);
-            margin-top: -40px;
+            z-index: 3;
+            margin: 96px 0px 32px 20px;
             >a{
                 text-decoration: none;
                 color: var(--clr-text);
@@ -67,6 +73,7 @@ section {
         .atf-scroll-down{
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
            
             .arrow-down {
@@ -78,13 +85,13 @@ section {
             .atf-arrow{
                 position: absolute;
                 left: -60px;
-                bottom: 180px;
+                bottom: 232px;
                 z-index: 0;
             }
               
             @keyframes arrow-slide-loop {
                 0% {top: 0px; opacity: 1;}  /* Start at the top and fully visible */
-                50% {top: 200px; opacity: 1;} /* End of downward motion, still visible */
+                50% {top: 340px; opacity: 1;} /* End of downward motion, still visible */
                 51% {opacity: 0;} /* Just after reaching the bottom, make it invisible */
                 100% {top: 0px; opacity: 0;} /* Move it back up invisibly */
             }
@@ -96,6 +103,7 @@ section {
                 letter-spacing: -0.025em;
                 text-align: center;
                 width: 8rem;
+                height: 8rem;
                 background-color: var(--clr-bg);
                 z-index: 2;
             }
