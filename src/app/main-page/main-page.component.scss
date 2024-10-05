@@ -1,17 +1,11 @@
-
+.main-container {
+  padding-top: 8rem;
+  // scroll-snap-type: y mandatory; /* Enable snap scrolling for Y axis */
   
-  .main-container {
-    padding-top: 8rem;
-    // scroll-snap-type: y mandatory; /* Enable snap scrolling for Y axis */
-    
-    overflow-y: scroll;
-    // height: 100vh; /* Full viewport height for the container */
-  
-
-
-
-}
+  overflow-y: scroll;
+  // height: 100vh; /* Full viewport height for the container */
+ }
 
 .wrapper {
     height: 90vh;
-  }
+}

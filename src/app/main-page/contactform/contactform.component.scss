@@ -35,13 +35,25 @@
     display: flex;
     flex-direction: column;
 
+    >div {
+      position: relative;
+
+      .feedback-text {
+        color: #E61C40;
+        position: absolute;
+        left: 16px;
+        bottom: -3px;
+        z-index: 1;
+      }
+    }
+
     .agreeCheckboxDiv {
       display: flex;
       align-items: baseline;
 
       a {
         color: var(--clr-text-green);
-      }
+      }     
     }
 
     textarea {
@@ -75,8 +87,6 @@
       }
     
     }
-
-
 
   input[type=checkbox] {
       appearance: none;
@@ -119,8 +129,8 @@
 
   .feedback-icon {
     position: absolute;
-    right: 35px;
-    transform: translateY(-200%);
+    right: 8px;
+    top: 16px;
     width: 25px;
     height: 25px;
     z-index: 1;
@@ -143,8 +153,6 @@
     text-align: left;
     margin: 2.125rem 0 2.323rem 0;
     transition: all 3s ease;
-    ;
-
 
     &:hover {
       transform: scale(1.2);

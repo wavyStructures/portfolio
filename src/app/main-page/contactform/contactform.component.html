@@ -11,9 +11,7 @@
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contactForm">
         <div>
             <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-                placeholder="{{ 'PLACEHOLDER_NAME'| translate }}" class="contact-form-fields
-        " minlength="2" required>
-
+                placeholder="{{ 'PLACEHOLDER_NAME'| translate }}" class="contact-form-fields" minlength="2" required>
 
             @if (!name.valid && name.touched ) {
             <span class="feedback-text"> {{ 'PLACEHOLDER_NAME_WARN' | translate }}</span>
@@ -25,14 +23,21 @@
             }
         </div>
 
+        <div>
+            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
+                placeholder="Your email" class="contact-form-fields" required
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 
+            @if (!email.valid && email.touched ) {
+            <span class="feedback-text"> {{ 'PLACEHOLDER_EMAIL_WARN' | translate }}</span>
+            <img class="feedback-icon shake-horizontal icon-red" src="./../../../assets/img/icons/warn.png"
+                alt="warning icon">
+            }
+            @if(email.valid){
+            <img class="feedback-icon" src="./../../../assets/img/icons/correct.png" alt="ok icon">
+            }
 
-
-
-        <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email" class="contact-form-fields
-        " required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-
-
+        </div>
         <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" minlength="5" class="contact-form-fields
         " placeholder="Your message" required>
                         </textarea>
