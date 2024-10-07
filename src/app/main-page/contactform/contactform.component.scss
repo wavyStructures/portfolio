@@ -36,18 +36,6 @@
     flex-direction: column;
 
     
-    >div {
-      position: relative;
-
-      .feedback-text {
-        color: #E61C40;
-        position: absolute;
-        left: 16px;
-        bottom: -3px;
-        z-index: 1;
-      }
-    }
-
     .agreeCheckboxDiv {
       display: flex;
       align-items: baseline;
@@ -61,7 +49,7 @@
       border: 0;
       border-bottom: 2px solid var(--clr-bg);
     }
-  }
+  
   
   input[type=text], [type=email], textarea {
       width: 100%; 
@@ -128,16 +116,38 @@
     background-repeat: no-repeat;
   }
 
-  .feedback-icon {
-    position: absolute;
-    right: 8px;
-    top: 16px;
-    width: 25px;
-    height: 25px;
-    z-index: 1;
-    margin-right: 3px;
+
+
+  >div {
+    position: relative;
+
+    .feedback-text {
+      color: #E61C40;
+      position: absolute;
+      left: 16px;
+      bottom: -3px;
+      z-index: 1;
+    }
+
+    .feedback-privacy{
+      bottom: -6px;
+      left: 3px;
+    }
+
+    .feedback-icon {
+      position: absolute;
+      right: 8px;
+      top: 16px;
+      width: 25px;
+      height: 25px;
+      z-index: 1;
+      margin-right: 3px;
+    }
   }
-    
+  
+  }
+
+
   .submit {
     width: fit-content;
     padding: 20px 40px 20px 40px;
@@ -154,12 +164,20 @@
     text-align: left;
     margin: 2.125rem 0 2.323rem 0;
     transition: all 3s ease;
-
-    &:hover {
+    &:disabled {
+      opacity: 0.3;
+    }
+    &:hover,
+    &:not(disabled) {
+      padding-inline: 2.5em;
+      font-weight: 700;
       transform: scale(1.2);
-    color: #fff;
-    border-color: #fff;
-    opacity: 100%;
+      color: #fff;
+      border-color: #fff;
+      opacity: 100%;
+    }
+    &:hover{
+      color: #45a049;
     }
   }
     

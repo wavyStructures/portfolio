@@ -58,21 +58,20 @@
                 {{'CHECKBOX_TEXT_2' | translate}}
             </p>
             @if(!checkboxState && message.valid && email.valid && name.valid){
-            <span class="fontOverpass feedback-container not-checked-msg">You must agree to the privacy
-                policy</span>
+            <span class="fontOverpass feedback-text feedback-privacy">{{'ACCEPT_PRIVACY_POLICY' | translate}}</span>
             }
         </div>
 
-        <button class="submit" type="submit" value="Submit" [disabled]="!contactForm.form.valid || !checkboxState">
+        <button class="submit" type="submit" value="Submit" [disabled]="!checkboxState">
             {{ 'SAY_HELLO' | translate }}</button>
 
     </form>
 
-    <div [ngStyle] ="{'display' : showMessage ? 'block' : 'none'}" class="success-msg">
+    <div [ngStyle]="{'display' : showMessage ? 'block' : 'none'}" class="success-msg">
         {{'EMAIL_SUCCESS_MSG' | translate}}
     </div>
 
     <div class="arrow-div">
         <a class="arrow-up" (click)="navigateToTop()"></a>
-      </div>
+    </div>
 </section>
