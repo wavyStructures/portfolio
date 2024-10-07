@@ -163,22 +163,49 @@
     }
   }
     
-    /* When moving the mouse over the submit button, add a darker green color */
-    input[type=submit]:hover {
-      background-color: #45a049;
-    }
-    
-    input:-webkit-autofill {
-      -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
-      -webkit-text-fill-color: #fffcf3;
-    }
-    
-    /* Reset background for autofill on focus */
-    input:-webkit-autofill:focus {
-      -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
-      -webkit-text-fill-color: #fffcf3;
-    }
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+    -webkit-text-fill-color: #fffcf3;
+  }
+  
+  /* Reset background for autofill on focus */
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+    -webkit-text-fill-color: #fffcf3;
+  }
 
-    /* Add a background color and some padding around the form */
+  .success-msg {
+      position: absolute;
+      top: 50%;
+      color: var(--clr-text-green);
+      font-size: 18px;
+      font-weight: 400;
+  }
+
+  .arrow-div{
+    position: relative;
+  
+    .arrow-up {
+      width: 30px;
+      height: 80px;
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      background-image: url("./../../../assets/img/animations/arrow_up.png");
+      background-repeat: no-repeat;
+      background-position: center 40px;
+      transition: all 0.125s linear;
+      cursor: pointer;
+    
+        &:hover {
+        background-position: center;
+        }
+      }
+  }
 }
   

@@ -3,6 +3,7 @@ import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { NavigationService } from '../../services/navigation.service';
 
 @Component({
   selector: 'app-contactform',
@@ -18,6 +19,8 @@ export class ContactformComponent {
   showMessage = false;
 
   mailTest = false;
+
+  constructor(private navigationService: NavigationService) {}
 
   contactData = {
     name: '',
@@ -59,6 +62,9 @@ export class ContactformComponent {
 
   onCheckboxChange() {}
 
+  navigateToTop(): void {
+    this.navigationService.navigateToSection('atf');
+  }
   // emptyForm() {
   //   this.contactData.firstName = '';
   //   this.contactData.lastName = '';
