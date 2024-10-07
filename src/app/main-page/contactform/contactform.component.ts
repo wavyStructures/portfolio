@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, TranslateModule],
+  imports: [CommonModule, FormsModule, TranslateModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss',
 })
@@ -14,6 +15,8 @@ export class ContactformComponent {
   http = inject(HttpClient);
 
   checkboxState: boolean = false;
+  showMessage = false;
+
   mailTest = false;
 
   contactData = {
@@ -53,6 +56,8 @@ export class ContactformComponent {
       // this.emptyForm();
     }
   }
+
+  onCheckboxChange() {}
 
   // emptyForm() {
   //   this.contactData.firstName = '';

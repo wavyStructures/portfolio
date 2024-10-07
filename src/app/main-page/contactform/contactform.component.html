@@ -15,8 +15,7 @@
 
             @if (!name.valid && name.touched ) {
             <span class="feedback-text"> {{ 'PLACEHOLDER_NAME_WARN' | translate }}</span>
-            <img class="feedback-icon shake-horizontal icon-red" src="./../../../assets/img/icons/warn.png"
-                alt="warning icon">
+            <img class="feedback-icon" src="./../../../assets/img/icons/warn.png" alt="warning icon">
             }
             @if(name.valid){
             <img class="feedback-icon" src="./../../../assets/img/icons/correct.png" alt="ok icon">
@@ -30,31 +29,46 @@
 
             @if (!email.valid && email.touched ) {
             <span class="feedback-text"> {{ 'PLACEHOLDER_EMAIL_WARN' | translate }}</span>
-            <img class="feedback-icon shake-horizontal icon-red" src="./../../../assets/img/icons/warn.png"
-                alt="warning icon">
+            <img class="feedback-icon" src="./../../../assets/img/icons/warn.png" alt="warning icon">
             }
             @if(email.valid){
             <img class="feedback-icon" src="./../../../assets/img/icons/correct.png" alt="ok icon">
             }
-
         </div>
-        <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" minlength="5" class="contact-form-fields
-        " placeholder="Your message" required>
-                        </textarea>
-        @if (!message.valid && message.touched && !message.disabled){<span>Please enter a message</span>}
-        <!-- <button class="submit" type="submit" value="Submit" [disabled]="!contactForm.form.valid || !checkboxState"> -->
+
+        <div>
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" minlength="5"
+                class="contact-form-fields" placeholder="Your message" required>
+            </textarea>
+            @if (!message.valid && message.touched && !message.disabled) { <span class="feedback-text">
+                {{'PLACEHOLDER_MSG_WARN' | translate}}</span>
+            <img class="feedback-icon" src="./../../../assets/img/icons/warn.png" alt="warning icon">
+            }
+            @if(message.valid){
+            <img class="feedback-icon" src="./../../../assets/img/icons/correct.png" alt="ok icon">
+            }
+        </div>
+
 
         <div class="agreeCheckboxDiv">
-            <input [(ngModel)]="checkboxState" type="checkbox" id="checkbox" name="checkbox">
-            <p>
-                {{'CHECKBOX_TEXT_1' | translate}} <a href="#privacy">
-                    {{ 'PRIVACY_POLICY' | translate }}
-                </a> {{'CHECKBOX_TEXT_2' | translate}}</p>
+            <input [(ngModel)]="checkboxState" type="checkbox" id="checkbox" name="checkbox"
+                (change)="onCheckboxChange()">
+            <p> {{'CHECKBOX_TEXT_1' | translate}}
+                <a href="#privacy"> {{ 'PRIVACY_POLICY' | translate }}</a>
+                {{'CHECKBOX_TEXT_2' | translate}}
+            </p>
+            @if(!checkboxState && message.valid && email.valid && name.valid){
+            <span class="fontOverpass feedback-container not-checked-msg">You must agree to the privacy
+                policy</span>
+            }
         </div>
 
-
-        <button class="submit" type="submit" value="Submit">Say hello ;)</button>
-        <!-- {{ 'SEND_MSG' | translate }} -->
+        <button class="submit" type="submit" value="Submit" [disabled]="!contactForm.form.valid || !checkboxState">
+            {{ 'SAY_HELLO' | translate }}</button>
 
     </form>
+
+    <div [ngStyle] ="{'display' : showMessage ? 'block' : 'none'}" class="success-msg">
+        {{'EMAIL_SUCCESS_MSG' | translate}}
+    </div>
 </section>

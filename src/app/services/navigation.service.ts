@@ -13,8 +13,4 @@ export class NavigationService {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
-
-  // navigateToTop(): void {
-  //   this.router.navigate([''], { fragment: 'atf' });
-  // }
 }

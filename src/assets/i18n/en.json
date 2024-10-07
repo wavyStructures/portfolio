@@ -47,6 +47,7 @@
 
     "PRIVACY_POLICY": "privacy policy",
     "SEND_MSG": "Send message",
+    "SAY_HELLO": "Say hello ;)",
     "BTN_IMPRINT": "Legal notice",
     "IMPRINT_TEXT": "<h1>Imprint</h1><h3>information according to §&nbsp;5&nbsp;TMG</h3><h2>Anja Schwab</h2><h3>mailing address:<span>Harz 25</span><span>06108 Halle(Saale)</span></h3><h4><span>phone: <span>01772357006</span></span><span>email: <span>mail&#64;developer-anja-schwab.de</span></span></h4>",
     "EMAIL_SUCCESS_MSG": "Your message has been sent successfully!",
