@@ -50,7 +50,7 @@
     "SEND_MSG": "Nachricht senden",
     "SAY_HELLO": "Sag Hallo;-)",
     "BTN_IMPRINT": "Impressum",
-    "IMPRINT_TEXT": "<h1>Impressum</h1><h3>Angaben gemäß §&nbsp;5&nbsp;TMG</h3><h2>Anja Schwab</h2><h3>Postanschrift:<span>Harz 25</span><span>06108 Halle(Saale)</span></h3><h4><span>Telefon: <span>01772357006</span></span><span>E-Mail: <span>mail&#64;developer-anja-schwab.de</span></span></h4>",
+    "IMPRINT_TEXT": "<h1>Impressum</h1><h3>Angaben gemäß §&nbsp;5&nbsp;TMG</h3><h2>Anja Schwab</h2><h3>Postanschrift:<br><span>Harz 25</span><span>06108 Halle(Saale)</span></h3><h4><span>Telefon: <span>01772357006</span></span><br><span>E-Mail: <span>mail&#64;developer-anja-schwab.de</span></span></h4>",
     
 
     "EMAIL_SUCCESS_MSG": "Ihre Nachricht wurde erfolgreich gesendet!",

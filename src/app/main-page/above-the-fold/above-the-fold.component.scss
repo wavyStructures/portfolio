@@ -8,11 +8,12 @@ section {
         align-items: stretch;
         flex-direction: column;
         gap: 48px;
+        width: 100vw;
 
         .atf-title-wrapper{
             background-color: var(--clr-bg);
             z-index: 1;
-            padding: 100px 0;
+            padding: 100px 0 8px 0;
         }
     }
 
@@ -42,7 +43,49 @@ section {
             width: 180px;
             height: 0;
             border-bottom: 3px solid black;           
-    }}
+    }
+
+    .frontend, .developer {
+        opacity: 0; 
+        position: relative;
+        // font-size: 4rem;
+      }
+
+      @keyframes flyInFromRight {
+        0% {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes flyInFromLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(-100%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+         
+      /* Apply animations */
+      .frontend {
+        animation: flyInFromRight 1s ease-out forwards;
+      }
+      
+      .developer {
+        animation: flyInFromLeft 1s ease-out forwards;
+        animation-delay: 0.5s; /* Delay developer's fly-in by half a second */
+      }
+
+
+
+}
 
     .atf-bottom {
         // display: flex;
@@ -56,7 +99,7 @@ section {
         .mail-div {
             transform: rotate(270deg);
             z-index: 3;
-            margin: 96px 0px 32px 20px;
+            margin: 96px 0px 48px 27px;
             >a{
                 text-decoration: none;
                 color: var(--clr-text);
@@ -73,7 +116,7 @@ section {
         .atf-scroll-down{
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
            
             .arrow-down {
@@ -104,6 +147,7 @@ section {
                 text-align: center;
                 width: 8rem;
                 height: 8rem;
+                padding-top: 2.6rem;
                 background-color: var(--clr-bg);
                 z-index: 2;
             }

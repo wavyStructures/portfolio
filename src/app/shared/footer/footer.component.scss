@@ -99,11 +99,9 @@ footer {
         }
     }
     
-    
-
+        
 ////////////////////////navigation footer////////////////////////
 .nav-footer{
-    
     footer{
         margin-top: auto; /* Push footer to the bottom */
         justify-content: flex-start;
@@ -119,78 +117,82 @@ footer {
       gap: 2rem;
       padding-bottom: 1rem;
 
-    .copyright{
-        display: flex;
-        flex-direction: unset; 
-        justify-content: unset; 
-        align-items: flex-start;
-        padding: 0 24px;
-    }  
-    
-    .mailTo {
-        display: block;
-        text-decoration: none;
-        margin-top: 1rem;
-        left: 24px; 
-      }
-
-    .socialMediaLinks {
-        justify-content: flex-end;
-        align-items: center;
-        gap: 2rem;
-        padding: 0 1rem;
-
+        .copyright{
+            display: flex;
+            flex-direction: unset; 
+            justify-content: unset; 
+            align-items: flex-start;
+            padding: 0 24px;
+        }  
         
+        .mailTo {
+            display: block;
+            text-decoration: none;
+            margin-top: 1rem;
+            left: 24px; 
+        }
+
+        .socialMediaLinks {
+            justify-content: flex-end;
+            align-items: center;
+            gap: 2rem;
+            padding: 0 1rem;        
+        }
     }
 }
 
-.imprint-footer{
-    footer{
-        margin-top: auto; /* Push footer to the bottom */
-        justify-content: flex-start;
-        padding: 8px 21px;
-    }
+.small-footer {
+    width: 100vw;
+    margin-top: 0 auto; 
     
     .footer-wrapper {
-      position: relative;        
-      width: 100vw;
-      height: auto; 
-      display: flex;
-      flex-direction: column-reverse;
-      gap: 2rem;
-      padding-bottom: 1rem;
-
-    .copyright{
         display: flex;
-        flex-direction: unset; 
-        justify-content: unset; 
-        align-items: flex-start;
-        padding: 0 24px;
-    }  
-    
-    .mailTo {
-        display: block;
-        text-decoration: none;
-        margin-top: 1rem;
-        left: 24px; 
-      }
+        flex-direction: row-reverse;    
+        width: 100vw;
+        justify-content: space-between;
+        padding: 8px 8px;
+    }      
 
     .socialMediaLinks {
-        justify-content: flex-end;
-        align-items: center;
-        gap: 2rem;
-        padding: 0 1rem;
+        align-items: flex-end;
+        padding-bottom: 8px;
     }
+   
 
+    .copyright {
+        align-items: flex-start;
+        padding: 0 24px;
+
+        p {
+            margin: 0;
+        }
+    }  
+        
+    //     .mailTo {
+    //         display: block;
+    //         text-decoration: none;
+    //         margin-top: 1rem;
+    //         left: 24px; 
+    //       }
     
-}}
-
-
-
-
-
-
-
-
-
+    //     .socialMediaLinks {
+    //         justify-content: flex-end;
+    //         align-items: center;
+    //         gap: 2rem;
+    //         padding: 0 1rem;
+    //     }
+    
+        
+    // }}
 }
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,5 @@
-<footer [ngClass]="{ 'nav-footer': isInsideNavigation, 'imprint-footer': isInsideImprint }">
+<footer [ngClass]="{ 'nav-footer': isInsideNavigation, 'small-footer': isInImprint}">
         <div class="footer-wrapper">
-
                 <div class="socialMediaLinks">
                         <a href="https://github.com/wavyStructures" target="_blank"> <img
                                         src="../../../assets/img/icons/Property 1 github.png" alt="github link"></a>
@@ -9,20 +8,20 @@
                         <a href="https://www.linkedin.com/in/anja-schwab-9441722b6/" target="_blank"><img
                                         src="../../../assets/img/icons/Property 1 linkedIn.png" alt="linkedin link"></a>
                 </div>
-
                 <div class="copyright">
-                        <div class="logo-div"><img [ngClass]="{ 'd-none': isInsideNavigation }"
+                        <div class="logo-div" [ngClass]="{ 'd-none': isInImprint }"><img
+                                        [ngClass]="{ 'd-none': isInsideNavigation}"
                                         src="../../../assets/img/Logo_black_final.svg" alt="logo"
                                         (click)="navigateToTop()">
                         </div>
                         <a class="mailTo"
                                 href="mailto:mail@developer-anja-schwab.de">mail&#64;developer-anja-schwab.de</a>
-                        <!-- <p>&copy; 2024 Anja Schwab</p> -->
+                        <p>&copy; 2024 Anja Schwab</p>
                 </div>
 
-                <div [ngClass]="{ 'd-none': isInsideNavigation }" class="privacy_policy"><a routerLink="imprint">
+                <div [ngClass]="{ 'd-none': isInsideNavigation || isInImprint }" class="privacy_policy"><a
+                                routerLink="imprint">
                                 {{ 'BTN_IMPRINT' | translate }}</a>
                 </div>
-
         </div>
 </footer>

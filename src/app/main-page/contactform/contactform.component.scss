@@ -177,13 +177,13 @@
       opacity: 100%;
     }
     &:hover{
-      color: #45a049;
+      color: var(--clr-bg);
     }
   }
     
   /* When moving the mouse over the submit button, add a darker green color */
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: var(--clr-bg);
   }
   
   input:-webkit-autofill {
@@ -203,6 +203,20 @@
       color: var(--clr-text-green);
       font-size: 18px;
       font-weight: 400;
+      animation: showSuccessMessage 1.5s forwards;
+  }
+
+  @keyframes showSuccessMessage {
+    from {
+      opacity: 0;
+      right: 100%;
+    }
+    to {
+      opacity: 1;
+      right: 50%;
+      transform: translateX(50%);
+
+    }
   }
 
   .arrow-div{
