@@ -63,6 +63,18 @@ section {
       }
     }
 
+      @keyframes flyInFromBottom {
+        0% {
+          opacity: 0;
+          transform: translateY(100%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    
+
     .atf-sub-title{
       display: flex;
       justify-content: center;
@@ -78,6 +90,9 @@ section {
             line-height: 23px;
             letter-spacing: -0.025em;
             text-align: center;
+            animation: flyInFromBottom 1s ease-out forwards;
+            animation-delay: 2s; /* Delay developer's fly-in by half a second */
+        
         }
 
         .atf-underline{
