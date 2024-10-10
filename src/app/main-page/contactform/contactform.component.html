@@ -54,9 +54,12 @@
             <input [(ngModel)]="checkboxState" type="checkbox" id="checkbox" name="checkbox"
                 (change)="onCheckboxChange()">
             <p> {{'CHECKBOX_TEXT_1' | translate}}
-                <a href="#privacy"> {{ 'PRIVACY_POLICY' | translate }}</a>
+                <a routerLink="privacy-policy">{{ 'PRIVACY_POLICY' | translate }}</a>
+                <!-- <a class='privacy' href='/privacy-policy'> -->
+                <!-- <a href="#privacy"> {{ 'PRIVACY_POLICY' | translate }}</a> -->
                 {{'CHECKBOX_TEXT_2' | translate}}
             </p>
+
             @if(!checkboxState && message.valid && email.valid && name.valid){
             <span class="fontOverpass feedback-text feedback-privacy">{{'ACCEPT_PRIVACY_POLICY' | translate}}</span>
             }

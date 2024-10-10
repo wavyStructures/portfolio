@@ -1,0 +1,58 @@
+::ng-deep section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 142px 16px 0px 16px;
+
+    .privacy-policy-content{
+        flex: 1;
+    }
+
+    h1 {
+        margin-bottom: 16px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 900;
+        margin-bottom: 8px;
+
+        &:hover {
+            color: unset;
+        }
+    }
+
+    h3:first-of-type {
+        text-align: center; 
+    }
+
+    h3 {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin: 8px;
+
+        span {
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        
+    }
+    
+    h4 {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            span{
+                display: flex;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    // @media (min-width: 768px)
+    // @media (min-width: 1200px)
+}

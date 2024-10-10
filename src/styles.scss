@@ -38,6 +38,11 @@ app-root {
     max-width: 1440rem;
 }
 
+app-above-the-fold {
+  margin: 0;
+  padding: 0;
+}
+
 app-contactform {
   display: flex;
 }
@@ -53,7 +58,7 @@ app-contactform {
 section {
   display: flex;
   justify-content: center;
-  padding: 16px;
+  padding: 0 16px;
   scroll-snap-align: start;
 }
 
@@ -114,6 +119,7 @@ h2 {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .d-none {
