@@ -16,6 +16,10 @@ body {
   font-family: 'Syne', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+body, .app-div {
+  overflow-x: hidden;
+}
+
 // .fontRailway {font-family: ‘Railway‘;}
 
 app-privacy-policy {
@@ -64,12 +68,14 @@ section {
 
 * {
     box-sizing: border-box;
-    border: 1px solid red;
+    // border: 1px solid red;
+    outline: 1px solid green;
 }
 
 * {
   scrollbar-width: auto;
   scrollbar-color: #6BC1E1 #ffffff00;
+  scrollbar-gutter: var(--clr-bg);
 }
 
   /* Chrome, Edge, and Safari */
