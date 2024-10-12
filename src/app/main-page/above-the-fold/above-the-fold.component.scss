@@ -1,7 +1,6 @@
 section {
     // height: 100vh;
     height: clamp(50vh, 100vh - 0rem, 100vh);
-
     background-color: var(--clr-bg);
     
     .atf-wrapper{
@@ -9,17 +8,14 @@ section {
         justify-content: space-around;
         align-items: stretch;
         flex-direction: column;
-        // gap: 48px;
         width: 100vw;
         
         .atf-title-wrapper{
             background-color: var(--clr-bg);
             z-index: 1;
             padding: 156px 0 0 0;
-            // flex-grow: 1;
         }
     
-
     .atf-title{
         margin: 0;
         padding: 0;
@@ -28,17 +24,15 @@ section {
     .frontend, .developer {
       opacity: 0; 
       position: relative;
-      // font-size: 4rem;
     }
 
-     /* Apply animations */
      .frontend {
       animation: flyInFromRight 1s ease-out forwards;
     }
     
     .developer {
       animation: flyInFromLeft 1s ease-out forwards;
-      animation-delay: 0.5s; /* Delay developer's fly-in by half a second */
+      animation-delay: 0.5s; 
     }
 
     @keyframes flyInFromRight {
@@ -74,7 +68,6 @@ section {
         }
       }
     
-
     .atf-sub-title{
       display: flex;
       justify-content: center;
@@ -85,19 +78,18 @@ section {
             opacity: 0;
             color: var(--clr-text-green);
             font-family: Overpass;
-            font-size: 23px;
+            font-size: clamp(1.4375rem, 3.08vw + 0.65125rem, 5rem);
             font-weight: 700;
             line-height: 23px;
             letter-spacing: -0.025em;
             text-align: center;
             animation: flyInFromBottom 1s ease-out forwards;
-            animation-delay: 2s; /* Delay developer's fly-in by half a second */
-        
+            animation-delay: 2s; 
         }
 
         .atf-underline{
             opacity: 0;
-            width: 180px;
+            width: 45%;
             height: 0;
             border-bottom: 3px solid black;
             animation: flyInFromLeft 1s ease-out forwards;
@@ -120,7 +112,7 @@ section {
             font-weight: 300;
             position: absolute;
             white-space: nowrap;
-            left: -129px;
+            left: -118px;
             top: 132px;
             transform: rotate(270deg);
             z-index: 3;
@@ -134,7 +126,8 @@ section {
            
             .arrow-down {
                position: relative;
-               animation: arrow-slide-loop 15s infinite; 
+               animation: arrow-slide-loop 12s infinite; 
+               animation-delay: 5s;
                transition: all 3s ease-in-out;
             }
 
@@ -166,5 +159,39 @@ section {
             }
         }
     }
+  }
+}
+
+@media (min-width: 720px){
+  .atf-title-wrapper {
+    padding-top: 20%;
+  } 
+
+  .atf-wrapper .atf-bottom > a {      
+         top: 80px !important;
+    }
+  
+
+  .atf-sub-title {
+    gap: 24px;
+  }
+}
+
+@media (min-width: 960px){
+  .atf-wrapper .atf-bottom > a {      
+    top: 0px !important;
+  }
+
+  .atf-sub-title {
+    gap: 24px;
+  }
+
+  .atf-wrapper .atf-bottom .atf-scroll-down {
+  span {
+    display: none;
+  }
+  .arrow-down {
+    right: 72px;
+  }
   }
 }
