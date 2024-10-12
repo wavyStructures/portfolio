@@ -20,14 +20,6 @@ body, .app-div {
   overflow-x: hidden;
 }
 
-.fontSyne {
-  font-family: 'Syne';
-}
-
-.fontOverpass{
-font-family: 'Overpass';
-}
-
 app-privacy-policy {
   width: 100%;
   flex: 1;
@@ -113,11 +105,21 @@ h2 {
   font-weight: 800;
   letter-spacing: 0.01em;
   text-align: center;
+  transition: color 1s ease;
   
     &:hover{
-    color: var(--clr-text-green);
-    cursor: pointer;
+      animation: colorTransition 1.6s ease forwards;
+      cursor: pointer;
     }
+
+    @keyframes colorTransition {
+      50% {
+        color: #029f7a;
+      }
+      100% {
+        color: var(--clr-text-green);
+      }
+  }
 
     .h2-text{
       font-family: Overpass;
@@ -135,6 +137,14 @@ a {
 
 .d-none {
   display: none;
+}
+
+.fontSyne {
+  font-family: 'Syne';
+}
+
+.fontOverpass{
+font-family: 'Overpass';
 }
 
   /* syne-regular - latin */
