@@ -107,25 +107,24 @@ section {
     
     .atf-bottom {
         display: flex;
+        flex-direction: row-reverse;
         justify-content: space-between;
         flex-grow: 1;
+        position: relative;
         
-        .mail-div {
+        >a {
+            text-decoration: none;
+            color: var(--clr-text);
+            font-family: Overpass;
+            font-size: 1.25rem;
+            font-weight: 300;
+            position: absolute;
+            white-space: nowrap;
+            left: -129px;
+            top: 132px;
             transform: rotate(270deg);
             z-index: 3;
-            margin: 206px 0px 106px -20px;
-            >a{
-                text-decoration: none;
-                color: var(--clr-text);
-                font-family: Overpass;
-                font-size: 1.25rem;
-                font-weight: 300;
-                position: absolute;
-                white-space: nowrap;
-                left: -80px;
-                top: 40px;
-            }
-        }
+          }
 
         .atf-scroll-down{
             display: flex;
