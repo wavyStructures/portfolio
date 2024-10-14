@@ -127,20 +127,20 @@ section {
             .arrow-down {
                position: relative;
                animation: arrow-slide-loop 12s infinite; 
-               animation-delay: 5s;
+               animation-delay: 3s;
                transition: all 3s ease-in-out;
             }
 
             .atf-arrow{
                 position: absolute;
                 left: -60px;
-                bottom: 232px;
+                bottom: 280px;
                 z-index: 0;
             }
               
             @keyframes arrow-slide-loop {
               0% {top: 0px; opacity: 1;}  /* Start at the top and fully visible */
-              50% {top: 340px; opacity: 1;} /* End of downward motion, still visible */
+              50% {top: 385px; opacity: 1;} /* End of downward motion, still visible */
               51% {opacity: 0;} /* Just after reaching the bottom, make it invisible */
               100% {top: 0px; opacity: 0;} /* Move it back up invisibly */
             }

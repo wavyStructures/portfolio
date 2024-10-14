@@ -1,3 +1,7 @@
+.section{
+    background-color: var(--clr-bg);
+}
+
 .about-wrapper{
         // width: 21.25rem;
     
@@ -56,6 +60,11 @@
             height: 26px;
             width: 35px;
             margin-right: 5px;
+        }
+        img.remote-img{
+            height: 23px;
+            width: 30px;
+            padding: 0 0 0 6px;           
         }
     }
 
