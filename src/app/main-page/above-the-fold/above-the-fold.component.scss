@@ -168,7 +168,7 @@ section {
   } 
 
   .atf-wrapper .atf-bottom > a {      
-         top: 80px !important;
+         top: 90px !important;
     }
   
   .atf-sub-title {
@@ -185,12 +185,21 @@ section {
     gap: 24px;
   }
 
+  section .atf-wrapper .atf-sub-title .atf-underline {
+      opacity: 1;
+      animation: none;
+    }
+  
+
   .atf-wrapper .atf-bottom .atf-scroll-down {
-  span {
-    display: none;
-  }
-  .arrow-down {
-    right: 72px;
-  }
+    span {
+      display: none;
+    }
+
+    .arrow-down {
+      right: 72px;
+      bottom: 20px;
+    }
+
   }
 }
