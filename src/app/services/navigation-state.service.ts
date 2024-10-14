@@ -5,7 +5,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class NavigationStateService {
-  
   // BehaviorSubject to hold the state of the navigation menu (open/closed)
   private navStateSubject: BehaviorSubject<boolean> =
     new BehaviorSubject<boolean>(false);
@@ -25,4 +24,3 @@ export class NavigationStateService {
     this.navStateSubject.next(!this.navStateSubject.value);
   }
 }
-
