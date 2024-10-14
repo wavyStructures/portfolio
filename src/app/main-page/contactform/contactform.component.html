@@ -2,18 +2,18 @@
     <div class="contact-wrapper">
         <h2 class="greet">{{ 'GREET'| translate}}</h2>
         <div class="h3-wrapper">
-            <h3>{{'CONTACT_UPPER_TEXT'|translate}}</h3>
+            <h3>{{ 'CONTACT_UPPER_TEXT'|translate}}</h3>
         </div>
         <div class="h4-wrapper"></div>
-        <h4>{{'CONTACT_LOWER_TEXT'| translate}}</h4>
+        <h4>{{ 'CONTACT_LOWER_TEXT'| translate}}</h4>
     </div>
 
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contactForm">
         <div>
             <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-                placeholder="{{ 'PLACEHOLDER_NAME'| translate }}" class="contact-form-fields" minlength="2" required>
+                placeholder="{{ 'PLACEHOLDER_NAME' | translate }}" class="contact-form-fields" minlength="2" required>
 
-            @if (!name.valid && name.touched ) {
+            @if (!name.valid && (name.touched || contactForm.submitted)) {
             <span class="feedback-text"> {{ 'PLACEHOLDER_NAME_WARN' | translate }}</span>
             <img class="feedback-icon" src="./../../../assets/img/icons/warn.png" alt="warning icon">
             }
@@ -24,10 +24,10 @@
 
         <div>
             <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
-                placeholder="Your email" class="contact-form-fields" required
+                placeholder="{{ 'PLACEHOLDER_EMAIL' | translate }}" class="contact-form-fields" required
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 
-            @if (!email.valid && email.touched ) {
+            @if (!email.valid && (email.touched || contactForm.submitted)) {
             <span class="feedback-text"> {{ 'PLACEHOLDER_EMAIL_WARN' | translate }}</span>
             <img class="feedback-icon" src="./../../../assets/img/icons/warn.png" alt="warning icon">
             }
@@ -38,12 +38,14 @@
 
         <div>
             <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" minlength="5"
-                class="contact-form-fields" placeholder="Your message" required>
+                class="contact-form-fields" placeholder="{{ 'PLACEHOLDER_MSG' | translate }}" required>
             </textarea>
-            @if (!message.valid && message.touched && !message.disabled) { <span class="feedback-text">
-                {{'PLACEHOLDER_MSG_WARN' | translate}}</span>
+
+            @if (!message.valid && (message.touched || contactForm.submitted)) { <span class="feedback-text">
+                {{ 'PLACEHOLDER_MSG_WARN' | translate}}</span>
             <img class="feedback-icon" src="./../../../assets/img/icons/warn.png" alt="warning icon">
             }
+
             @if(message.valid){
             <img class="feedback-icon" src="./../../../assets/img/icons/correct.png" alt="ok icon">
             }
@@ -53,25 +55,30 @@
         <div class="agreeCheckboxDiv">
             <input [(ngModel)]="checkboxState" type="checkbox" id="checkbox" name="checkbox"
                 (change)="onCheckboxChange()">
-            <p> {{'CHECKBOX_TEXT_1' | translate}}
+            <p> {{ 'CHECKBOX_TEXT_1' | translate}}
                 <a routerLink="privacy-policy">{{ 'PRIVACY_POLICY' | translate }}</a>
                 <!-- <a class='privacy' href='/privacy-policy'> -->
                 <!-- <a href="#privacy"> {{ 'PRIVACY_POLICY' | translate }}</a> -->
-                {{'CHECKBOX_TEXT_2' | translate}}
+                {{ 'CHECKBOX_TEXT_2' | translate}}
             </p>
 
-            @if(!checkboxState && message.valid && email.valid && name.valid){
-            <span class="fontOverpass feedback-text feedback-privacy">{{'ACCEPT_PRIVACY_POLICY' | translate}}</span>
+            @if(!checkboxState && message.valid && email.valid && name.valid || !checkboxState && contactForm.submitted)
+            {
+            <span class="fontOverpass feedback-text feedback-privacy">{{ 'ACCEPT_PRIVACY_POLICY' | translate}}</span>
             }
         </div>
 
-        <button class="submit" type="submit" value="Submit" [disabled]="!checkboxState">
+        <button class="submit" type="submit" value="Submit"
+            [ngClass]="{'disabled-button': !contactForm.valid || !checkboxState}">
+            <!-- <button class="submit" type="submit" value="Submit" (click)="showInfo()"> -->
+            <!-- [ngClass]="{'disabled-button': !contactForm.valid || !checkboxState}"> -->
             {{ 'SAY_HELLO' | translate }}</button>
+
 
     </form>
 
     <div [ngStyle]="{'display' : showMessage ? 'block' : 'none'}" class="success-msg">
-        {{'EMAIL_SUCCESS_MSG' | translate}}
+        {{ 'EMAIL_SUCCESS_MSG' | translate}}
     </div>
 
 

@@ -18,7 +18,7 @@ export class ContactformComponent {
   checkboxState: boolean = false;
   showMessage = false;
 
-  mailTest = false;
+  mailTest = true;
 
   constructor(private navigationService: NavigationService) {}
 
@@ -41,8 +41,16 @@ export class ContactformComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http
+    console.log('Form Valid:', ngForm.valid);
+    console.log('Form Submitted:', ngForm.submitted);
+
+    console.log('Submit clicked');
+
+
+    ngForm.form.markAllAsTouched();
+
+    if (ngForm.form.valid && !this.mailTest) {
+      this.http 
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -53,22 +61,23 @@ export class ContactformComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    } else if (ngForm.form.valid && this.mailTest) {
       console.log(this.contactData);
       ngForm.resetForm();
-      // this.emptyForm();
+    } else {
+      console.warn('form is not valid');
     }
   }
+
+  // showInfo(){
+  //   if(!contactForm.valid || !checkboxState){
+  //     show the warnings
+  //   }
+  // }
 
   onCheckboxChange() {}
 
   navigateToTop(): void {
     this.navigationService.navigateToSection('atf');
   }
-  // emptyForm() {
-  //   this.contactData.firstName = '';
-  //   this.contactData.lastName = '';
-  //   this.contactData.email = '';
-  //   this.contactData.message = '';
-  // }
 }

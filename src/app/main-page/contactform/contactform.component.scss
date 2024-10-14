@@ -141,36 +141,25 @@
     padding: 20px 40px 20px 40px;
     align-self: center;
     background-color: var(--clr-text);
-    border: 4px solid var(--clr-btn);
-    opacity: 50%;
-    color: var(--clr-btn);
+    // color: var(--clr-btn);
+    // border: 4px solid var(--clr-btn);
     cursor: pointer;
     font-family: Montserrat;
     font-size: 23px;
     font-weight: 400;
     margin: 2.125rem 0 2.323rem 0;
-    transition: all 3s ease;
-    &:disabled {
+    font-weight: 700;
+    transform: scale(1.2);
+    color: #fff;
+    border-color: #fff;
+    opacity: 100%;
+    transition: all 0.3 ease;
+    }
+
+    .disabled-button {
       opacity: 0.3;
+      cursor: default;    
     }
-    &:hover,
-    &:not(disabled) {
-      // padding-inline: 2.5em;
-      font-weight: 700;
-      transform: scale(1.2);
-      color: #fff;
-      border-color: #fff;
-      opacity: 100%;
-    }
-    &:hover{
-      color: var(--clr-bg);
-    }
-  }
-    
-  /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
-    background-color: var(--clr-bg);
-  }
   
   input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
