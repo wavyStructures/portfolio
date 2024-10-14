@@ -20,10 +20,6 @@ export class FooterComponent {
     private navigationService: NavigationService
   ) {}
 
-  // navigateToTop(): void {
-  //   this.navigationService.navigateToSection('atf');
-  // }
-
   navigateToTop() {
     if (this.router.url !== '/') {
       this.router.navigate(['/']).then(() => {
@@ -34,9 +30,5 @@ export class FooterComponent {
     } else {
       this.navigationService.navigateToSection('atf');
     }
-
-    // if (this.isActive) {
-    //   this.toggleNav();
-    // }
   }
 }

@@ -1,26 +1,38 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { NavigationService } from '../../services/navigation.service';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterLink,
+    RouterOutlet,
+    TranslateModule,
+  ],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss',
 })
 export class ContactformComponent {
   http = inject(HttpClient);
+  @Input() isInsideNavigation: boolean = false;
+  @Input() isInImprint: boolean = false;
 
   checkboxState: boolean = false;
   showMessage = false;
 
   mailTest = true;
 
-  constructor(private navigationService: NavigationService) {}
+  constructor(
+    private router: Router,
+    private navigationService: NavigationService
+  ) {}
 
   contactData = {
     name: '',
@@ -29,8 +41,8 @@ export class ContactformComponent {
   };
 
   post = {
-    endPoint: 'http://localhost/send-email.php',
-    // endPoint: 'https://deineDomain.de/sendMail.php',
+    // endPoint: 'http://localhost/send-email.php',
+    endPoint: 'https://developer-anja-schwab.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -46,11 +58,10 @@ export class ContactformComponent {
 
     console.log('Submit clicked');
 
-
     ngForm.form.markAllAsTouched();
 
     if (ngForm.form.valid && !this.mailTest) {
-      this.http 
+      this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -68,12 +79,6 @@ export class ContactformComponent {
       console.warn('form is not valid');
     }
   }
-
-  // showInfo(){
-  //   if(!contactForm.valid || !checkboxState){
-  //     show the warnings
-  //   }
-  // }
 
   onCheckboxChange() {}
 
