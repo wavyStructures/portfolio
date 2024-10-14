@@ -1,6 +1,9 @@
 <footer [ngClass]="{ 'nav-footer': isInsideNavigation, 'small-footer': isInImprint}">
         <div class="footer-wrapper">
                 <div class="socialMediaLinks">
+                        <div class="arrow-div">
+                                <a class="arrow-up" (click)="navigateToTop()"></a>
+                        </div>
                         <a href="https://github.com/wavyStructures" target="_blank"> <img
                                         src="../../../assets/img/icons/Property 1 github.png" alt="github link"></a>
                         <a href="#contact" target="_blank"><img src="../../../assets/img/icons/Property 1 mail.png"
@@ -16,7 +19,8 @@
                         </div>
                         <a class="mailTo"
                                 href="mailto:mail@developer-anja-schwab.de">mail&#64;developer-anja-schwab.de</a>
-                        <p [ngClass]="{ 'd-none': isInsideNavigation}">&copy; 2024 Anja Schwab</p>
+                        <p class="copyright-name" [ngClass]="{ 'd-none': isInsideNavigation}">&copy; 2024 Anja Schwab
+                        </p>
                 </div>
 
                 <div [ngClass]="{ 'd-none': isInsideNavigation || isInImprint }" class="privacy_policy"><a

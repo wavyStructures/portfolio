@@ -197,16 +197,21 @@ footer {
         .privacy_policy >a {
             color: var(--clr-bg);
             position: absolute;
-            bottom: 16px;
+            bottom: 8px;
             right: 20px;
+            font-size: smaller;
         }
 
         .copyright{
             align-items: flex-start;
 
-            >p {
-                margin-top: -16px;
+            p {
+                margin-top: -28px;
             }
+        }
+
+        .copyright-name {
+            margin-bottom: 0px;
         }
 
         .mailTo {
@@ -215,15 +220,41 @@ footer {
 
         .logo-div {
             padding: 0;
+
+            >img {
+                margin-left: -32px;
+            }
         }
         
         .socialMediaLinks {
+            position: relative;
             flex-grow: 1;
-            gap: 10%;
+            gap: 8%;
             justify-content: flex-end;
+            padding: 5.5rem 0 2rem 0;
         }
-    }
-}
+
+       
+
+    .arrow-div{
+        position: absolute;
+        bottom: 231px;
+      
+        .arrow-up {
+          width: 30px;
+          height: 80px;
+          background-image: url(./../../../assets/img/animations/arrow_up.png);
+          background-repeat: no-repeat;
+          background-position: center 40px;
+          transition: all 0.125s linear;
+          cursor: pointer;
+        
+            &:hover {
+            background-position: center;
+            }
+          }
+      }
+}}
 
 
 

@@ -203,32 +203,6 @@
       transform: translateX(50%);
     }
   }
-
-  .arrow-div{
-    position: relative;
-  
-    .arrow-up {
-      width: 30px;
-      height: 80px;
-      position: absolute;
-      right: 0px;
-      bottom: 0px;
-      background-image: url("./../../../assets/img/animations/arrow_up.png");
-      background-repeat: no-repeat;
-      background-position: center 40px;
-      transition: all 0.125s linear;
-      cursor: pointer;
-      display: none;
-    
-        &:hover {
-        background-position: center;
-        }
-      }
-  }
 }
 
-@media (min-width: 500px){
-  .arrow-up {
-    display: block !important;
-  }
-}
+
