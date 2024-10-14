@@ -65,11 +65,16 @@ export class HeaderComponent implements OnInit {
   }
 
   navigateToTop() {
-    if (!this.isAtTop) {
-      this.navigationService.navigateToSection('atf');
-    }
-    if (this.isActive) {
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']).then(() => {
+        setTimeout(() => {
+          this.navigationService.navigateToSection('atf');
+        }, 100);
+      });
+    } else if (this.isActive) {
       this.toggleNav();
+    } else {
+      this.navigationService.navigateToSection('atf');
     }
   }
 }
