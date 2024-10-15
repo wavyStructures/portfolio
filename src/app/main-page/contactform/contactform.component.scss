@@ -178,20 +178,54 @@
       color: var(--clr-text-green);
       font-size: 18px;
       font-weight: 400;
-      animation: showSuccessMessage 1.5s forwards;
+      background-color: black;
+      padding: 83px;
+      text-align: center;
+      width: 100vw;
+      border: 2px solid var(--clr-text-green);
+      // animation: showSuccessMessage 1.5s forwards;
   }
 
-  @keyframes showSuccessMessage {
-    from {
-      opacity: 0;
-      right: 100%;
-    }
-    to {
-      opacity: 1;
-      right: 50%;
-      transform: translateX(50%);
-    }
-  }
+  .visible {
+    display: block; 
+    transition-duration: 7s !important; 
+}
+
+.hidden {
+    display: none; 
+}
+
+  // @keyframes showSuccessMessage {
+  //   from {
+  //     opacity: 0;
+  //     right: 100%;
+  //   }
+  //   to {
+  //     opacity: 1;
+  //     right: 50%;
+  //     transform: translateX(50%);
+  //   }
+  // }
+
+  // .roll-out-blurred-left {
+  //   animation: roll-out-blurred-left 5s cubic-bezier(0.755, 0.050, 0.855, 0.060) 2s forwards; // Changed 'both' to 'forwards' for clarity
+  // }
+  
+  // @keyframes roll-out-blurred-left {
+  //   0% {
+  //     transform: translateX(0) rotate(0deg);
+  //     filter: blur(0);
+  //     opacity: 1;
+  //   }
+  
+  //   100% {
+  //     transform: translateX(-1200px) rotate(-720deg); // Adjusted to move further left for a more dramatic effect
+  //     filter: blur(60px); // Slightly increased blur for a stronger effect
+  //     opacity: 0;
+  //   }
+  // }
+  
+
 }
 
 

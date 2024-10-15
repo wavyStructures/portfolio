@@ -27,7 +27,7 @@ export class ContactformComponent {
   checkboxState: boolean = false;
   showMessage = false;
 
-  mailTest = true;
+  mailTest = false;
 
   constructor(
     private router: Router,
@@ -41,9 +41,7 @@ export class ContactformComponent {
   };
 
   post = {
-    // endPoint: 'http://localhost/send-email.php',
-
-    endPoint: 'https://anja_schwab@gmx.de/sendMail.php',
+    endPoint: 'https://developer-anja-schwab.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -56,7 +54,6 @@ export class ContactformComponent {
   onSubmit(ngForm: NgForm) {
     console.log('Form Valid:', ngForm.valid);
     console.log('Form Submitted:', ngForm.submitted);
-
     console.log('Submit clicked');
 
     ngForm.form.markAllAsTouched();
@@ -65,10 +62,14 @@ export class ContactformComponent {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: (response) => {
+          next: (response: any) => {
+            this.showMessage = true;
             ngForm.resetForm();
+            setTimeout((): void => {
+              this.showMessage = false;
+            }, 6000); // Die Nachricht wird nach 3 Sekunden ausgeblendet
           },
-          error: (error) => {
+          error: (error: any) => {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
