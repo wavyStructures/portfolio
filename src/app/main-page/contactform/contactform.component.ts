@@ -42,7 +42,8 @@ export class ContactformComponent {
 
   post = {
     // endPoint: 'http://localhost/send-email.php',
-    endPoint: 'https://developer-anja-schwab.de/sendMail.php',
+
+    endPoint: 'https://anja_schwab@gmx.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
