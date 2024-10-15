@@ -152,6 +152,13 @@ article{
           width: 60%;
           font-weight: 700;
         }
+
+        &:active {
+          background-color: var(--clr-text);
+          color: #fff;
+          transform: scale(1);
+          font-weight: 700;
+        }
       }
     }
       
