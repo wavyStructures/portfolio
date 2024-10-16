@@ -34,6 +34,30 @@
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 20px;
     justify-items: center;
+
+    img {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    img:hover{
+        animation: backward-forward-flip 1.5s ease-in-out
+    }
+
+    @keyframes backward-forward-flip {
+        0% {
+            transform: rotateY(0deg);
+        }
+        40% {
+            transform: rotateY(-120deg);
+        }
+                
+        80% {
+            transform: scale(.5) rotateY(-360deg); 
+        }
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
 }
 
 /* Target the skill items specifically, excluding the last-row-icon */
@@ -43,6 +67,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    cursor: pointer;
 
     >img span{
         font-family: Overpass;
@@ -117,7 +142,7 @@
 
     /* Adjust individual skill items (icons) */
     .skill-item img {
-        width: 60px; /* Smaller icons */
+        width: 60px; 
         height: 60px;
     }
 
