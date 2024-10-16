@@ -54,7 +54,6 @@ export class ContactformComponent {
   onSubmit(ngForm: NgForm) {
     console.log('Form Valid:', ngForm.valid);
     console.log('Form Submitted:', ngForm.submitted);
-    console.log('Submit clicked');
 
     ngForm.form.markAllAsTouched();
 
@@ -63,11 +62,11 @@ export class ContactformComponent {
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response: any) => {
-            this.showMessage = true;
+            this.showMessage = true; // Show the success message
+            setTimeout(() => {
+              this.showMessage = false; // Hide the message after 6 seconds
+            }, 6000);
             ngForm.resetForm();
-            setTimeout((): void => {
-              this.showMessage = false;
-            }, 6000); // Die Nachricht wird nach 3 Sekunden ausgeblendet
           },
           error: (error: any) => {
             console.error(error);

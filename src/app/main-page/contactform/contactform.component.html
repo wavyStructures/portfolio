@@ -79,8 +79,7 @@
 
     </form>
 
-    <div [ngClass]="{'success-msg': true, 'visible': showMessage, 'hidden': !showMessage}" data-aos="flip-left"
-        data-aos-easing="ease-in-out" class="aos-init aos-animate">
+    <div [ngClass]="{'success-msg': true, 'visible': showMessage, 'hidden': !showMessage}" class="flip-left">
         {{ 'EMAIL_SUCCESS_MSG' | translate}}
     </div>
 
