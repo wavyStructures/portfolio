@@ -21,8 +21,8 @@
         height: 14rem;
         display: flex;
         justify-content: flex-end;
-        padding: 0 100px;
-        margin-bottom: 40px;
+        padding: 0 40px;
+        margin-bottom: 20px;
 
         >img{
             position: absolute;
@@ -41,3 +41,22 @@
         }
     }
 }
+
+@media (min-width: 1000px) {
+    .arrow-div  {
+        margin-bottom: -40px !important;
+
+}}
+
+@media (min-width: 700px) {
+    .arrow-div  {
+        margin-bottom: -20px !important;
+
+}}
+
+@media (min-width: 500px) {
+    .arrow-div  {
+        padding: 0 100px !important;
+        margin-bottom: -5px !important;
+
+}}
