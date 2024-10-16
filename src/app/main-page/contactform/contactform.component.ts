@@ -51,6 +51,8 @@ export class ContactformComponent {
     },
   };
 
+
+
   onSubmit(ngForm: NgForm) {
     console.log('Form Valid:', ngForm.valid);
     console.log('Form Submitted:', ngForm.submitted);

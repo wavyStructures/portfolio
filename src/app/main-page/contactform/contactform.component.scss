@@ -40,7 +40,6 @@
     display: flex;
     flex-direction: column;
 
-    
     .agreeCheckboxDiv {
       display: flex;
       align-items: baseline;
@@ -56,30 +55,37 @@
     }
   
   
-  input[type=text], [type=email], textarea {
-      width: 100%; 
-      border: none;
-      border-bottom: 2px solid var(--clr-bg); 
-      background-color: var(--clr-text);
-      box-sizing: border-box; 
-      margin-top: 6px; 
-      margin-bottom: 16px; 
-      resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-      padding: 15px 25px 15px 25px;
-      gap: 10px;
-      font-family: Overpass;
-      font-size: 20px;
-      font-weight: 400;
-      text-align: left;
-
-      &::placeholder {
-        color: var(--clr-bg);
+    input[type=text], [type=email], textarea {
+        width: 100%; 
+        border: none;
+        border-bottom: 2px solid var(--clr-bg); 
+        background-color: var(--clr-text);
+        box-sizing: border-box; 
+        margin-top: 6px; 
+        margin-bottom: 16px; 
+        padding: 15px 25px 15px 25px;
         font-family: Overpass;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 400;
         text-align: left;
+
+        &::placeholder {
+          color: var(--clr-bg);
+          font-family: Overpass;
+          font-size: 16px;
+          font-weight: 400;
+          text-align: left;
+        }
+
+        &:focus {
+          background-color: #000 !important;
+          border: 2px solid var(--clr-bg);
+      
       }
-    
+    }
+
+    textarea{
+      height: 200px;
     }
 
     .contact-form-fields {
@@ -118,7 +124,7 @@
       .feedback-text {
         color: #E61C40;
         position: absolute;
-        left: 16px;
+        left: 26px;
         bottom: -3px;
         z-index: 1;
       }
@@ -138,39 +144,39 @@
         margin-right: 3px;
       }
     }
-  }
 
-  .submit {
-    padding: 20px 40px 20px 40px;
-    align-self: center;
-    background-color: var(--clr-text);
-    cursor: pointer;
-    font-family: Montserrat;
-    font-size: 23px;
-    font-weight: 400;
-    margin: 2.125rem 0 2.323rem 0;
-    font-weight: 700;
-    transform: scale(1.2);
-    color: #fff;
-    border-color: #fff;
-    opacity: 100%;
-    transition: all 0.3 ease;
-    }
+    .submit {
+      padding: 20px 40px 20px 40px;
+      align-self: center;
+      background-color: var(--clr-text);
+      cursor: pointer;
+      font-family: Montserrat;
+      font-size: 23px;
+      font-weight: 400;
+      margin: 2.125rem 0 2.323rem 0;
+      font-weight: 700;
+      transform: scale(1.2);
+      color: #fff;
+      border-color: #fff;
+      opacity: 100%;
+      transition: all 0.3 ease;
+      }
 
-    .disabled-button {
-      opacity: 0.3;
-      cursor: default;    
+      .disabled-button {
+        opacity: 0.3;
+        cursor: default;    
+      }
+    
+    input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+      -webkit-text-fill-color: #fffcf3;
     }
-  
-  input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
-    -webkit-text-fill-color: #fffcf3;
-  }
-  
-  /* Reset background for autofill on focus */
-  input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
-    -webkit-text-fill-color: #fffcf3;
+    
+    /* Reset background for autofill on focus */
+    input:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+      -webkit-text-fill-color: #fffcf3;
+    }
   }
 
   .success-msg {
@@ -193,7 +199,6 @@
     z-index: 1000;
   }
 
-  /* Keyframes for 5 flips (in) */
   @keyframes flipIn {
     0% {
       opacity: 0;
@@ -234,4 +239,23 @@
   }
 }
 
+@media (min-width: 450px) {
+  .contactForm {
+    width: 80%;
+    align-self: center;
+  }
+}
+
+@media (min-width: 750px) {
+  .contactForm {
+    width: 56%;
+    align-self: center;
+  }
+
+  .container button {
+    opacity: 0.3;
+    cursor: default;
+    width: 17rem;
+  }
+}
 
