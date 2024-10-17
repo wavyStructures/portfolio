@@ -1,3 +1,7 @@
+app-reference-single {
+    display: flex;
+}
+
 .references-wrapper{
 
     .ref-top{
@@ -15,6 +19,13 @@
         }
     }
    
+    .ref-bottom{
+        display: grid;
+        grid-template-columns: 1fr; /* One column by default */
+        gap: 1rem; /* Space between the grid items */
+        align-self: stretch;
+    }
+
     .arrow-div  {
         position: relative;
         overflow: hidden;
@@ -48,6 +59,18 @@
 
 }}
 
+@media (min-width: 768px) {
+    .references-wrapper .ref-bottom {
+      grid-template-columns: repeat(3, 1fr); 
+      align-items: stretch; /* Ensures that grid items stretch to the same height */
+
+      .ref-titles {  height: 100%; /* Stretch to fill the height of the grid item */
+        min-height: 300px; /* Optional: Ensures a minimum height */
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: For box aesthetics */}
+    }
+  }
+
 @media (min-width: 700px) {
     .arrow-div  {
         margin-bottom: -20px !important;
@@ -60,3 +83,5 @@
         margin-bottom: -5px !important;
 
 }}
+
+

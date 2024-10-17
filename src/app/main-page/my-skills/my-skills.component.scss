@@ -40,7 +40,7 @@
     }
 
     img:hover{
-        animation: backward-forward-flip 1.5s ease-in-out
+        animation: backward-forward-flip 1.5s ease-in-out;
     }
 
     @keyframes backward-forward-flip {
