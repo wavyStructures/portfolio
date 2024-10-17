@@ -66,6 +66,12 @@ section {
   background-color: var(--clr-bg);
 }
 
+@media (min-width: 768px) {
+  section {
+    padding: 0 40px;
+  }  
+}
+
 * {
     box-sizing: border-box;
     // outline: 1px solid green;
@@ -103,13 +109,13 @@ h1 {
 
 h2 {  
   font-family: 'Syne';
-  font-size: clamp(2.2rem, 4.8vw, 4.8rem);
+  font-size: clamp(2.2rem, 6.2vw, 6.2rem);
   font-weight: 800;
   letter-spacing: 0.01em;
   text-align: center;
   transition: color 1s ease;
   
-    &:hover{
+    &:hover {
       animation: colorTransition 1.6s ease forwards;
       cursor: pointer;
     }
@@ -122,15 +128,15 @@ h2 {
         color: var(--clr-text-green);
       }
   }
-
-    .h2-text{
+}
+    .h2-text {
       font-family: Overpass;
-      font-size: clamp(2.2rem, 4.8vw, 4.8rem);
+      font-size: clamp(1.25rem, 1.8vw, 1.8rem);
       font-weight: 400;
       text-align: center;
     }
 
-}
+
 
 a {
   text-decoration: none;

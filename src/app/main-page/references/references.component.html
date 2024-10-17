@@ -2,11 +2,11 @@
     <div class="references-wrapper">
         <div class="ref-top">
             <h2>{{'REFERENCES' | translate}}</h2>
-            <p>{{'REFERENCES_TEXT' | translate}}</p>
+            <p class="h2-text">{{'REFERENCES_TEXT' | translate}}</p>
         </div>
         <div class="ref-bottom">
-            <app-reference-single *ngFor="let referenceSingle of references"
-                [references]="referenceSingle" class="single-reference"></app-reference-single>
+            <app-reference-single *ngFor="let referenceSingle of references" [references]="referenceSingle"
+                class="single-reference"></app-reference-single>
         </div>
 
         <div class="arrow-div">

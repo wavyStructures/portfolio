@@ -21,8 +21,8 @@ app-reference-single {
    
     .ref-bottom{
         display: grid;
-        grid-template-columns: 1fr; /* One column by default */
-        gap: 1rem; /* Space between the grid items */
+        grid-template-columns: 1fr; 
+        gap: 1rem;
         align-self: stretch;
     }
 
@@ -53,35 +53,35 @@ app-reference-single {
     }
 }
 
-@media (min-width: 1000px) {
-    .arrow-div  {
-        margin-bottom: -40px !important;
-
-}}
-
-@media (min-width: 768px) {
-    .references-wrapper .ref-bottom {
-      grid-template-columns: repeat(3, 1fr); 
-      align-items: stretch; /* Ensures that grid items stretch to the same height */
-
-      .ref-titles {  height: 100%; /* Stretch to fill the height of the grid item */
-        min-height: 300px; /* Optional: Ensures a minimum height */
-        padding: 1rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: For box aesthetics */}
-    }
-  }
-
-@media (min-width: 700px) {
-    .arrow-div  {
-        margin-bottom: -20px !important;
-
-}}
-
 @media (min-width: 500px) {
     .arrow-div  {
         padding: 0 100px !important;
         margin-bottom: -5px !important;
+        margin-top: 20px;
+    }
+}
 
-}}
+@media (min-width: 700px) {
+    .arrow-div  {
+        margin-bottom: -20px !important;
+    }
+}
 
+@media (min-width: 768px) {
+    .references-wrapper .ref-bottom {
+      grid-template-columns: repeat(3, 1fr); 
+      align-items: stretch; 
 
+      .ref-titles {  
+        height: 100%; 
+        min-height: 420px; 
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+    }
+}
+
+  @media (min-width: 1000px) {
+    .arrow-div  {
+        margin-bottom: -40px !important;
+    }
+}
