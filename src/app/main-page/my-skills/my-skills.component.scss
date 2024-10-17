@@ -20,7 +20,6 @@
         font-size: 20px;
         font-weight: 400;
     }
-
 }
 
 .skill-item-and-missing > img {
@@ -34,6 +33,7 @@
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 20px;
     justify-items: center;
+    grid-auto-flow: dense; 
 
     img {
         transition: transform 0.3s ease-in-out;
@@ -60,12 +60,11 @@
     }
 }
 
-/* Target the skill items specifically, excluding the last-row-icon */
 .skill-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 10px;
     cursor: pointer;
 
@@ -76,21 +75,27 @@
     }
 }
 
-/* Center the last row of normal skill items */
-.skill-item:nth-last-child(-n+3) {
-    grid-column: span 3; /* Center when there are 1, 2, or 3 items in the last row */
-    justify-self: center;
+.last-row-icon {
+    grid-column: 1; 
 }
 
-/* Last row specific styles (icon and text) */
-.last-row-icon {
-    grid-column: 1; /* Place the icon in the first column of the last row */
+.skills-missing {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    grid-column: span 3;
+    gap: 40px;
+
+    img {
+        margin-left: 12px;
+    }
 }
 
 .last-row-text {
-    grid-column: 2 / -1; /* Make the text take up the rest of the columns */
-    justify-self: start; /* Align text to the left within its grid area */
+    grid-column: 2 / -1; 
+    justify-self: start; 
     margin-left: -20px;
+    margin-top: -20px;
     text-align: left;
 
     .contact {
@@ -99,6 +104,11 @@
         font-size: 20px;
         font-weight: 500;
         cursor: pointer;
+
+        &:hover {
+            font-weight: 700;
+            text-shadow: 0 0 2px rgba(0, 122, 0, 0.1);    
+        }
     }
 }
 
@@ -109,7 +119,7 @@
     transform: scaleX(-1);
     display: flex;
     justify-content: flex-end;
-    padding: 0 100px;
+    padding: 0 50px;
     margin-top: 20px;
 
     
@@ -146,15 +156,9 @@
         height: 60px;
     }
 
-        /* Adjust the special last row icon and text */
-    .last-row-icon {
-        grid-column: 1; /* Keep the icon in the first column */
-        margin-top: 16px;
-       }
-
     .last-row-text {
         grid-column: 2 / -1; /* Text still spans the remaining columns */
-        // margin-left: -20px;
+       
         text-align: left;
         padding-left: 8px;
     }
