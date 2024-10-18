@@ -32,7 +32,7 @@
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 5%;
+    gap: 50px;
     justify-items: center;
     grid-auto-flow: dense;
     padding: 6%;
@@ -144,19 +144,46 @@
     }
 }
 
-//////////////////////////  bigger screens ///////////////////////////////////////
- @media (max-width: 600px) {
+//////////////////////////  smaller screens ///////////////////////////////////////
+@media (min-width: 768px) {
+    section {
+        padding: 0px 42px;
+    }
+}
+
+@media (max-width: 720px) {
+    .skills-grid {
+       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+       // gap: 15px;
+   }
+}
+
+@media (max-width: 600px) {
 
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Reduce icon size */
-        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
+        gap: 8px;
+        padding: unset;
     }
 
     .skill-item img {
-        width: 60px; 
-        height: 60px;
+        width: 50px; 
+        height: 50px;
     }
 
+    .skill-item span {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .skills-missing {
+        margin-top: 8px;
+    
+        img {
+            margin-left: 3px;
+        }
+    }       
+    
     .last-row-text {
         grid-column: 2 / -1; /* Text still spans the remaining columns */
        
@@ -169,16 +196,3 @@
         width: 90%; 
     }
  }
-
- @media (max-width: 720px) {
-     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
-        // gap: 15px;
-    }
- }
-
- @media (min-width: 768px) {
-    section {
-        padding: 0px 42px;
-    }
-}

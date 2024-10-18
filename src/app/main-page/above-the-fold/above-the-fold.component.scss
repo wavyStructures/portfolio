@@ -13,7 +13,7 @@ section {
         .atf-title-wrapper{
             background-color: var(--clr-bg);
             z-index: 1;
-            padding: 156px 0 0 0;
+            padding-top: 50%;
         }
     
     .atf-title{
@@ -99,13 +99,11 @@ section {
     
     .atf-bottom {
         display: flex;
-        flex-direction: row-reverse;
         justify-content: space-between;
         flex-grow: 1;
         position: relative;
-        padding-top: 20%;
-        
-        >a {
+                
+        .link-div a {
             text-decoration: none;
             color: var(--clr-text);
             font-family: Overpass;
@@ -113,8 +111,8 @@ section {
             font-weight: 300;
             position: absolute;
             white-space: nowrap;
-            left: -64px;
-            top: 132px;
+            left: -5.5rem;
+            top: 8rem;
             transform: rotate(270deg);
             z-index: 3;
           }
@@ -124,29 +122,42 @@ section {
             flex-direction: column;
             justify-content: flex-end;
             align-items: center;
+            // position: relative;
            
             .arrow-down {
-               position: relative;
-               animation: arrow-slide-loop 8s infinite; 
-               animation-delay: 3s;
-               transition: all 3s ease-in-out;
+              //  position: relative;
+              //  animation: arrow-slide-loop 8s infinite; 
+              //  animation-delay: 3s;
+              //  transition: all 3s ease-in-out;
             }
 
             .atf-arrow{
-                position: absolute;
-                left: -60px;
-                bottom: 280px;
+              
+              animation: arrow-slide-loop 8s infinite; 
+              animation-delay: 3s;
+              transition: all 3s ease-in-out;
+                // position: absolute;
+                // left: -60px;
+                // bottom: 280px;
                 z-index: 0;
             }
               
             @keyframes arrow-slide-loop {
-              0% {top: 0px; opacity: 1;}  /* Start at the top and fully visible */
-              50% {top: 385px; opacity: 1;} /* End of downward motion, still visible */
-              51% {opacity: 0;} /* Just after reaching the bottom, make it invisible */
-              100% {top: 0px; opacity: 0;} /* Move it back up invisibly */
+             0% {transform: translateY(-200px)}
+             100% {transform: translateY(126px)}
+             
+             
+             
+             
+             
+             
+              // 0% {top: 0px; opacity: 1;}  /* Start at the top and fully visible */
+              // 50% {top: 385px; opacity: 1;} /* End of downward motion, still visible */
+              // 51% {opacity: 0;} /* Just after reaching the bottom, make it invisible */
+              // 100% {top: 0px; opacity: 0;} /* Move it back up invisibly */
             }
 
-            >span{
+            .arrow-cover-below {
               font-family: Overpass;
               font-size: 20px;
               font-weight: 300;
