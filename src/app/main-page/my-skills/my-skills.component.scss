@@ -31,10 +31,11 @@
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 5%;
     justify-items: center;
-    grid-auto-flow: dense; 
+    grid-auto-flow: dense;
+    padding: 6%;
 
     img {
         transition: transform 0.3s ease-in-out;
@@ -114,6 +115,7 @@
 }
 
 .arrow-div {
+    width: 100%;
     position: relative;
     overflow: hidden;
     height: 14rem;
@@ -142,16 +144,14 @@
     }
 }
 
-//////////////////////////  MOBILE ///////////////////////////////////////
+//////////////////////////  bigger screens ///////////////////////////////////////
  @media (max-width: 600px) {
 
-    /* Make the grid layout more vertical */
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Reduce icon size */
-        gap: 15px; /* Smaller gap between items */
+        gap: 15px;
     }
 
-    /* Adjust individual skill items (icons) */
     .skill-item img {
         width: 60px; 
         height: 60px;
@@ -169,3 +169,16 @@
         width: 90%; 
     }
  }
+
+ @media (max-width: 720px) {
+     .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+        // gap: 15px;
+    }
+ }
+
+ @media (min-width: 768px) {
+    section {
+        padding: 0px 42px;
+    }
+}

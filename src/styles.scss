@@ -84,7 +84,13 @@ section {
   background-color: var(--clr-bg);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 450px) {
+  section {
+    padding: 0 50px;
+  }  
+}
+
+@media (min-width: 1200px) {
   section {
     padding: 0 100px;
   }  
