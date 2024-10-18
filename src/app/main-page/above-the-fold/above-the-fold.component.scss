@@ -103,6 +103,7 @@ section {
         justify-content: space-between;
         flex-grow: 1;
         position: relative;
+        padding-top: 20%;
         
         >a {
             text-decoration: none;
@@ -126,7 +127,7 @@ section {
            
             .arrow-down {
                position: relative;
-               animation: arrow-slide-loop 12s infinite; 
+               animation: arrow-slide-loop 8s infinite; 
                animation-delay: 3s;
                transition: all 3s ease-in-out;
             }
@@ -168,7 +169,7 @@ section {
   } 
 
   .atf-wrapper .atf-bottom > a {      
-         top: 90px !important;
+         top: 110px !important;
     }
   
   .atf-sub-title {
@@ -178,7 +179,7 @@ section {
 
 @media (min-width: 960px){
   .atf-wrapper .atf-bottom > a {      
-    top: -64px !important;
+    top: 42px !important;
   }
 
   .atf-sub-title {
