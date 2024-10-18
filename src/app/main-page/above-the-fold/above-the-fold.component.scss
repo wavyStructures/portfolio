@@ -101,6 +101,7 @@ section {
         justify-content: space-between;
         flex-grow: 1;
         position: relative;
+        margin-top: 100px;
                 
         .link-div a {
             text-decoration: none;
@@ -151,9 +152,21 @@ section {
   }
 }
 
+@media (min-width: 450px){
+  .atf-bottom {
+    margin-top: unset !important;
+  }
+}
+
+@media (min-width: 590px) {
+  .atf-title-wrapper{
+    padding-top: 27% !important;
+  }
+}
+
 @media (min-width: 720px){
   .atf-title-wrapper {
-    padding-top: 20%;
+    padding-top: 20% !important;
   } 
 
   .atf-wrapper .atf-bottom > a {      
@@ -162,6 +175,17 @@ section {
   
   .atf-sub-title {
     gap: 24px;
+  }
+
+
+}
+
+@media (min-width: 940px){
+  .atf-title-wrapper {
+    padding-top: unset !important;
+  }
+  .atf-bottom .link-div a {
+       top: 7rem;
   }
 }
 
@@ -192,3 +216,4 @@ section {
 
   }
 }
+
