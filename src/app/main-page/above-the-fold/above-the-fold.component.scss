@@ -112,7 +112,7 @@ section {
             font-weight: 300;
             position: absolute;
             white-space: nowrap;
-            left: -118px;
+            left: -64px;
             top: 132px;
             transform: rotate(270deg);
             z-index: 3;
@@ -178,7 +178,7 @@ section {
 
 @media (min-width: 960px){
   .atf-wrapper .atf-bottom > a {      
-    top: 0px !important;
+    top: -64px !important;
   }
 
   .atf-sub-title {

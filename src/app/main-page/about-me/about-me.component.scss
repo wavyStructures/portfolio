@@ -147,10 +147,7 @@
 }
 
 @media (min-width: 850px) { 
-    .section{
-        padding: 0 80px;
-    }
-
+   
     h2 {
         text-align: left;
         padding-left: 20px;
@@ -182,10 +179,11 @@
     }
 
     .about-wrapper {
-                
+        padding-left: 10%;
+
         .photo-div {
             flex-grow: 1;
-            padding-left: 20px;
+            padding-left: 5%;
             margin-top: 3px;
 
             .photo img img {
