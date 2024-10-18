@@ -1,30 +1,38 @@
 <section class="section">
+
     <div class="about-wrapper">
         <h2>{{'ABOUTME' | translate}}</h2>
-        <p>{{'ABOUT_DESCRIPTION_1' | translate}}</p>
-        <p>{{'ABOUT_DESCRIPTION_2' | translate}}</p>
+        <div class="text-button-photo">
+            <div class="text-and-button">
 
-        <div class="about-info">
-            <img src="./../../../assets/img/icons/house.png" alt="">
-            <p>{{ 'BASED' | translate }}</p>
+                <p>{{'ABOUT_DESCRIPTION_1' | translate}}</p>
+                <p>{{'ABOUT_DESCRIPTION_2' | translate}}</p>
+
+                <div class="about-info">
+                    <img src="./../../../assets/img/icons/house.png" alt="">
+                    <p>{{ 'BASED' | translate }}</p>
+                </div>
+
+                <div class="about-info">
+                    <img class="remote-img" src="./../../../assets/img/icons/laptop_chromebook.png" alt="">
+                    <p>{{ 'REMOTE' | translate }}</p>
+                </div>
+
+                <div class="button-div">
+                    <a href="#contact" class="button">{{ 'TALKBUTTON' | translate }}</a>
+                </div>
+            </div>
+
+            <div class="photo-div">
+                <div class="photo"><img src="./../../../assets/img/AnjaPhotoSquare.jpg" alt="">
+                    <div class="show-border"></div>
+                </div>
+            </div>
         </div>
-
-        <div class="about-info">
-            <img class="remote-img" src="./../../../assets/img/icons/laptop_chromebook.png" alt="">
-            <p>{{ 'REMOTE' | translate }}</p>
-        </div>
-
-        <div class="button-div">
-            <a href="#contact" class="button">{{ 'TALKBUTTON' | translate }}</a>
-        </div>
-
-        <div class="photo"><img src="./../../../assets/img/AnjaPhotoSquare.jpg" alt="">
-            <div class="show-border"></div>
-        </div>
-
         <div class="arrow-div">
             <img src="./../../../assets/img/animations/arrow_angle.png" alt="arrow showing down"
                 [ngClass]="{'scrolled': isScrolled}">
         </div>
+
     </div>
 </section>
