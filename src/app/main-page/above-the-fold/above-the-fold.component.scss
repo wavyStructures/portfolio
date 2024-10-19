@@ -227,3 +227,38 @@ section {
   }
 }
 
+@media (min-width: 1460px) {
+  #atfMail {
+      left: -3rem;
+      top: -19rem !important;
+  }
+
+  section .atf-wrapper .atf-bottom .atf-scroll-down {
+    position: absolute;
+    right: 90px;
+    bottom: 180px;
+    z-index: 2;
+  }
+}
+
+
+@media (min-width: 1560px) {
+  #atfMail {
+      left: 1rem;
+      top: -19rem !important;
+  }
+
+  section .atf-wrapper .atf-bottom .atf-scroll-down {
+    position: absolute;
+    right: 145px;
+    bottom: 180px;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 1760px) {
+  #atfMail {
+      left: 12rem;
+      top: -19rem !important;
+  }
+}
