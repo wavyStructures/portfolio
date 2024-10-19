@@ -2,12 +2,13 @@ section {
     height: clamp(50vh, 100vh - 0rem, 100vh);
     background-color: var(--clr-bg);
     
-    .atf-wrapper{
+    .atf-wrapper {
+      width: 100vw;
         display: flex;
         justify-content: space-around;
         align-items: stretch;
         flex-direction: column;
-        width: 100vw;
+        padding-top: 20%;
         
         .atf-title-wrapper{
             background-color: var(--clr-bg);
@@ -112,7 +113,7 @@ section {
             position: absolute;
             white-space: nowrap;
             left: -5.5rem;
-            top: 8rem;
+            top: 6.5rem;
             transform: rotate(270deg);
             z-index: 3;
           }
@@ -152,19 +153,23 @@ section {
   }
 }
 
-@media (min-width: 450px){
+@media (min-width: 400px) {
   .atf-bottom {
     margin-top: unset !important;
   }
 }
 
-@media (min-width: 590px) {
+@media (min-width: 510px) {
   .atf-title-wrapper{
     padding-top: 27% !important;
   }
+
+  .link-div a {
+      top: 6rem;
+  }
 }
 
-@media (min-width: 720px){
+@media (min-width: 675px) {
   .atf-title-wrapper {
     padding-top: 20% !important;
   } 
@@ -176,22 +181,27 @@ section {
   .atf-sub-title {
     gap: 24px;
   }
-
-
 }
 
-@media (min-width: 940px){
+
+
+@media (min-width: 745px) {
   .atf-title-wrapper {
     padding-top: unset !important;
   }
+
   .atf-bottom .link-div a {
        top: 7rem;
   }
 }
 
-@media (min-width: 960px){
+@media (min-width: 1060px) {
   .atf-wrapper .atf-bottom > a {      
     top: 42px !important;
+  }
+
+  .atf-bottom .link-div a {
+    top: 0 !important;
   }
 
   .atf-sub-title {

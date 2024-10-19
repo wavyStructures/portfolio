@@ -3,9 +3,9 @@
 
     <div class="header-right">
 
-        @if(currentLanguage === 'en'){
+        @if(currentLanguage === 'en') {
         <img src="../../../assets/img/icons/english.png" alt="Deutsch" (click)="changeLanguage('de')">}
-        @if(currentLanguage === 'de'){
+        @if(currentLanguage === 'de') {
         <img src="../../../assets/img/icons/german.png" alt="English" (click)="changeLanguage('en')">}
 
         <button class="burger-menu" id="toggle" [ngClass]="{ 'burger-active': isActive,  'closing': isClosing }"
