@@ -100,7 +100,6 @@ footer {
         }
     }
     
-        
 ////////////////////////navigation footer////////////////////////
 .nav-footer{
     footer{
@@ -118,7 +117,6 @@ footer {
         align-items: unset;
         margin-bottom: unset;
         padding-left: 20px;
-
 
         .copyright{
             display: flex;
@@ -183,6 +181,10 @@ footer {
         p {
             margin: 0;
         }
+
+        a {
+          display: none;
+        }
     }  
 }
 
@@ -234,9 +236,7 @@ footer {
             gap: 8%;
             justify-content: flex-end;
             padding: 5.5rem 0 2rem 0;
-        }
-
-       
+        }   
 
     .arrow-div{
         position: absolute;
