@@ -2,19 +2,32 @@
     display: flex;
     flex-direction: column;
 }
+
+h2 {
+    // margin-top: -30px;
+    background-color: var(--clr-bg);
+    width: 80%;
+    align-self: center;
+    position: relative;  /* This is important to position the ::before pseudo-element relative to the wrapper */
+    margin-top: -110px;   /* Move the wrapper visually upwards, but keep the padding effect */
+    padding-top: 110px;   /* Adds the needed space for scrolling behavior */
+}
+  
+h2::before {
+    content: "";          /* This creates the pseudo-element */
+    position: absolute;   
+    top: -108px;
+    height: 110px;      /* Adds the space equivalent to your desired padding */
+    width: 100%;          /* Span the entire width of the .skills-wrapper */
+    visibility: hidden;   /* Keep it invisible but still taking up space */
+}
+
 .skills-wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
     border: 4px solid var(--clr-text);
-    
-    >h2 {
-        margin-top: -30px;
-        background-color: var(--clr-bg);
-        width: 80%;
-        align-self: center;
-    }
 
     p, span {
         font-family: Overpass;

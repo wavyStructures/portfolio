@@ -1,6 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
+import { Component } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { AboutMeComponent } from '../about-me/about-me.component';
@@ -40,4 +39,32 @@ export class ProjectsComponent {
       demo: 'https://epl.developer-anja-schwab.de',
     },
   ];
+
+  // largeWindow: boolean = false;
+
+  // constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  // ngOnInit(): void {
+  //   this.getWindowSize();
+  // }
+
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event: Event): void {
+  //   this.getWindowSize();
+  // }
+
+  // private getWindowSize(): void {
+  //   const windowWidth = window.innerWidth;
+  //   this.largeWindow = windowWidth >= 800;
+  // }
+
+  // ngAfterViewInit(): void {
+  //   if (isPlatformBrowser(this.platformId)) {
+  //     AOS.init({
+  //       offset: 300,
+  //       duration: 400,
+  //       delay: 200,
+  //     });
+  //   }
+  // }
 }

@@ -29,7 +29,7 @@ export class NavigationComponent {
   ) {}
 
   navigateToSection(target: string): void {
-    this.navigationService.navigateToSection(target); 
+    this.navigationService.navigateToSection(target);
     this.closeNav.emit(); // Emit close event to parent
   }
 }
