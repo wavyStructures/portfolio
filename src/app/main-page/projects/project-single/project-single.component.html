@@ -19,8 +19,8 @@
             </a>
 
 
-            <div class="text-content" [attr.data-aos]="!largeWindow ? 'fade-down' : 'fade-right'"
-                data-aos-duration="1000" data-aos-offset="220" data-aos-delay="200" data-aos-easing="ease-in-sine">
+            <div class="text-content" [attr.data-aos]="!largeWindow ? 'fade-down' : 'fade-right'">
+
                 <h2>{{project.title | translate}}</h2>
                 <p class="stack">{{project.stack}}</p>
                 <p class="description">{{ projectDescription | translate }}</p>
@@ -46,8 +46,7 @@
                 </div>
             </a>
 
-            <div class="text-content" [attr.data-aos]="!largeWindow ? 'fade-down' : 'fade-left'"
-                data-aos-duration="1000" data-aos-easing="ease-in-sine">
+            <div class="text-content" [attr.data-aos]="!largeWindow ? 'fade-down' : 'fade-left'">
 
                 <h2>{{project.title | translate}}</h2>
                 <p class="stack">{{project.stack}}</p>

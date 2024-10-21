@@ -25,7 +25,59 @@ export class ProjectSingleComponent
 {
   largeWindow: boolean = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  // constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  // @HostListener('window:scroll', [])
+  // onWindowScroll(): void {
+  //   this.debounceCheckProjectsInView();
+  // }
+
+  // // Vanilla debounce function
+  // debounce(func: Function, wait: number) {
+  //   let timeout: any;
+  //   return function (...args: any[]) {
+  //     const later = () => {
+  //       clearTimeout(timeout);
+  //       func(...args);
+  //     };
+  //     clearTimeout(timeout);
+  //     timeout = setTimeout(later, wait);
+  //   };
+  // }
+
+  // // Debounce the check to run every 100 milliseconds after scrolling has stopped
+  // debounceCheckProjectsInView = this.debounce(() => {
+  //   this.checkProjectsInView();
+  // }, 100);
+
+  // // Method to check if project elements are in view
+  // checkProjectsInView(): void {
+  //   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+  //   const projectElements = document.querySelectorAll(
+  //     '.single-project-wrapper'
+  //   );
+
+  //   projectElements.forEach((projectElement: Element) => {
+  //     const elementPosition =
+  //       projectElement.getBoundingClientRect().top + window.scrollY;
+
+  //     // Check if the project element is in view
+  //     if (
+  //       scrollPosition > elementPosition - window.innerHeight &&
+  //       scrollPosition < elementPosition + projectElement.clientHeight
+  //     ) {
+  //       const alreadyAnimated =
+  //         projectElement.getAttribute('data-aos-animated');
+
+  //       // Trigger animation only if it hasn't been animated already
+  //       if (!alreadyAnimated) {
+  //         AOS.refresh(); // Trigger the animation refresh when in view
+  //         projectElement.setAttribute('data-aos-animated', 'true'); // Mark as animated
+  //       }
+  //     }
+  //   });
+  // }
 
   ngOnInit(): void {
     this.getWindowSize();
@@ -33,29 +85,31 @@ export class ProjectSingleComponent
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
-    this.getWindowSize();
-    AOS.refresh();
+    const prevLargeWindow = this.largeWindow; // Store the previous window size state
+    this.getWindowSize(); // Update `largeWindow`
+
+    // Only refresh AOS if the window crosses the 800px threshold (to avoid unnecessary refreshes)
+    if (prevLargeWindow !== this.largeWindow) {
+      AOS.refresh();
+    }
   }
 
   private getWindowSize(): void {
     const windowWidth = window.innerWidth;
-    this.largeWindow = windowWidth >= 800;
+    this.largeWindow = windowWidth >= 800; // Update based on the window width
   }
 
   ngAfterViewInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      AOS.init({
-        offset: 300,
-        duration: 500,
-        delay: 200,
-        easing: 'ease-in-sine',
-      });
-    }
+    // if (isPlatformBrowser(this.platformId)) {
+    AOS.init({
+      offset: 0,
+      duration: 1000,
+      delay: 200,
+      easing: 'ease-in-sine',
+      once: true,
+    });
+    // }
   }
-
-  // ngAfterViewInit(): void {
-  //   AOS.init();
-  // }
 
   ngAfterViewChecked(): void {
     AOS.refresh();

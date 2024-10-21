@@ -10,7 +10,7 @@ h2 {
     align-self: center;
     position: relative;  /* This is important to position the ::before pseudo-element relative to the wrapper */
     margin-top: -110px;   /* Move the wrapper visually upwards, but keep the padding effect */
-    padding-top: 110px;   /* Adds the needed space for scrolling behavior */
+    padding-top: 70px;   /* Adds the needed space for scrolling behavior */
 }
   
 h2::before {
