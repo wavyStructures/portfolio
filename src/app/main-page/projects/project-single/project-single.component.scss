@@ -89,7 +89,7 @@ article{
 
         >img {
           transition: transform 125ms ease-in-out;
-          transition-delay: 2000ms;
+          transition-delay: 200ms;
           transform: scale(1.5) rotate(-130deg);
         }
 
@@ -126,7 +126,6 @@ article{
       }
 
       &:hover .about {
-        // animation: animateRightOdd 125ms forwards;
         padding-left: 0;
         padding-right: 100px;
       }
@@ -143,6 +142,7 @@ article{
         border: 4px solid var(--clr-text);
         background-color: transparent;
         transition: width 0.3s ease;
+        cursor: pointer;
 
         @media (min-width: 768px) {
           padding: 20px 60px;

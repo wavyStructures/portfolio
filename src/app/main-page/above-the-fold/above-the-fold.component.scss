@@ -1,5 +1,5 @@
 section {
-    height: clamp(50vh, 100vh - 0rem, 100vh);
+    min-height: clamp(50vh, 100vh - 0rem, 100vh);
     background-color: var(--clr-bg);
     
     .atf-wrapper {

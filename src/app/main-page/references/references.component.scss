@@ -29,7 +29,7 @@ app-reference-single {
     .arrow-div  {
         position: relative;
         overflow: hidden;
-        height: 14rem;
+        height: 8rem;
         display: flex;
         justify-content: flex-end;
         padding: 0 40px;
@@ -54,12 +54,14 @@ app-reference-single {
 }
 
 @media (min-width: 500px) {
-    .arrow-div  {
+    .about-wrapper .arrow-div  {
         padding: 0 100px !important;
         margin-bottom: -5px !important;
         margin-top: 20px;
-    }
+        height: 14rem;
+        }
 }
+
 
 @media (min-width: 700px) {
     .arrow-div  {

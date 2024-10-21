@@ -33,9 +33,16 @@
         opacity: 0;
         padding-right: 8px;
         transition: opacity 3s ease-in-out;
-        opacity: 1;
+
+        &:hover {
+            opacity: 1;
+        }
     }
    
+    .text-button-photo:hover .photo-div .show-border {
+        opacity: 1;
+    }
+
     .about-info {
         display: flex;
         align-items: center;
@@ -91,7 +98,7 @@
     .arrow-div {
         position: relative;
         overflow: hidden;
-        height: 14rem;
+        height: 8rem;
         display: flex;
         justify-content: flex-end;
         padding: 0 50px;
@@ -103,10 +110,6 @@
             transition: transform 0.25s linear;        
             animation: moveDown 7s ease-in-out infinite; 
         }            
-        
-        // .scrolled {
-        //     animation: moveDown 7s ease-in-out infinite; 
-        // }
 
         @keyframes moveDown {
             from {
@@ -125,9 +128,12 @@
     
         .photo {
             min-width: 300px;
-            // flex-grow: 1;
             display: flex;         
         }
+    }
+
+    .about-wrapper .arrow-div {
+        height: 14rem;
     }
 }
 
@@ -188,7 +194,7 @@
             padding-left: 5%;
             margin-top: 3px;
 
-            .photo img img {
+            .photo img {
                 max-width: 450px;
                 flex-grow: 1;
                 padding: 0;
@@ -201,7 +207,6 @@
     }
 }
    
-
 @media (min-width: 1200px) { 
     .about-wrapper {
         padding-left: 5%;
@@ -219,7 +224,6 @@
             aspect-ratio: auto;
         }
     
-
         .show-border {
                     height: 160%;
                     width: 128%;
