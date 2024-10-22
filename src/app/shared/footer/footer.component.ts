@@ -24,11 +24,12 @@ export class FooterComponent {
     if (this.router.url !== '/') {
       this.router.navigate(['/']).then(() => {
         setTimeout(() => {
-          this.navigationService.navigateToSection('atf');
+          this.navigationService.scrollToSection('atf');
         }, 100);
       });
     } else {
-      this.navigationService.navigateToSection('atf');
+      this.navigationService.scrollToSection('atf');
     }
   }
+  
 }

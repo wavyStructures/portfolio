@@ -24,6 +24,6 @@ export class MySkillsComponent {
   constructor(private navigationService: NavigationService) {}
 
   navigateToSection(target: string) {
-    this.navigationService.navigateToSection(target);
+    this.navigationService.scrollToSection(target);
   }
 }

@@ -29,7 +29,17 @@ export class NavigationComponent {
   ) {}
 
   navigateToSection(target: string) {
-    const fixedHeaderHeight = 300;
-    this.navigationService.scrollToSection(target, fixedHeaderHeight);
+    const fullPageRoutes = ['imprint', 'privacy-policy'];
+
+    if (fullPageRoutes.includes(target)) {
+      this.router.navigate([`/${target}`]).then(() => {
+        this.closeNav.emit();
+      });
+    } else {
+      const fixedHeaderHeight = 300;
+      this.navigationService.scrollToSection(target, fixedHeaderHeight);
+
+      this.closeNav.emit();
+    }
   }
 }

@@ -60,7 +60,7 @@ export class HeaderComponent implements OnInit {
   }
 
   closeNav(): void {
-    this.isActive = false; // Close the nav
+    this.isActive = false;
   }
 
   @HostListener('window:scroll', [])

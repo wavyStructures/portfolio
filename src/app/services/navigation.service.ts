@@ -19,7 +19,6 @@ export class NavigationService {
       });
     }
   }
-
 }
 
   // async navigateToSection(target: string): Promise<void> {

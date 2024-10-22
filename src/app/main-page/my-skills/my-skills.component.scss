@@ -4,21 +4,20 @@
 }
 
 h2 {
-    // margin-top: -30px;
     background-color: var(--clr-bg);
     width: 80%;
     align-self: center;
     position: relative;  
-    margin-top: -50px;   
+    margin-top: -32px;   
     // padding-top: 70px;  
 }
   
 h2::before {
-    content: "";          /* This creates the pseudo-element */
+    content: "";          
     position: absolute;   
     top: -108px;
     height: 110px;      /* Adds the space equivalent to your desired padding */
-    width: 100%;          /* Span the entire width of the .skills-wrapper */
+    width: 100%;          
     visibility: hidden;   /* Keep it invisible but still taking up space */
 }
 
@@ -158,18 +157,6 @@ h2::before {
 }
 
 //////////////////////////  other screens ///////////////////////////////////////
-@media (min-width: 500px) {
-    .about-wrapper .arrow-div {
-        height: 14rem;
-    }
-}
-
-@media (min-width: 768px) {
-    section {
-        padding: 0px 42px;
-    }
-}
-
 @media (max-width: 720px) {
     .skills-grid {
        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
@@ -215,3 +202,16 @@ h2::before {
         padding-top: unset;
     }
  }
+
+@media (min-width: 500px) {
+    .arrow-div {
+        height: 14rem;
+    }
+}
+
+
+@media (min-width: 768px) {
+    section {
+        padding: 0px 42px;
+    }
+}

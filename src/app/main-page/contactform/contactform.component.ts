@@ -51,8 +51,6 @@ export class ContactformComponent {
     },
   };
 
-
-
   onSubmit(ngForm: NgForm) {
     console.log('Form Valid:', ngForm.valid);
     console.log('Form Submitted:', ngForm.submitted);
@@ -86,6 +84,6 @@ export class ContactformComponent {
   onCheckboxChange() {}
 
   navigateToTop(): void {
-    this.navigationService.navigateToSection('atf');
+    this.navigationService.scrollToSection('atf');
   }
 }
