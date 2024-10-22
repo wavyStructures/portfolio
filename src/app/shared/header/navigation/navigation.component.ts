@@ -28,8 +28,8 @@ export class NavigationComponent {
     private navigationService: NavigationService
   ) {}
 
-  navigateToSection(target: string): void {
-    this.navigationService.navigateToSection(target);
-    this.closeNav.emit(); // Emit close event to parent
+  navigateToSection(target: string) {
+    const fixedHeaderHeight = 300;
+    this.navigationService.scrollToSection(target, fixedHeaderHeight);
   }
 }

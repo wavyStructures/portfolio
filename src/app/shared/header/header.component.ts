@@ -59,6 +59,10 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  closeNav(): void {
+    this.isActive = false; // Close the nav
+  }
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.isAtTop = window.scrollY === 0; //check if at top
@@ -68,13 +72,13 @@ export class HeaderComponent implements OnInit {
     if (this.router.url !== '/') {
       this.router.navigate(['/']).then(() => {
         setTimeout(() => {
-          this.navigationService.navigateToSection('atf');
+          this.navigationService.scrollToSection('atf');
         }, 100);
       });
     } else if (this.isActive) {
       this.toggleNav();
     } else {
-      this.navigationService.navigateToSection('atf');
+      this.navigationService.scrollToSection('atf');
     }
   }
 }

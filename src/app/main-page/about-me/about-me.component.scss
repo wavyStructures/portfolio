@@ -3,6 +3,10 @@
 }
 
 .about-wrapper{    
+    h2 {
+        padding-top: 100px;
+    }
+
     p{
         font-family: Overpass;
         font-size: 20px;
@@ -148,47 +152,48 @@
 }
 
 @media (min-width: 950px) { 
-    h2 {
-        text-align: left;
-    }
-
-    .text-button-photo {
-        display: flex;
-        align-items: flex-start;
-
-        .text-and-button {
-            width: 60%;
-            position: relative;
-            margin-right: -50px;
-               
-            p { margin-top: 0;
-                font-size: 22px;
-                font-weight: bolder;
-            }
-
-            .about-info {
-                align-items: flex-start;
-                height: 3rem;
-                margin-bottom: unset;
-            }
-                
-            img {
-                margin-top: 8px;
-            } 
-
-            .button-div {
-                justify-content: flex-end;
-
-                .button {
-                    padding: 20px 80px;
-                }
-            }   
-        }
-    }
-
-    .about-wrapper {
+    .about-wrapper{
         padding-left: 5%;
+        
+        h2 {
+            text-align: left;
+            padding-top: 45px;
+        }
 
+        .text-button-photo {
+            display: flex;
+            align-items: flex-start;
+
+            .text-and-button {
+                width: 60%;
+                position: relative;
+                margin-right: -50px;
+                
+                p { margin-top: 0;
+                    font-size: 22px;
+                    font-weight: bolder;
+                }
+
+                .about-info {
+                    align-items: flex-start;
+                    height: 3rem;
+                    margin-bottom: unset;
+                }
+                    
+                img {
+                    margin-top: 8px;
+                } 
+
+                .button-div {
+                    justify-content: flex-end;
+
+                    .button {
+                        padding: 20px 80px;
+                    }
+                }   
+            }
+        }
+         
         .photo-div {
             flex-grow: 1;
             padding-left: 5%;
@@ -204,7 +209,7 @@
         .show-border {
             width: 100%;
         }
-    }
+    }    
 }
    
 @media (min-width: 1200px) { 
