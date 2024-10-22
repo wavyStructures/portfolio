@@ -25,7 +25,7 @@ export class FooterComponent {
       this.router.navigate(['/']).then(() => {
         setTimeout(() => {
           this.navigationService.navigateToSection('atf');
-        }, 100); // Add a small delay to ensure DOM is rendered
+        }, 100);
       });
     } else {
       this.navigationService.navigateToSection('atf');

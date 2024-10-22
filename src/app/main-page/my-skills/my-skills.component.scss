@@ -8,9 +8,9 @@ h2 {
     background-color: var(--clr-bg);
     width: 80%;
     align-self: center;
-    position: relative;  /* This is important to position the ::before pseudo-element relative to the wrapper */
-    margin-top: -110px;   /* Move the wrapper visually upwards, but keep the padding effect */
-    padding-top: 70px;   /* Adds the needed space for scrolling behavior */
+    position: relative;  
+    margin-top: -50px;   
+    // padding-top: 70px;  
 }
   
 h2::before {
