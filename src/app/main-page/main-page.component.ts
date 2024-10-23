@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 import { NavigationStateService } from './../../app/services/navigation-state.service';
@@ -21,6 +21,7 @@ import { ContactformComponent } from './contactform/contactform.component';
     ProjectsComponent,
     ReferencesComponent,
     ContactformComponent,
+    
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss',

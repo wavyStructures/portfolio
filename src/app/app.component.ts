@@ -26,12 +26,8 @@ export class AppComponent implements OnInit {
   title = 'Anja Schwab';
 
   ngOnInit() {
-    AOS.init(); // Initialize AOS normally
+    AOS.init();
   }
-  // async ngOnInit() {
-  //   const AOS = await import('aos');
-  //   AOS.init();
-  // }
 
   showFooter: boolean = true;
 

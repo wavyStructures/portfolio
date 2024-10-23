@@ -1,5 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Router, RouterLink, RouterModule } from '@angular/router';
+import {
+  Router,
+  RouterLink,
+  RouterModule,
+  ActivatedRoute,
+} from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { NavigationService } from '../../../services/navigation.service';
@@ -24,9 +29,25 @@ export class NavigationComponent {
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private translate: TranslateService,
     private navigationService: NavigationService
   ) {}
+
+  ngOnInit() {
+    this.route.fragment.subscribe((fragment: any) => {
+      this.scrollToSection(fragment);
+    });
+  }
+
+  scrollToSection(section: string | null) {
+    if (section) {
+      const element = document.getElementById(section);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
 
   navigateToSection(target: string) {
     const fullPageRoutes = ['imprint', 'privacy-policy'];
@@ -41,5 +62,9 @@ export class NavigationComponent {
 
       this.closeNav.emit();
     }
+  }
+
+  closeNavMenu() {
+    this.closeNav.emit();
   }
 }

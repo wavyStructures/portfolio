@@ -200,9 +200,10 @@
             margin-top: 3px;
 
             .photo img {
-                max-width: 450px;
+                max-width: 432px;
                 flex-grow: 1;
                 padding: 0;
+                aspect-ratio: 1 / 1.05;
             }
         }
 
@@ -235,7 +236,7 @@
     
         .show-border {
                     height: 160%;
-                    width: 128%;
+                    width: 145%;
                     max-width: unset;
         }
     }

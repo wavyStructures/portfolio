@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
@@ -26,7 +26,6 @@ export class ContactformComponent {
 
   checkboxState: boolean = false;
   showMessage = false;
-
   mailTest = false;
 
   constructor(
@@ -52,12 +51,11 @@ export class ContactformComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    console.log('Form Valid:', ngForm.valid);
-    console.log('Form Submitted:', ngForm.submitted);
-
     ngForm.form.markAllAsTouched();
 
-    if (ngForm.form.valid && !this.mailTest) {
+    if (ngForm.form.valid && !this.mailTest && this.checkboxState) {
+      console.log('checkboxState in submit onSbmit', this.checkboxState);
+
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
