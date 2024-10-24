@@ -12,6 +12,8 @@
     h1 {
         margin-bottom: 16px;
         color: var(--clr-text-green);
+        font-size: clamp(2.5rem, 6.5vw, 6.5rem);
+
     }
 
     h2 {

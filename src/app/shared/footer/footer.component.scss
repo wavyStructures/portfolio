@@ -84,18 +84,18 @@ footer {
         >a::after {
             content: "";
             position: absolute;
-            left: 0%;
-            bottom: 0;
+            right: 150px;
+            bottom: 16px;
             width: 10%;
             height: 2px; 
             background-color: transparent;
             transition: background-color 0.3s ease;
             transition: width 0.5s ease; 
-            transform: translateX(110%); 
+            transform: translateX(200%); 
         }
 
         >a:hover::after {
-            width: 50%; 
+            width: 40%; 
             background-color: #00BC8F; 
         }
     }
@@ -136,7 +136,6 @@ footer {
         .socialMediaLinks {
             justify-content: flex-end;
             align-items: center;
-            // gap: 2rem;
             gap: clamp(1rem, 2vw + 1rem, 4rem);
             padding: 0 1rem;       
             margin-bottom: 177px; 
@@ -195,7 +194,7 @@ footer {
             position: relative;
             flex-direction: row-reverse;
             width: 100vw;
-            padding: 0 20px;
+            padding: 0 40px 0 20px;
         }
 
         .privacy_policy >a {
@@ -204,6 +203,7 @@ footer {
             bottom: 8px;
             right: 20px;
             font-size: smaller;
+            padding: 0 60px 20px 0;
         }
 
         .copyright{
@@ -236,6 +236,7 @@ footer {
             gap: 8%;
             justify-content: flex-end;
             padding: 5.5rem 0 2rem 0;
+            margin: 0 40px 20px 0;
         }   
 
     .arrow-div{
@@ -256,7 +257,8 @@ footer {
             }
           }
       }
-}}
+    }
+}
 
 
 
