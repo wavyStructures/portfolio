@@ -37,16 +37,25 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Subscribe to the navigation state
     this.navigationStateService.navState$.subscribe((isOpen) => {
       this.isNavOpen = isOpen;
     });
+  }
+
+  closeNav(): void {
+    this.isActive = false;
+
+    const currentUrl = this.router.url;
+    if (currentUrl === '/imprint' || currentUrl === '/privacy-policy') {
+      this.router.navigate(['/']);
+    }
   }
 
   toggleNav() {
     this.navigationStateService.toggleNavState();
     if (this.isActive) {
       this.isClosing = true;
+      this.navigationService.scrollToSection('atf');
       setTimeout(() => {
         this.isActive = false;
         this.isClosing = false;
@@ -57,10 +66,6 @@ export class HeaderComponent implements OnInit {
       this.isClosing = false;
       document.body.classList.add('no-scroll');
     }
-  }
-
-  closeNav(): void {
-    this.isActive = false;
   }
 
   @HostListener('window:scroll', [])

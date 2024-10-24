@@ -60,9 +60,9 @@ export class ContactformComponent {
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response: any) => {
-            this.showMessage = true; // Show the success message
+            this.showMessage = true;
             setTimeout(() => {
-              this.showMessage = false; // Hide the message after 6 seconds
+              this.showMessage = false;
             }, 6000);
             ngForm.resetForm();
           },

@@ -16,9 +16,8 @@ export class MySkillsComponent {
   isScrolled = false;
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    // You can modify this logic as per your needs
     const offset = window.pageYOffset || document.documentElement.scrollTop;
-    this.isScrolled = offset > 100; // Change 100 to the value when you want the arrow to move
+    this.isScrolled = offset > 100;
   }
 
   constructor(private navigationService: NavigationService) {}

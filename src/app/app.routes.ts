@@ -10,13 +10,18 @@ import { ProjectsComponent } from './main-page/projects/projects.component';
 
 export const routes: Routes = [
   { path: '', component: MainPageComponent },
-  { path: 'landing', component: MainPageComponent },
-  { path: 'about', component: MainPageComponent },
-  { path: 'skills', component: MainPageComponent },
-  { path: 'projects', component: MainPageComponent },
-  { path: 'contact', component: MainPageComponent },
 
-  { path: 'imprint', component: ImprintComponent, data: { showFooter: false } },
+  // { path: 'landing', component: MainPageComponent },
+  // { path: 'about', component: MainPageComponent },
+  // { path: 'skills', component: MainPageComponent },
+  // { path: 'projects', component: MainPageComponent },
+  // { path: 'contact', component: MainPageComponent },
+
+  {
+    path: 'imprint',
+    component: ImprintComponent,
+    data: { showFooter: false, preload: true },
+  },
 
   {
     path: 'privacy-policy',

@@ -73,13 +73,10 @@ section {
       &:hover {
         animation: border-effect 315ms forwards;
         background-repeat: no-repeat;
-        // background-size: contain;
         cursor: pointer;
       }
   }
 }
-
-
 
 @keyframes border-effect {
   0% {

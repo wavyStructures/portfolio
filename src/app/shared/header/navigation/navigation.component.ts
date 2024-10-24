@@ -57,11 +57,22 @@ export class NavigationComponent {
         this.closeNav.emit();
       });
     } else {
-      const fixedHeaderHeight = 300;
-      this.navigationService.scrollToSection(target, fixedHeaderHeight);
-
-      this.closeNav.emit();
+      this.goToLink(target);
     }
+  }
+
+  goToLink(target: string) {
+    let fixedHeaderHeight: number;
+
+    if (target === 'projects') {
+      fixedHeaderHeight = 98;
+    } else {
+      fixedHeaderHeight = 120;
+    }
+
+    this.navigationService.scrollToSection(target, fixedHeaderHeight);
+
+    this.closeNav.emit();
   }
 
   closeNavMenu() {
