@@ -154,15 +154,22 @@ section {
   }
 }
 
+@media (min-width: 345px) {
+  .atf-bottom {
+    margin-top: unset !important;
+  }
+}
+
+
 @media (min-width: 400px) {
   .atf-bottom {
     margin-top: unset !important;
   }
 }
 
-@media (min-width: 510px) {
+@media (min-width: 478px) {
   .atf-title-wrapper{
-    padding-top: 27% !important;
+    padding-top: 20% !important;
   }
 
   .link-div a {

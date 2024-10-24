@@ -34,21 +34,6 @@ export class NavigationComponent {
     private navigationService: NavigationService
   ) {}
 
-  ngOnInit() {
-    this.route.fragment.subscribe((fragment: any) => {
-      this.scrollToSection(fragment);
-    });
-  }
-
-  scrollToSection(section: string | null) {
-    if (section) {
-      const element = document.getElementById(section);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-  }
-
   navigateToSection(target: string) {
     const fullPageRoutes = ['imprint', 'privacy-policy'];
 
@@ -70,9 +55,26 @@ export class NavigationComponent {
       fixedHeaderHeight = 120;
     }
 
-    this.navigationService.scrollToSection(target, fixedHeaderHeight);
+    this.navigationService
+      .scrollToSection(target, fixedHeaderHeight)
+      .then(() => {
+        this.closeNav.emit();
+        this.toggleAboveTheFold(target);
+      })
+      .catch((error: any) => {
+        console.error(error);
+      });
+  }
 
-    this.closeNav.emit();
+  toggleAboveTheFold(target: string) {
+    const atfElement = document.getElementById('atf'); // Ensure 'atf' is the correct ID
+    if (atfElement) {
+      if (target === 'skills' || target === 'about' || target === 'projects') {
+        atfElement.classList.remove('d-none'); // Remove the class
+      } else {
+        atfElement.classList.add('d-none'); // Optionally add it back for other targets
+      }
+    }
   }
 
   closeNavMenu() {

@@ -1,8 +1,8 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Subscription } from 'rxjs';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { NavigationService } from '../../services/navigation.service';
 
 @Component({
   selector: 'app-about-me',
@@ -11,17 +11,17 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })
-export class AboutMeComponent implements OnInit {
+export class AboutMeComponent {
   isScrolled = false;
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const offset = window.pageYOffset || document.documentElement.scrollTop;
-    setTimeout(() => {
-      this.isScrolled = offset > 100;
-    }, 5000);
+    this.isScrolled = offset > 100;
   }
 
-  constructor() {}
+  constructor(private navigationService: NavigationService) {}
 
-  ngOnInit() {}
+  navigateToSection(target: string) {
+    this.navigationService.scrollToSection(target);
+  }
 }

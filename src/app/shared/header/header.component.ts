@@ -55,7 +55,6 @@ export class HeaderComponent implements OnInit {
     this.navigationStateService.toggleNavState();
     if (this.isActive) {
       this.isClosing = true;
-      this.navigationService.scrollToSection('atf');
       setTimeout(() => {
         this.isActive = false;
         this.isClosing = false;
@@ -71,19 +70,5 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.isAtTop = window.scrollY === 0; //check if at top
-  }
-
-  navigateToTop() {
-    if (this.router.url !== '/') {
-      this.router.navigate(['/']).then(() => {
-        setTimeout(() => {
-          this.navigationService.scrollToSection('atf');
-        }, 100);
-      });
-    } else if (this.isActive) {
-      this.toggleNav();
-    } else {
-      this.navigationService.scrollToSection('atf');
-    }
   }
 }
