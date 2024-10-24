@@ -35,15 +35,7 @@ export class NavigationComponent {
   ) {}
 
   navigateToSection(target: string) {
-    const fullPageRoutes = ['imprint', 'privacy-policy'];
-
-    if (fullPageRoutes.includes(target)) {
-      this.router.navigate([`/${target}`]).then(() => {
-        this.closeNav.emit();
-      });
-    } else {
-      this.goToLink(target);
-    }
+    this.goToLink(target);
   }
 
   goToLink(target: string) {
@@ -55,15 +47,9 @@ export class NavigationComponent {
       fixedHeaderHeight = 120;
     }
 
-    this.navigationService
-      .scrollToSection(target, fixedHeaderHeight)
-      .then(() => {
-        this.closeNav.emit();
-        this.toggleAboveTheFold(target);
-      })
-      .catch((error: any) => {
-        console.error(error);
-      });
+    this.navigationService.scrollToSection(target, fixedHeaderHeight);
+    this.closeNav.emit();
+    this.toggleAboveTheFold(target);
   }
 
   toggleAboveTheFold(target: string) {
