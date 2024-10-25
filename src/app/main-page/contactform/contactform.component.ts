@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, inject } from '@angular/core';
+import { Component, Input, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
@@ -19,19 +19,24 @@ import { NavigationService } from '../../services/navigation.service';
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss',
 })
-export class ContactformComponent {
+export class ContactformComponent implements OnInit {
   http = inject(HttpClient);
   @Input() isInsideNavigation: boolean = false;
   @Input() isInImprint: boolean = false;
 
   checkboxState: boolean = false;
-  showMessage = false;
+  showMessage: boolean = false;
+  startHideMessage: boolean = false;
   mailTest = false;
 
   constructor(
     private router: Router,
     private navigationService: NavigationService
   ) {}
+
+  ngOnInit() {
+    this.showMessage = false;
+  }
 
   contactData = {
     name: '',
@@ -50,10 +55,10 @@ export class ContactformComponent {
     },
   };
 
-  onSubmit(ngForm: NgForm) {
-    ngForm.form.markAllAsTouched();
+  onSubmit(form: NgForm) {
+    form.form.markAllAsTouched();
 
-    if (ngForm.form.valid && !this.mailTest && this.checkboxState) {
+    if (form.form.valid && !this.mailTest && this.checkboxState) {
       console.log('checkboxState in submit onSbmit', this.checkboxState);
 
       this.http
@@ -61,25 +66,31 @@ export class ContactformComponent {
         .subscribe({
           next: (response: any) => {
             this.showMessage = true;
+            this.startHideMessage = false;
+
             setTimeout(() => {
-              this.showMessage = false;
+              this.startHideMessage = true;
+
+              setTimeout(() => {
+                this.showMessage = false;
+                this.startHideMessage = false;
+              }, 1500);
             }, 6000);
-            ngForm.resetForm();
+
+            form.resetForm();
           },
           error: (error: any) => {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.form.valid && this.mailTest) {
+    } else if (form.valid && this.mailTest) {
       console.log(this.contactData);
-      ngForm.resetForm();
+      form.resetForm();
     } else {
       console.warn('form is not valid');
     }
   }
-
-  onCheckboxChange() {}
 
   navigateToTop(): void {
     this.navigationService.scrollToSection('atf');

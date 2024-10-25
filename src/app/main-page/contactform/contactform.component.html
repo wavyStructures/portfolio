@@ -53,14 +53,9 @@
 
 
         <div class="agreeCheckboxDiv">
-            <input [(ngModel)]="checkboxState" type="checkbox" id="checkbox" name="checkbox"
-                (change)="onCheckboxChange()">
+            <input [(ngModel)]="checkboxState" type="checkbox" id="checkbox" name="checkbox">
             <p> {{ 'CHECKBOX_TEXT_1' | translate}}
                 <a routerLink="privacy-policy" class="privacy_policy">{{ 'PRIVACY_POLICY' | translate }}</a>
-
-
-                <!-- <a class='privacy' href='/privacy-policy'> -->
-                <!-- <a href="#privacy"> {{ 'PRIVACY_POLICY' | translate }}</a> -->
                 {{ 'CHECKBOX_TEXT_2' | translate}}
             </p>
 
@@ -72,14 +67,13 @@
 
         <button class="submit" type="submit" value="Submit"
             [ngClass]="{'disabled-button': !contactForm.valid || !checkboxState}">
-            <!-- <button class="submit" type="submit" value="Submit" (click)="showInfo()"> -->
-            <!-- [ngClass]="{'disabled-button': !contactForm.valid || !checkboxState}"> -->
             {{ 'SAY_HELLO' | translate }}</button>
 
 
     </form>
 
-    <div [ngClass]="{'success-msg': true, 'visible': showMessage, 'hidden': !showMessage}" class="flip-left">
+    <div [ngClass]="{'visible': showMessage && !startHideMessage, 'hidden': showMessage && startHideMessage, 'd-none': !showMessage    }"
+        class="success-msg flip-left">
         {{ 'EMAIL_SUCCESS_MSG' | translate}}
     </div>
 
