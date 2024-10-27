@@ -216,3 +216,10 @@ h2::before {
         padding: 0px 42px;
     }
 }
+
+
+@media (min-width: 1000px) {
+    h2 {
+       margin-bottom: 2%;
+    }
+}

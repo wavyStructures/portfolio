@@ -6,17 +6,17 @@ footer {
     // width: 100%;
     background-color: var(--clr-text);
     color: var(--clr-bg);
-    margin-top: -1px;
+    
 
-
-    width: 100vw; /* Use viewport width to ensure full page coverage */
-    max-width: 100vw; /* Prevent any max-width from constraining it */
+    // width: 100vw; /* Use viewport width to ensure full page coverage */
+    // max-width: 100vw; /* Prevent any max-width from constraining it */
 
     margin: 0; /* Remove any external margins */
     padding: 0; /* Adjust padding as necessary */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;       
+    margin-top: -1px;
 
          
     .socialMediaLinks {

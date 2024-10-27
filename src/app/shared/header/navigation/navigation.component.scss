@@ -79,7 +79,7 @@ h2 {
   font-size: 2.8rem;
   clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
   width: 100vw;
-  margin-bottom: 0;
+  margin-bottom: -1px;
   margin-top: 0;
 
   &:hover {
@@ -104,15 +104,8 @@ h2 {
   }
 }
 
-
 @media (max-width: 450px) {
   .navigation-wrapper ul li {
     width: 95%;
   }
 }
-
-// @media (min-width: 900px){
-//   .navigation-wrapper ul {
-//       padding: 0 0 8% 0;
-//   }
-// }

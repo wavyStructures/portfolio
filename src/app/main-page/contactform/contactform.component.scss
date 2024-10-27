@@ -1,3 +1,7 @@
+section {
+ max-width: unset ;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -264,5 +268,11 @@
 @media (min-width: 768px) {
   .container {
    padding:  53px 40px 0 40px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .contactForm {
+      width: 50%;
   }
 }
