@@ -9,20 +9,22 @@
                 {{ ('0' + (index + 1)).slice(-2) }}/{{ ('0' + totalProjects).slice(-2) }}
             </div>
 
-            <a [href]="project.demo" target="_blank">
-                <div class="project-img-div" [ngStyle]="{'align-self': 'flex-start'}">
-                    <img [src]="project.img" alt="project image">
-                    <div class="show-border">
-                        <img src="../../../../assets/img/icons/blackArrow_circle.svg">
+            <div class="pic-txt-box">
+                <a [href]="project.demo" target="_blank">
+                    <div class="project-img-div" [ngStyle]="{'align-self': 'flex-start'}">
+                        <img [src]="project.img" alt="project image">
+                        <div class="show-border">
+                            <img src="../../../../assets/img/icons/blackArrow_circle.svg">
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <div class="text-content" [attr.data-aos]="!largeWindow ? 'fade-down' : 'fade-right'">
-                <h2>{{project.title | translate}}</h2>
-                <p class="stack">{{project.stack}}</p>
-                <p class="description">{{ projectDescription | translate }}</p>
-                <a [href]="project.github" target="_blank"><button>Github</button></a>
+                <div class="text-content" [attr.data-aos]="!largeWindow ? 'fade-down' : 'fade-right'">
+                    <h2>{{project.title | translate}}</h2>
+                    <p class="stack">{{project.stack}}</p>
+                    <p class="description">{{ projectDescription | translate }}</p>
+                    <a [href]="project.github" target="_blank"><button>Github</button></a>
+                </div>
             </div>
         </div>
         }
@@ -35,25 +37,27 @@
                 {{ ('0' + (index + 1)).slice(-2) }}/{{ ('0' + totalProjects).slice(-2) }}
             </div>
 
-            <a [href]="project.demo" target="_blank" class="show-border">
-                <div class="project-img-div" [ngStyle]="{'align-self': 'flex-end'}">
-                    <img [src]="project.img" alt="project image">
-                    <div class="show-border">
-                        <img src="../../../../assets/img/icons/blackArrow_circle.svg">
+            <div class="pic-txt-box">
+                <a [href]="project.demo" target="_blank" class="show-border">
+                    <div class="project-img-div" [ngStyle]="{'align-self': 'flex-end'}">
+                        <img [src]="project.img" alt="project image">
+                        <div class="show-border">
+                            <img src="../../../../assets/img/icons/blackArrow_circle.svg">
+                        </div>
                     </div>
+                </a>
+
+                <div class="text-content" [attr.data-aos]="!largeWindow ? 'fade-down' : 'fade-left'">
+
+                    <h2>{{project.title | translate}}</h2>
+                    <p class="stack">{{project.stack}}</p>
+                    <p class="description">{{ projectDescription | translate }}</p>
+                    <a [href]="project.github" target="_blank"><button>Github</button></a>
+
                 </div>
-            </a>
-
-            <div class="text-content" [attr.data-aos]="!largeWindow ? 'fade-down' : 'fade-left'">
-
-                <h2>{{project.title | translate}}</h2>
-                <p class="stack">{{project.stack}}</p>
-                <p class="description">{{ projectDescription | translate }}</p>
-                <a [href]="project.github" target="_blank"><button>Github</button></a>
-
             </div>
-        </div>
-        }
+        </div>}
+
     </div>
 
 </article>
