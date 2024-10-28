@@ -28,7 +28,7 @@ section {
     }
 
      .frontend {
-      animation: flyInFromRight 1s ease-out forwards;
+      animation: flyInFromRight 0.8s ease-out forwards;
     }
     
     .developer {
@@ -84,8 +84,8 @@ section {
             line-height: 23px;
             letter-spacing: -0.025em;
             text-align: center;
-            animation: flyInFromBottom 1s ease-out forwards;
-            animation-delay: 2s; 
+            animation: flyInFromBottom 0.8s ease-out forwards;
+            animation-delay: 1s; 
         }
 
         .atf-underline{
@@ -93,7 +93,7 @@ section {
             width: 45%;
             height: 0;
             border-bottom: 3px solid black;
-            animation: flyInFromLeft 1s ease-out forwards;
+            animation: flyInFromLeft 0.8 ease-out forwards;
             animation-delay: 1.5s; /* Delay by one and a  half second */
         }
       }
@@ -114,7 +114,6 @@ section {
             position: absolute;
             white-space: nowrap;
             left: -5.5rem;
-            // top: 3rem;
             top: 6.5rem;
             transform: rotate(270deg);
             z-index: 3;
@@ -127,7 +126,7 @@ section {
             align-items: center;
            
             .atf-arrow {             
-              animation: arrow-slide-loop 8s infinite; 
+              animation: arrow-slide-loop 3.5s infinite; 
               animation-delay: 3s;
               transition: all 3s ease-in-out;
                 z-index: 0;

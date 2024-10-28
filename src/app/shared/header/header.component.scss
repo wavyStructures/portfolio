@@ -54,11 +54,11 @@ nav.active {
 }
 
 .burger-menu.burger-active {
-animation: cycleBurgerMenu 3s linear forwards;
+animation: cycleBurgerMenu 1.5s linear forwards;
 }
 
 .burger-menu.closing {
-    animation: reverseBurgerMenu 3s linear forwards;
+    animation: reverseBurgerMenu 1.5s linear forwards;
 }
 
 @keyframes cycleBurgerMenu {
