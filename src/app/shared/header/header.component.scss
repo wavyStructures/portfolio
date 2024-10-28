@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // max-width: 1440px;
     padding: 0 16px 0 0;
 
     img {
@@ -29,7 +28,6 @@ nav.active {
 
     >img{
         width: 50%;
-        
         height: 2.8rem;
         padding: 1px 0;
     }
@@ -40,7 +38,6 @@ nav.active {
     background-image: url('./../../../assets/img/animations/burger1.png');
     background-size: cover;
     background-repeat: no-repeat;
-    // transition: background-image 0.5s linear;
     border: 0;
     cursor: pointer;
     padding: 0;
@@ -79,19 +76,3 @@ animation: cycleBurgerMenu 1.5s linear forwards;
     100% {background-image: url('./../../../assets/img/animations/burger1.png');}
 }
 
-
-
-// .line {
-//     width: 40px;
-//     height: 4px;
-//     background-color: var(--clr-text);
-//     margin: 8px 0;
-// }
-
-// .active .line1 {
-//     transform: rotate(45deg) translate(5px, 5px);
-// }
-
-// .active .line2 {
-//     transform: rotate(-45deg) translate(5px, -5px);
-// }
