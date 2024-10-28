@@ -68,6 +68,12 @@ app-contactform {
   background-color: var(--clr-bg);
 }
 
+#header, #atf, #about, #skills, #projects, #references {
+ max-width: 1440px; 
+ align-self: center;
+}
+
+
 #header {
   position: fixed;
   top: 0;

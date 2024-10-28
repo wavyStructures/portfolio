@@ -125,6 +125,7 @@ footer {
     
     .footer-wrapper {
         width: 100vw;
+        max-width: 1440px;
         height: 14rem;
         display: flex;
         flex-direction: column-reverse;
@@ -161,6 +162,7 @@ footer {
         .footer-wrapper {
             position: relative;
             width: 100vw;
+            max-width: 1440px;
             max-height: 10rem;
             display: flex;
             flex-direction: row-reverse;
@@ -210,6 +212,7 @@ footer {
             position: relative;
             flex-direction: row-reverse;
             width: 100vw;
+            max-width: 1440px;
             padding: 0 40px 0 20px;
         }
 
