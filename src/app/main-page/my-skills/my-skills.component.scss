@@ -59,7 +59,7 @@ h2::before {
     }
 
     img:hover{
-        animation: backward-forward-flip 1.5s ease-in-out;
+        animation: backward-forward-flip 0.8s ease-in-out;
     }
 
     @keyframes backward-forward-flip {
