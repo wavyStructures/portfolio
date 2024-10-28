@@ -1,3 +1,7 @@
+section {
+    padding: 0 50px 0 70px !important;
+}
+
 .section.skills{
     display: flex;
     flex-direction: column;
@@ -23,7 +27,7 @@ h2::before {
 }
 
 .skills-wrapper {
-    width: 100%;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -44,7 +48,7 @@ h2::before {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 50px;
     justify-items: center;
     grid-auto-flow: dense;
@@ -167,8 +171,8 @@ h2::before {
 @media (max-width: 600px) {
 
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
-        gap: 8px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 25px;
         padding: unset;
     }
 
@@ -201,6 +205,21 @@ h2::before {
         margin-top: -18px;
         width: 90%; 
         padding-top: unset;
+    }
+ }
+
+ @media (max-width: 460px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 16px;
+        padding: unset;
+    }
+ }
+
+ @media (max-width: 360px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        gap: 8px;
     }
  }
 

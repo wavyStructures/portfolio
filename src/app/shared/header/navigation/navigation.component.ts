@@ -43,13 +43,16 @@ export class NavigationComponent {
 
     if (target === 'projects') {
       fixedHeaderHeight = 98;
+      // } if else (target === 'about') {
+      //   fixedHeaderHeight = 120;
+      //   const atfElement = document.getElementById('atf');
+      //   atfElement.classList.remove('d-none');
     } else {
       fixedHeaderHeight = 120;
     }
-
+    this.toggleAboveTheFold(target);
     this.navigationService.scrollToSection(target, fixedHeaderHeight);
     this.closeNav.emit();
-    this.toggleAboveTheFold(target);
   }
 
   toggleAboveTheFold(target: string) {
