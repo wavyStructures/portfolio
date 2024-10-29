@@ -95,19 +95,19 @@ footer {
         >a::after {
             content: "";
             position: absolute;
-            right: 150px;
-            bottom: 16px;
+            right: 95px;
+            bottom: -2px;
             width: 10%;
             height: 2px; 
             background-color: transparent;
             transition: background-color 0.3s ease;
             transition: width 0.5s ease; 
-            transform: translateX(200%); 
+            transform: translateX(230%); 
         }
 
         >a:hover::after {
-            width: 40%; 
-            background-color: #00BC8F; 
+            width: 50%;
+            background-color: #00BC8F;
         }
     }
     
@@ -216,14 +216,27 @@ footer {
             padding: 0 40px 0 20px;
         }
 
-        .privacy_policy >a {
+        .privacy_policy a {
             color: var(--clr-bg);
             position: absolute;
             bottom: 8px;
             right: 20px;
             font-size: smaller;
             padding: 0 60px 20px 0;
-        }
+        }    
+        
+        .privacy_policy a::after {
+                    right: 152px;
+                    bottom: 17px;
+
+                    transform: translateX(200%); 
+                }
+        
+        .privacy_policy a:hover::after {
+                    width: 38%;
+                }
+        
+    
 
         .copyright{
             align-items: flex-start;
