@@ -76,3 +76,8 @@ animation: cycleBurgerMenu 1.5s linear forwards;
     100% {background-image: url('./../../../assets/img/animations/burger1.png');}
 }
 
+@media (min-width: 2000px) {
+    .header-container {
+        padding: 0 32px 0 0;
+    }
+}
