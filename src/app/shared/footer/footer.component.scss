@@ -270,24 +270,29 @@ footer {
             padding: 5.5rem 0 2rem 0;
             margin: 0 40px 20px 0;
         }   
+    }
+}
 
-    .arrow-div{
-        position: absolute;
-        bottom: 231px;
-      
-        .arrow-up {
-          width: 30px;
-          height: 80px;
-          background-image: url(./../../../assets/img/animations/arrow_up.png);
-          background-repeat: no-repeat;
-          background-position: center 40px;
-          transition: all 0.125s linear;
-          cursor: pointer;
+@media (min-width: 700px) {
+    footer {
+        .arrow-div{
+            position: absolute;
+            bottom: 90%;
         
-            &:hover {
-            background-position: center;
+            .arrow-up {
+                display: flex;
+                width: 30px;
+                height: 80px;
+                background-image: url(./../../../assets/img/animations/arrow_up.png);
+                background-repeat: no-repeat;
+                background-position: center 40px;
+                transition: all 0.125s linear;
+                cursor: pointer;
+            
+                &:hover {
+                background-position: center;
+                }
             }
-          }
-      }
+        }
     }
 }
