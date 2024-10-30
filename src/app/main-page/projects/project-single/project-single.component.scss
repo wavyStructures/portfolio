@@ -42,8 +42,8 @@ article{
       }
 
       >img {
-        width: 100%; // Make image responsive
-        height: auto; // Maintain aspect ratio
+        width: 100%; 
+        height: auto; 
       }
 
       .show-border {
@@ -73,7 +73,7 @@ article{
       .show-border {
         display: flex;
         flex-direction: column;
-        left: 12px;
+        left: 8px;
       }
 
       .show-border >img {
@@ -89,7 +89,7 @@ article{
         >img {
           transition: transform 125ms ease-in-out;
           transition-delay: 200ms;
-          transform: scale(1.4) rotate(-130deg);
+          transform: scale(1.5) rotate(-130deg);
         }
       }
     }
@@ -112,8 +112,8 @@ article{
 
         >img {
           transition: transform 125ms ease-in-out;
-          transition-delay: 200ms;
-          transform: scale(1.4) rotate(130deg);
+          transition-delay: 2000ms;
+          transform: scale(1.5) rotate(130deg);
         }
         
       }
