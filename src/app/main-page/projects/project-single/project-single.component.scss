@@ -105,14 +105,15 @@ article{
         right: 8px;
       }
 
-      &:hover .show-border {
+      &:hover .show-border,
+      :active .show-border {
         right: 20px;
         opacity: 1;
         visibility: visible;
 
         >img {
           transition: transform 125ms ease-in-out;
-          transition-delay: 2000ms;
+          transition-delay: 200ms;
           transform: scale(1.5) rotate(130deg);
         }
         
@@ -187,20 +188,12 @@ article{
   
     .show-border {
       border: 3px solid #000;
-      // article .single-project-wrapper .project-img-div .show-border {
-       top: 12px;
+      top: 12px;
       
-
       >img {
-        width: 2rem;
         top: 40%;
-        transform: scale(1.5) rotate(130deg);
       }
     }
-  }
-
-  article .single-project-wrapper .project-img-div .show-border > img {
-    transform: scale(1.5) rotate(1deg);
   }
 
   .odd-project-div .project-img-div .show-border > img {
