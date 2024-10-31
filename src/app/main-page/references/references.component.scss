@@ -78,6 +78,13 @@ app-reference-single {
         min-height: 420px; 
         padding: 1rem;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+
+        .first-item article {
+            padding-left: 0 !important;
+        }
+        .last-item article {
+            padding-right: 0 !important;
+        }
     }
 }
 

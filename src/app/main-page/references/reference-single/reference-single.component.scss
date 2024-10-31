@@ -71,3 +71,22 @@ article {
         font-size: 22px;
     }
 }
+
+::ng-deep .first-reference article {
+    padding-left: 0 !important;
+}
+
+
+::ng-deep .last-reference article {
+    padding-right: 0 !important;
+}
+
+@media (max-width: 699px) {
+    ::ng-deep .first-reference article {
+        padding-left: 8px !important; // Remove left padding for first reference in smaller viewports
+    }
+
+    ::ng-deep .last-reference article {
+        padding-right: 8px !important; // Remove right padding for last reference in smaller viewports
+    }
+}
