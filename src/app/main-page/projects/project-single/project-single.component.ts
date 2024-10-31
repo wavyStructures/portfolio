@@ -5,6 +5,9 @@ import {
   HostListener,
   AfterViewInit,
   AfterViewChecked,
+  ElementRef,
+  Renderer2,
+  ViewChild,
 } from '@angular/core';
 import AOS from 'aos';
 import { CommonModule } from '@angular/common';
@@ -21,6 +24,11 @@ import { Project } from '../../../interfaces/project.interface';
 export class ProjectSingleComponent
   implements OnInit, AfterViewInit, AfterViewChecked
 {
+  @ViewChild('projectImgDiv') projectImgDiv!: ElementRef;
+  @ViewChild('showBorder') showBorder!: ElementRef;
+
+  constructor(private renderer: Renderer2) {}
+
   largeWindow: boolean = false;
 
   ngOnInit(): void {
@@ -51,6 +59,41 @@ export class ProjectSingleComponent
       easing: 'ease-in-sine',
       once: true,
     });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Make showBorder visible and animate the icon when in view
+          this.renderer.setStyle(this.showBorder.nativeElement, 'opacity', '1');
+          this.renderer.setStyle(
+            this.showBorder.nativeElement,
+            'visibility',
+            'visible'
+          );
+          this.renderer.setStyle(
+            this.showBorder.nativeElement.querySelector('img'),
+            'transform',
+            'scale(1.5) rotate(-130deg)'
+          );
+        } else {
+          // Reset styles when out of view
+          this.renderer.setStyle(this.showBorder.nativeElement, 'opacity', '0');
+          this.renderer.setStyle(
+            this.showBorder.nativeElement,
+            'visibility',
+            'hidden'
+          );
+          this.renderer.setStyle(
+            this.showBorder.nativeElement.querySelector('img'),
+            'transform',
+            'none'
+          );
+        }
+      });
+    });
+
+    // Observe the target element
+    observer.observe(this.projectImgDiv.nativeElement);
   }
 
   ngAfterViewChecked(): void {

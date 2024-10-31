@@ -11,9 +11,9 @@
 
             <div class="pic-txt-box">
                 <a [href]="project.demo" target="_blank">
-                    <div class="project-img-div" [ngStyle]="{'align-self': 'flex-start'}">
+                    <div #projectImgDiv class="project-img-div" [ngStyle]="{'align-self': 'flex-start'}">
                         <img [src]="project.img" alt="project image">
-                        <div class="show-border">
+                        <div #showBorder class="show-border">
                             <img src="../../../../assets/img/icons/blackArrow_circle.svg">
                         </div>
                     </div>
@@ -39,9 +39,9 @@
 
             <div class="pic-txt-box">
                 <a [href]="project.demo" target="_blank" class="show-border">
-                    <div class="project-img-div" [ngStyle]="{'align-self': 'flex-end'}">
+                    <div #projectImgDiv class="project-img-div" [ngStyle]="{'align-self': 'flex-end'}">
                         <img [src]="project.img" alt="project image">
-                        <div class="show-border">
+                        <div #showBorder class="show-border">
                             <img src="../../../../assets/img/icons/blackArrow_circle.svg">
                         </div>
                     </div>
