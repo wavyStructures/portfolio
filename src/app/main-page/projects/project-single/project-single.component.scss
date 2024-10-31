@@ -21,10 +21,6 @@ article{
       }  
     }
 
-    a, .text-content {
-      width: 50%;
-    }
-
     .project-img-div {
       display: flex;
       position: relative;
@@ -65,6 +61,8 @@ article{
             position: absolute;
             width: 1.7rem;
             top: 40%;
+            left: -15px;
+            
         }
       }
     }
@@ -107,7 +105,7 @@ article{
 
       &:hover .show-border,
       :active .show-border {
-        right: 20px;
+        // right: 20px;
         opacity: 1;
         visibility: visible;
 
@@ -139,7 +137,7 @@ article{
         cursor: pointer;
 
         @media (min-width: 768px) {
-          padding: 20px 60px;
+          padding: 16px 60px;
         }
 
         @media (min-width: 900px) {
@@ -173,6 +171,12 @@ article{
   }
 }
 
+@media (max-width: 450px){
+  ::ng-deep section  {
+    padding: 0 30px;
+    }
+}
+
 @media (min-width: 700px) {
   article .single-project-wrapper .project-img-div .show-border {
     height: 98%;
@@ -189,11 +193,11 @@ article{
     .show-border {
       border: 3px solid #000;
       top: 12px;
-      
-      >img {
-        top: 40%;
-      }
     }
+  }
+
+  a, .text-content {
+    width: 50%;
   }
 
   .odd-project-div .project-img-div .show-border > img {
