@@ -83,6 +83,11 @@ export class ProjectSingleComponent
     setTimeout(() => {
       this.renderer.setStyle(this.showBorder.nativeElement, 'opacity', '1');
       this.renderer.setStyle(
+        this.projectImgDiv.nativeElement,
+        'filter',
+        'grayscale(0%)'
+      );
+      this.renderer.setStyle(
         this.showBorder.nativeElement,
         'visibility',
         'visible'
