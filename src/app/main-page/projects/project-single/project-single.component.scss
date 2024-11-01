@@ -62,6 +62,9 @@ article{
             width: 1.7rem;
             top: 40%;
             left: -15px;
+            transform: none;
+            transition: transform 125ms ease-in-out;
+            transition-delay: 200ms;
             
         }
       }
@@ -85,8 +88,8 @@ article{
         visibility: visible;
        
         >img {
-          transition: transform 125ms ease-in-out;
-          transition-delay: 200ms;
+          // transition: transform 125ms ease-in-out;
+          // transition-delay: 200ms;
           transform: scale(1.5) rotate(-130deg);
         }
       }
@@ -111,8 +114,8 @@ article{
         }
 
         >img {
-          transition: transform 125ms ease-in-out;
-          transition-delay: 200ms;
+          // transition: transform 125ms ease-in-out;
+          // transition-delay: 200ms;
           transform: scale(1.5) rotate(130deg);
         }
         

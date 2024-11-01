@@ -30,6 +30,8 @@ export class ProjectSingleComponent
   constructor(private renderer: Renderer2) {}
 
   largeWindow: boolean = false;
+  mobileWindow: boolean = false;
+  observer!: IntersectionObserver;
 
   ngOnInit(): void {
     this.getWindowSize();
@@ -49,6 +51,7 @@ export class ProjectSingleComponent
   private getWindowSize(): void {
     const windowWidth = window.innerWidth;
     this.largeWindow = windowWidth >= 800; // Update based on the window width
+    this.mobileWindow = windowWidth <= 799;
   }
 
   ngAfterViewInit(): void {
@@ -60,40 +63,50 @@ export class ProjectSingleComponent
       once: true,
     });
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Make showBorder visible and animate the icon when in view
-          this.renderer.setStyle(this.showBorder.nativeElement, 'opacity', '1');
-          this.renderer.setStyle(
-            this.showBorder.nativeElement,
-            'visibility',
-            'visible'
-          );
-          this.renderer.setStyle(
-            this.showBorder.nativeElement.querySelector('img'),
-            'transform',
-            'scale(1.5) rotate(-130deg)'
-          );
-        } else {
-          // Reset styles when out of view
-          this.renderer.setStyle(this.showBorder.nativeElement, 'opacity', '0');
-          this.renderer.setStyle(
-            this.showBorder.nativeElement,
-            'visibility',
-            'hidden'
-          );
-          this.renderer.setStyle(
-            this.showBorder.nativeElement.querySelector('img'),
-            'transform',
-            'none'
-          );
-        }
+    if (this.mobileWindow) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.showEffects();
+          } else {
+            this.noEffects();
+          }
+        });
       });
-    });
 
-    // Observe the target element
-    observer.observe(this.projectImgDiv.nativeElement);
+      // Observe the target element
+      observer.observe(this.projectImgDiv.nativeElement);
+    }
+  }
+
+  showEffects() {
+    setTimeout(() => {
+      this.renderer.setStyle(this.showBorder.nativeElement, 'opacity', '1');
+      this.renderer.setStyle(
+        this.showBorder.nativeElement,
+        'visibility',
+        'visible'
+      );
+      this.renderer.setStyle(
+        this.showBorder.nativeElement.querySelector('img'),
+        'transform',
+        'scale(1.5) rotate(-130deg)'
+      );
+    }, 1000);
+  }
+
+  noEffects() {
+    this.renderer.setStyle(this.showBorder.nativeElement, 'opacity', '0');
+    this.renderer.setStyle(
+      this.showBorder.nativeElement,
+      'visibility',
+      'hidden'
+    );
+    this.renderer.setStyle(
+      this.showBorder.nativeElement.querySelector('img'),
+      'transform',
+      'none'
+    );
   }
 
   ngAfterViewChecked(): void {
@@ -109,5 +122,13 @@ export class ProjectSingleComponent
 
   getLayoutClass() {
     return this.index % 2 === 0 ? 'even-layout' : 'odd-layout';
+  }
+
+  ngOnDestroy() {
+    // Clean up observer and any event listeners if necessary
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+    window.removeEventListener('resize', this.onResize.bind(this));
   }
 }
