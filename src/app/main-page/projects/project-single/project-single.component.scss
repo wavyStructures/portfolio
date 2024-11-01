@@ -86,10 +86,9 @@ article{
       :active .show-border {
         opacity: 1;
         visibility: visible;
-       
+        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    
         >img {
-          // transition: transform 125ms ease-in-out;
-          // transition-delay: 200ms;
           transform: scale(1.5) rotate(-130deg);
         }
       }
@@ -114,11 +113,8 @@ article{
         }
 
         >img {
-          // transition: transform 125ms ease-in-out;
-          // transition-delay: 200ms;
           transform: scale(1.5) rotate(130deg);
         }
-        
       }
 
       &:hover .about {
@@ -256,5 +252,4 @@ article{
   .description {
     font-size: 16px;
   }
-
 }

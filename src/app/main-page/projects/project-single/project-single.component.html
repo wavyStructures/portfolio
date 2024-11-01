@@ -42,7 +42,8 @@
                     <div #projectImgDiv class="project-img-div" [ngStyle]="{'align-self': 'flex-end'}">
                         <img [src]="project.img" alt="project image">
                         <div #showBorder class="show-border">
-                            <img [attr.style]="!mobileWindow ? 'transform: rotate(130deg);' : 'transform: rotate(-130deg);'"
+                            <img #turnImgOdd
+                                [attr.style]="!mobileWindow ? 'transform: rotate(130deg);' : 'transform: rotate(-130deg);'"
                                 src="../../../../assets/img/icons/blackArrow_circle.svg">
                         </div>
                     </div>
