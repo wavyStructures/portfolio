@@ -73,9 +73,9 @@ section {
 
 .greeting-footer-box {
   width: 100vw;
-    background-color: var(--clr-text);
-    clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
-    padding-top: 180px;
+  background-color: var(--clr-text);
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+  padding-top: 16px;
 }
 
 .h2-greet {
@@ -101,7 +101,9 @@ h2 {
   }
 }
 
-
+footer .arrow-div .arrow-up {
+  display: none;
+}
 
 @keyframes border-effect {
   0% {

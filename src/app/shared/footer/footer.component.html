@@ -1,7 +1,7 @@
 <footer [ngClass]="{ 'nav-footer': isInsideNavigation, 'small-footer': isInImprint}">
         <div class="footer-wrapper">
                 <div class="socialMediaLinks">
-                        <div class="arrow-div">
+                        <div [ngClass]="{ 'd-none': isInsideNavigation || isInImprint }" class="arrow-div">
                                 <a class="arrow-up" (click)="navigateToTop()"></a>
                         </div>
                         <a href="https://github.com/wavyStructures" target="_blank"> <img
