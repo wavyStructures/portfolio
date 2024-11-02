@@ -28,8 +28,10 @@ article{
       max-width: 100%;
       padding-top: 1rem;
       cursor: pointer;
+      transition: all 125ms ease-in-out 200ms;
       filter: grayscale(100%);
       transition: filter 0.5s ease-in-out;
+      
       z-index: 2;
 
       &:hover {
@@ -62,10 +64,8 @@ article{
             width: 1.7rem;
             top: 40%;
             left: -15px;
-            transform: none;
             transition: transform 125ms ease-in-out;
             transition-delay: 200ms;
-            
         }
       }
     }
@@ -110,18 +110,19 @@ article{
         opacity: 1;
         visibility: visible;
         transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-        }
-
+        transition: transform 125ms ease-in-out;
+        transition-delay: 200ms;
+        
         >img {
           transform: scale(1.5) rotate(130deg);
+          transition: transform 125ms ease-in-out;
+        transition-delay: 200ms;
         }
       }
-
-      &:hover .about {
-        padding-left: 0;
-        padding-right: 100px;
-      }
     }
+  }
+
+
         
     .text-content {
       a button {
@@ -252,4 +253,7 @@ article{
   .description {
     font-size: 16px;
   }
+
+  
 }
+

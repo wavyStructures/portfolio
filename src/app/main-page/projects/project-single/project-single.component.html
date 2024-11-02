@@ -14,7 +14,7 @@
                     <div #projectImgDiv class="project-img-div" [ngStyle]="{'align-self': 'flex-start'}">
                         <img [src]="project.img" alt="project image">
                         <div #showBorder class="show-border">
-                            <img #turnImgEven src="../../../../assets/img/icons/blackArrow_circle.svg">
+                            <img src="../../../../assets/img/icons/blackArrow_circle.svg">
                         </div>
                     </div>
                 </a>
@@ -42,8 +42,7 @@
                     <div #projectImgDiv class="project-img-div" [ngStyle]="{'align-self': 'flex-end'}">
                         <img [src]="project.img" alt="project image">
                         <div #showBorder class="show-border">
-                            <img #turnImgOdd
-                                [attr.style]="!mobileWindow ? 'transform: rotate(130deg);' : 'transform: rotate(-130deg);'"
+                            <img class="arrow" [ngClass]="mobileWindow ? 'mobile-transform' : 'desktop-transform'"
                                 src="../../../../assets/img/icons/blackArrow_circle.svg">
                         </div>
                     </div>

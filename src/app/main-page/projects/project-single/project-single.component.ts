@@ -31,6 +31,7 @@ export class ProjectSingleComponent
 
   largeWindow: boolean = false;
   mobileWindow: boolean = false;
+  isOddProject: boolean = false;
   observer!: IntersectionObserver;
 
   ngOnInit(): void {
@@ -92,12 +93,31 @@ export class ProjectSingleComponent
         'visibility',
         'visible'
       );
-      this.renderer.setStyle(
-        this.showBorder.nativeElement.querySelector('img'),
-        'transform',
-        'scale(1.5) rotate(-130deg)'
-      );
+      this.applyRotation();
+
+      // this.renderer.setStyle(
+      //   this.showBorder.nativeElement.querySelector('img'),
+      //   'transform',
+      //   'scale(1.5) rotate(-130deg)'
+      // );
     }, 1000);
+  }
+
+  applyRotation() {
+    const layoutClass = this.getLayoutClass();
+
+    if (layoutClass === 'odd-layout') {
+      this.isOddProject = true;
+    } else {
+      this.isOddProject = false;
+    }
+
+    const rotation = this.isOddProject ? 'rotate(-130deg)' : 'rotate(130deg)';
+    this.renderer.setStyle(
+      this.showBorder.nativeElement.querySelector('img'),
+      'transform',
+      `scale(1.5) ${rotation}`
+    );
   }
 
   noEffects() {
