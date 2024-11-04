@@ -218,10 +218,11 @@ h2::before {
 
  @media (max-width: 360px) {
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
         gap: 8px;
     }
  }
+ 
 
  @media (max-width: 500px) {
     .skills-grid img:hover {
