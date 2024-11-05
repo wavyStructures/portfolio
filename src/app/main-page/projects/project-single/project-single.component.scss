@@ -165,7 +165,7 @@ article{
     }
 
     .stack {
-      font-size: 24px;
+      font-size: 23px;
       color: #00bc8f;
       font-weight: 400;
     }
@@ -215,10 +215,11 @@ article{
         align-items: center;
   }
 
-  h2 {
+  h3 {
     margin: 10px 0;
     text-align: left;
-    font-size: clamp(1.5rem, 6vw, 6rem);
+    font-size: clamp(1.5rem, 3.5vw, 3.5rem);
+    font-weight: 800;
     line-height: 40px;
   }
 
@@ -246,7 +247,7 @@ article{
 }
 
 @media (min-width: 1000px){
-  h2 {
+  h3 {
     line-height: 56px;
   }
   
@@ -257,7 +258,7 @@ article{
 
 
 @media (min-width: 1400px){
-  h2 {
+  h3 {
     line-height: 5rem;
   }
 } 

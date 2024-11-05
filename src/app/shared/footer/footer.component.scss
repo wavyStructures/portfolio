@@ -205,9 +205,7 @@ footer {
         .privacy_policy a:hover::after {
                     width: 38%;
                 }
-        
-    
-
+          
         .copyright{
             align-items: flex-start;
 
@@ -264,6 +262,12 @@ footer {
                 }
             }
         }
+    }
+}
+
+@media (min-width: 1440px) {
+    footer .logo-div > img {
+        margin-left: unset;
     }
 }
 
