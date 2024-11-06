@@ -52,7 +52,7 @@ export class NavigationComponent {
   }
 
   toggleAboveTheFold(target: string) {
-    const atfElement = document.getElementById('atf'); // Ensure 'atf' is the correct ID
+    const atfElement = document.getElementById('atf');
     if (atfElement) {
       if (target === 'skills' || target === 'about' || target === 'projects') {
         atfElement.classList.remove('d-none'); // Remove the class
