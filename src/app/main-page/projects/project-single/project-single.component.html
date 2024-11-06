@@ -20,7 +20,9 @@
                 </a>
 
                 <div class="text-content" [attr.data-aos]="!largeWindow ? 'fade-down' : 'fade-right'">
-                    <h3>{{project.title | translate}}</h3>
+                    <a [href]="project.demo" target="_blank">
+                        <h3>{{project.title | translate}}</h3>
+                    </a>
                     <p class="stack">{{project.stack}}</p>
                     <p class="description">{{ projectDescription | translate }}</p>
                     <a [href]="project.github" target="_blank"><button>Github</button></a>
@@ -50,7 +52,9 @@
 
                 <div class="text-content" [attr.data-aos]="!largeWindow ? 'fade-down' : 'fade-left'">
 
-                    <h3>{{project.title | translate}}</h3>
+                    <a [href]="project.demo" target="_blank">
+                        <h3>{{project.title | translate}}</h3>
+                    </a>
                     <p class="stack">{{project.stack}}</p>
                     <p class="description">{{ projectDescription | translate }}</p>
                     <a [href]="project.github" target="_blank"><button>Github</button></a>

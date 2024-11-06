@@ -43,24 +43,4 @@ export class NavigationComponent {
       this.closeNav.emit();
     });
   }
-
-  toggleAboveTheFold(target: string) {
-    const atfElement = document.getElementById('atf');
-    if (atfElement) {
-      atfElement.classList.toggle(
-        'd-none',
-        !(target === 'skills' || target === 'about' || target === 'projects')
-      );
-    }
-  }
-
-  //   const atfElement = document.getElementById('atf');
-  //   if (atfElement) {
-  //     if (target === 'skills' || target === 'about' || target === 'projects') {
-  //       atfElement.classList.remove('d-none'); // Remove the class
-  //     } else {
-  //       atfElement.classList.add('d-none'); // Optionally add it back for other targets
-  //     }
-  //   }
-  // }
 }

@@ -24,6 +24,7 @@ section {
     letter-spacing: 0.01em;
     text-align: left;
     margin-top: 2rem;
+    padding-left: 50px;
   }
 
   h3 {
@@ -46,7 +47,8 @@ section {
   .contactForm {
     display: flex;
     flex-direction: column;
-
+    max-width: 1240px;
+  
     .agreeCheckboxDiv {
       display: flex;
       align-items: baseline;
