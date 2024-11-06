@@ -34,35 +34,33 @@ export class NavigationComponent {
     private navigationService: NavigationService
   ) {}
 
-  navigateToSection(target: string) {
-    this.goToLink(target);
-  }
-
   goToLink(target: string) {
-    let fixedHeaderHeight: number;
+    let fixedHeaderHeight = target === 'projects' ? 98 : 120;
+    console.log('Fixed Header Height:', fixedHeaderHeight); // Debugging
 
-    if (target === 'projects') {
-      fixedHeaderHeight = 98;
-    } else {
-      fixedHeaderHeight = 120;
-    }
-    this.toggleAboveTheFold(target);
-    this.navigationService.scrollToSection(target, fixedHeaderHeight);
-    this.closeNav.emit();
+    this.router.navigate([''], { fragment: target }).then(() => {
+      this.navigationService.scrollToSection(target, fixedHeaderHeight);
+      this.closeNav.emit();
+    });
   }
 
   toggleAboveTheFold(target: string) {
     const atfElement = document.getElementById('atf');
     if (atfElement) {
-      if (target === 'skills' || target === 'about' || target === 'projects') {
-        atfElement.classList.remove('d-none'); // Remove the class
-      } else {
-        atfElement.classList.add('d-none'); // Optionally add it back for other targets
-      }
+      atfElement.classList.toggle(
+        'd-none',
+        !(target === 'skills' || target === 'about' || target === 'projects')
+      );
     }
   }
 
-  closeNavMenu() {
-    this.closeNav.emit();
-  }
+  //   const atfElement = document.getElementById('atf');
+  //   if (atfElement) {
+  //     if (target === 'skills' || target === 'about' || target === 'projects') {
+  //       atfElement.classList.remove('d-none'); // Remove the class
+  //     } else {
+  //       atfElement.classList.add('d-none'); // Optionally add it back for other targets
+  //     }
+  //   }
+  // }
 }

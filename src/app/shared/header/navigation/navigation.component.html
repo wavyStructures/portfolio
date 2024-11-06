@@ -1,14 +1,14 @@
 <section id="navigation">
     <div [ngClass]="{ 'active': isActive }" class="navigation-wrapper">
         <ul>
-            <li><a (click)="navigateToSection('about')" class="nav-link">{{'ABOUTME' | translate}}</a></li>
-            <li><a (click)="navigateToSection('skills')" class="nav-link">{{'MY_SKILLS' | translate }}</a></li>
-            <li><a (click)="navigateToSection('projects')" class="nav-link">Portfolio</a></li>
+            <li><a (click)="goToLink('about')" class="nav-link">{{'ABOUTME' | translate}}</a></li>
+            <li><a (click)="goToLink('skills')" class="nav-link">{{'MY_SKILLS' | translate }}</a></li>
+            <li><a (click)="goToLink('projects')" class="nav-link">Portfolio</a></li>
         </ul>
     </div>
     <div class="greeting-footer-box">
         <div class="h2-greet">
-            <h2 class="greet" (click)="navigateToSection('contact')">{{ 'GREET' | translate }}</h2>
+            <h2 class="greet" (click)="goToLink('contact')">{{ 'GREET' | translate }}</h2>
         </div>
         <app-footer [isInsideNavigation]="true"></app-footer>
     </div>
