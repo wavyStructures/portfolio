@@ -1,3 +1,7 @@
+::ng-deep app-root {
+    width: unset;
+}
+
 ::ng-deep section {
     display: flex;
     flex-direction: column;
