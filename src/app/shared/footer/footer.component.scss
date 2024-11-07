@@ -273,14 +273,12 @@ footer {
 
 .small-footer {
     width: 100vw;
-    margin-top: 0 auto; 
-    
     display: flex;
-    justify-content: center; /* Centers the footer content horizontally */
-    background-color: black; /* Sets a black background for the full footer span */
-    color: var(--clr-bg); /* Text color to contrast against black background */
-    margin-top: auto; /* Ensures it aligns correctly with other content */
-    padding: 16px 0; /* Adds vertical padding */
+    justify-content: center; 
+    background-color: black; 
+    color: var(--clr-bg); 
+    margin-top: auto; 
+    padding: 16px 0; 
 
     .footer-wrapper {
         display: flex;
