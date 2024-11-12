@@ -6,13 +6,8 @@ footer {
     // width: 100%;
     background-color: var(--clr-text);
     color: var(--clr-bg);
-    
-
-    // width: 100vw; /* Use viewport width to ensure full page coverage */
-    // max-width: 100vw; /* Prevent any max-width from constraining it */
-
-    margin: 0; /* Remove any external margins */
-    padding: 0; /* Adjust padding as necessary */
+    margin: 0; 
+    padding: 0; 
     display: flex;
     justify-content: center;
     align-items: center;       
@@ -172,8 +167,6 @@ footer {
         }        
     }
 }
-
-
 
 @media (min-width: 500px) {
     footer {
