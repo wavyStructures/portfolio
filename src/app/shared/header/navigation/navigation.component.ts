@@ -18,7 +18,7 @@ import { FooterComponent } from '../../footer/footer.component';
     TranslateModule,
     FooterComponent,
     RouterModule,
-    RouterLink,
+    // RouterLink,
   ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss',
@@ -36,7 +36,7 @@ export class NavigationComponent {
 
   goToLink(target: string) {
     let fixedHeaderHeight = target === 'projects' ? 98 : 120;
-    console.log('Fixed Header Height:', fixedHeaderHeight); // Debugging
+    // console.log('Fixed Header Height:', fixedHeaderHeight); // Debugging
 
     this.router.navigate([''], { fragment: target }).then(() => {
       this.navigationService.scrollToSection(target, fixedHeaderHeight);

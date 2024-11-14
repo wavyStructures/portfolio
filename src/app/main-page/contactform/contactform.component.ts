@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Input, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { NavigationService } from '../../services/navigation.service';
 
@@ -13,7 +13,6 @@ import { NavigationService } from '../../services/navigation.service';
     CommonModule,
     FormsModule,
     RouterLink,
-    RouterOutlet,
     TranslateModule,
   ],
   templateUrl: './contactform.component.html',
@@ -59,7 +58,7 @@ export class ContactformComponent implements OnInit {
     form.form.markAllAsTouched();
 
     if (form.form.valid && !this.mailTest && this.checkboxState) {
-      console.log('checkboxState in submit onSbmit', this.checkboxState);
+      // console.log('checkboxState in submit onSbmit', this.checkboxState);
 
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
@@ -85,7 +84,7 @@ export class ContactformComponent implements OnInit {
           complete: () => console.info('send post complete'),
         });
     } else if (form.valid && this.mailTest) {
-      console.log(this.contactData);
+      // console.log(this.contactData);
       form.resetForm();
     } else {
       console.warn('form is not valid');
